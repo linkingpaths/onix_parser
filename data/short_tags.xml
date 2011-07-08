@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ONIXmessage SYSTEM "http://www.editeur.org/onix/2.1/short/onix-international.dtd">
+<ONIXmessage>
+  <header>
+    <m174>Ingram Content Group</m174>
+    <m175>CoreSource</m175>
+    <m283>coresourcesupport@ingramcontent.com</m283>
+    <m178>Rethink Books</m178>
+    <m182>20110629</m182>
+  </header>
+  <product>
+    <a001>9781418573102</a001>
+    <a002>03</a002>
+    <productidentifier>
+      <b221>15</b221>
+      <b244>9781418573102</b244>
+    </productidentifier>
+    <b012>DG</b012>
+    <b211>029</b211>
+    <n338/>
+    <title>
+      <b202>01</b202>
+      <b203>100 Days of Weight Loss</b203>
+      <b029>The Secret to Being Successful on Any Diet Plan</b029>
+    </title>
+    <workidentifier>
+      <b201>01</b201>
+      <b244>9781401603731</b244>
+    </workidentifier>
+    <contributor>
+      <b035>A01</b035>
+      <b036>Linda Spangle</b036>
+      <b037>Spangle, Linda</b037>
+      <b039>Linda</b039>
+      <b040>Spangle</b040>
+    </contributor>
+    <n386/>
+    <language>
+      <b253>01</b253>
+      <b252>eng</b252>
+    </language>
+    <b061>240</b061>
+    <subject>
+      <b067>10</b067>
+      <b069>HEA019000</b069>
+    </subject>
+    <subject>
+      <b067>01</b067>
+      <b069>613.25</b069>
+    </subject>
+    <othertext>
+      <d102>01</d102>
+      <d103>06</d103>
+      <d104>
+        <![CDATA[<p><strong>This personal growth diet companion encourages dieters--no matter what diet plan they are on--to stick to it by giving them the tools to address the issues behind their eating habits and to make the right choices.</strong></p><p>Going on a diet is easy, staying on a diet is hard and it is the consistent, long-term lifestyle change that results in real success. This book is not a diet but a diet companion. There are 100 short lessons that provide coping skills, behavioral tools, and personal growth ideas that serve as a companion and encourager and give dieters the daily strength to stick with their resolution. Spangle tackles the emotional and psychological issues of weight loss, which is missing from most diet plans. They tell you what to eat. <em>100 Days of Weight Loss</em> gives you the personal tools to make the right choices.</p>]]></d104>
+    </othertext>
+    <othertext>
+      <d102>02</d102>
+      <d103>06</d103>
+      <d104>
+        <![CDATA[<p><strong>This personal growth diet companion encourages dieters--no matter what diet plan they are on--to stick to it by giving them the tools to address the issues behind their eating habits and to make the right choices.</strong></p><p>Going on a diet is easy, staying on a diet is hard and it is the consistent, long-term lifestyle change that results in real success. This book is not a diet but a diet companion. There are 100 short lessons that provide coping skills, behavioral tools, and personal growth ideas that serve as a companion and encourager and give dieters the daily strength to stick with their resolution. Spangle tackles the emotional and psychological issues of weight loss, which is missing from most diet plans. They tell you what to eat. <em>100 Days of Weight Loss</em> gives you the personal tools to make the right choices.</p>]]></d104>
+    </othertext>
+    <imprint>
+      <b079>Thomas Nelson</b079>
+    </imprint>
+    <publisher>
+      <b081>Thomas Nelson</b081>
+    </publisher>
+    <b003>20070904</b003>
+    <b087>2007</b087>
+    <salesrights>
+      <b089>01</b089>
+      <b388>WORLD</b388>
+    </salesrights>
+    <relatedproduct>
+      <h208>13</h208>
+      <productidentifier>
+        <b221>15</b221>
+        <b244>9781401603731</b244>
+      </productidentifier>
+    </relatedproduct>
+    <supplydetail>
+      <j137>Thomas Nelson</j137>
+      <j292>01</j292>
+      <j141>IP</j141>
+      <j143>20070904</j143>
+      <price>
+        <j148>01</j148>
+        <j151>14.99</j151>
+        <j152>USD</j152>
+        <j303>WORLD</j303>
+      </price>
+    </supplydetail>
+  </product>
+</ONIXmessage>

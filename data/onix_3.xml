@@ -1,0 +1,1996 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ONIXMessage release="3.0">
+	<Header>
+		<Sender>
+			<SenderName>Zondervan</SenderName>
+			<ContactName>Dave Gombert</ContactName>
+		</Sender>
+		<Addressee>
+			<AddresseeName>Zondervan</AddresseeName>
+		</Addressee>
+		<SentDateTime>20110407</SentDateTime>
+	</Header>
+	<Product>
+		<RecordReference>com.zondervan.9780310252382</RecordReference>
+		<NotificationType>03</NotificationType>
+		<RecordSourceType>01</RecordSourceType>
+		<RecordSourceName>Zondervan</RecordSourceName>
+		<ProductIdentifier>
+			<ProductIDType>02</ProductIDType>
+			<IDValue>0310252385</IDValue>
+		</ProductIdentifier>
+		<ProductIdentifier>
+			<ProductIDType>03</ProductIDType>
+			<IDValue>9780310252382</IDValue>
+		</ProductIdentifier>
+		<ProductIdentifier>
+			<ProductIDType>04</ProductIDType>
+			<IDValue>025986252380</IDValue>
+		</ProductIdentifier>
+		<ProductIdentifier>
+			<ProductIDType>15</ProductIDType>
+			<IDValue>9780310252382</IDValue>
+		</ProductIdentifier>
+		<!--BLOCK 1-->
+		<DescriptiveDetail>
+			<ProductComposition>00</ProductComposition>
+			<ProductForm>BB</ProductForm>
+			<ProductFormFeature>
+				<ProductFormFeatureType>02</ProductFormFeatureType>
+				<ProductFormFeatureValue>WHI</ProductFormFeatureValue>
+				<ProductFormFeatureDescription><![CDATA[White]]></ProductFormFeatureDescription>
+			</ProductFormFeature>
+			<ProductFormFeature>
+				<ProductFormFeatureType>03</ProductFormFeatureType>
+				<ProductFormFeatureValue/>
+				<ProductFormFeatureDescription><![CDATA[Not Applicable]]></ProductFormFeatureDescription>
+			</ProductFormFeature>
+			<ProductFormFeature>
+				<ProductFormFeatureType>06</ProductFormFeatureType>
+				<ProductFormFeatureValue>00</ProductFormFeatureValue>
+				<ProductFormFeatureDescription><![CDATA[]]></ProductFormFeatureDescription>
+			</ProductFormFeature>
+			<ProductFormDescription><![CDATA[Hardcover, Jacketed]]></ProductFormDescription>
+			<TradeCategory>07</TradeCategory>
+			<Measure>
+				<MeasureType>01</MeasureType>
+				<Measurement>8.30</Measurement>
+				<MeasureUnitCode>in</MeasureUnitCode>
+			</Measure>
+			<Measure>
+				<MeasureType>02</MeasureType>
+				<Measurement>5.70</Measurement>
+				<MeasureUnitCode>in</MeasureUnitCode>
+			</Measure>
+			<Measure>
+				<MeasureType>03</MeasureType>
+				<Measurement>0.60</Measurement>
+				<MeasureUnitCode>in</MeasureUnitCode>
+			</Measure>
+			<Measure>
+				<MeasureType>08</MeasureType>
+				<Measurement>0.545</Measurement>
+				<MeasureUnitCode>lb</MeasureUnitCode>
+			</Measure>
+			<Measure>
+				<MeasureType>01</MeasureType>
+				<Measurement>211</Measurement>
+				<MeasureUnitCode>mm</MeasureUnitCode>
+			</Measure>
+			<Measure>
+				<MeasureType>02</MeasureType>
+				<Measurement>145</Measurement>
+				<MeasureUnitCode>mm</MeasureUnitCode>
+			</Measure>
+			<Measure>
+				<MeasureType>03</MeasureType>
+				<Measurement>15</Measurement>
+				<MeasureUnitCode>mm</MeasureUnitCode>
+			</Measure>
+			<Measure>
+				<MeasureType>08</MeasureType>
+				<Measurement>247</Measurement>
+				<MeasureUnitCode>gr</MeasureUnitCode>
+			</Measure>
+			<CountryOfManufacture>US</CountryOfManufacture>
+			<NoCollection/>
+			<TitleDetail>
+				<TitleType>01</TitleType>
+				<TitleElement>
+					<TitleElementLevel>01</TitleElementLevel>
+					<TitleText><![CDATA[The Volunteer Revolution]]></TitleText>
+					<TitlePrefix>The</TitlePrefix>
+					<TitleWithoutPrefix><![CDATA[Volunteer Revolution]]></TitleWithoutPrefix>
+					<Subtitle><![CDATA[Unleashing the Power of Everybody]]></Subtitle>
+				</TitleElement>
+			</TitleDetail>
+			<Contributor>
+				<SequenceNumber>1</SequenceNumber>
+				<ContributorRole>A01</ContributorRole>
+				<NameIdentifier>
+					<NameIDType>01</NameIDType>
+					<IDTypeName>AuthorID</IDTypeName>
+					<IDValue>HybelsB</IDValue>
+				</NameIdentifier>
+				<PersonName><![CDATA[Bill Hybels]]></PersonName>
+				<PersonNameInverted><![CDATA[Hybels, Bill]]></PersonNameInverted>
+				<NamesBeforeKey><![CDATA[Bill]]></NamesBeforeKey>
+				<KeyNames><![CDATA[Hybels]]></KeyNames>
+				<Website>
+					<WebsiteRole>06</WebsiteRole>
+					<WebsiteDescription>Contributors Website URL 1</WebsiteDescription>
+					<WebsiteLink>www.willowcreek.org</WebsiteLink>
+				</Website>
+			</Contributor>
+			<NoEdition/>
+			<Language>
+				<LanguageRole>01</LanguageRole>
+				<LanguageCode>eng</LanguageCode>
+				<CountryCode>US</CountryCode>
+			</Language>
+			<Extent>
+				<ExtentType>00</ExtentType>
+				<ExtentValue>144.00</ExtentValue>
+				<ExtentUnit>3</ExtentUnit>
+			</Extent>
+			<IllustrationsNote><![CDATA[None]]></IllustrationsNote>
+			<Subject>
+				<SubjectSchemeIdentifier>22</SubjectSchemeIdentifier>
+				<SubjectSchemeVersion>2.0</SubjectSchemeVersion>
+				<SubjectCode>TP028</SubjectCode>
+				<SubjectHeadingText><![CDATA[Christian Interest]]></SubjectHeadingText>
+			</Subject>
+			<Subject>
+				<SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+				<SubjectSchemeName>bisac 1</SubjectSchemeName>
+				<SubjectSchemeVersion>2.7</SubjectSchemeVersion>
+				<SubjectCode>REL108010</SubjectCode>
+				<SubjectHeadingText><![CDATA[REL108010]]></SubjectHeadingText>
+			</Subject>
+			<Subject>
+				<SubjectSchemeIdentifier>22</SubjectSchemeIdentifier>
+				<SubjectSchemeName>merch theme 1</SubjectSchemeName>
+				<SubjectCode>TP028</SubjectCode>
+				<SubjectHeadingText><![CDATA[TP028]]></SubjectHeadingText>
+			</Subject>
+			<Subject>
+				<MainSubject/>
+				<SubjectSchemeIdentifier>33</SubjectSchemeIdentifier>
+				<SubjectSchemeName>Main Subject</SubjectSchemeName>
+				<SubjectCode>CHMCHLCGR</SubjectCode>
+				<SubjectHeadingText><![CDATA[CHURCH & MINISTRY/CHURCH LIFE/CHURCH GROWTH]]></SubjectHeadingText>
+			</Subject>
+			<AudienceCode>01</AudienceCode>
+			<Audience>
+				<AudienceCodeType>01</AudienceCodeType>
+				<AudienceCodeTypeName>Zondervan</AudienceCodeTypeName>
+				<AudienceCodeValue/>
+			</Audience>
+			<AudienceRange>
+				<AudienceRangeQualifier>17</AudienceRangeQualifier>
+				<AudienceRangePrecision>03</AudienceRangePrecision>
+				<AudienceRangeValue>18</AudienceRangeValue>
+				<AudienceRangePrecision>04</AudienceRangePrecision>
+				<AudienceRangeValue>99</AudienceRangeValue>
+			</AudienceRange>
+		</DescriptiveDetail>
+		<!--BLOCK 2-->
+		<CollateralDetail>
+			<TextContent>
+				<TextType>08</TextType>
+				<ContentAudience>00</ContentAudience>
+				<Text><![CDATA['...As in most of his other books, this new volume from Hybels take a decidely practical approach as he explains and promotes a substantive Christian concept.  He understands the church to be a community of people with a variety of abilities and attributes who are called to serve.  Certainly the church has an important 'service' mandate to fulfill.  This small book communicates the essential message clearly and compellingly.'  -- Christian Week  ]]></Text>
+				<TextAuthor>Bill Hybels  </TextAuthor>
+				<TextSourceCorporate><![CDATA[Zondervan]]></TextSourceCorporate>
+				<SourceTitle><![CDATA[Christian Week]]></SourceTitle>
+			</TextContent>
+			<TextContent>
+				<TextType>02</TextType>
+				<ContentAudience>00</ContentAudience>
+				<Text><![CDATA[There is unprecedented spiritual openness in today's society, and at the same time, increasing economic pressure on the resources of local churches. The solution lies squarely on the able shoulders of God-gifted volunteers. And they are ready for the challenge! ]]></Text>
+				<TextAuthor>Bill Hybels  </TextAuthor>
+				<TextSourceCorporate><![CDATA[Zondervan]]></TextSourceCorporate>
+			</TextContent>
+			<TextContent>
+				<TextType>03</TextType>
+				<ContentAudience>00</ContentAudience>
+				<Text><![CDATA[The future of the local church is directly tied to its ability to attract, equip, and unleash the potential of volunteers in the church
+
+Pastor Bill Hybels sees a new reality on the horizon. There is unprecedented spiritual openness in today's society, and at the same time, increasing economic pressure on the resources of local churches. The solution lies squarely on the able shoulders of God-gifted volunteers. And they are ready for the challenge! Once trained, empowered, and inspired, record numbers of volunteers will take on all new levels of responsibility in the local church, creating a volunteer revolution that will transform churches and communities.
+
+The Volunteer Revolution reveals how all of this can happen and how churches can unleash vast amounts of untapped potential. Through real-life volunteer stories, Hybels inspires church leaders in their role as equippers while motivating potential volunteers to align themselves with God's mission to change the world.
+
+The Volunteer Revolution is also available as an unabridged Audio Pages CD.]]></Text>
+				<TextAuthor>Bill Hybels  </TextAuthor>
+				<TextSourceCorporate><![CDATA[Zondervan]]></TextSourceCorporate>
+			</TextContent>
+			<SupportingResource>
+				<!--Front Cover-->
+				<ResourceContentType>01</ResourceContentType>
+				<ContentAudience>00</ContentAudience>
+				<ResourceMode>03</ResourceMode>
+				<ResourceVersion>
+					<ResourceForm>01</ResourceForm>
+					<ResourceLink>http://www.zondervan.com/images/product/medium/0310252385.jpg</ResourceLink>
+				</ResourceVersion>
+			</SupportingResource>
+			<SupportingResource>
+				<!--First 1000 words-->
+				<ResourceContentType>15</ResourceContentType>
+				<ContentAudience>00</ContentAudience>
+				<ResourceMode>03</ResourceMode>
+				<ResourceVersion>
+					<ResourceForm>01</ResourceForm>
+					<ResourceLink>http://www.zondervan.com/media/samples/pdf/0310252385_samptxt.pdf</ResourceLink>
+				</ResourceVersion>
+			</SupportingResource>
+			<Prize>
+				<PrizeName><![CDATA[Critic's Choice- Christianity Today]]></PrizeName>
+				<PrizeYear>2004</PrizeYear>
+				<PrizeCountry>US</PrizeCountry>
+				<PrizeCode>01</PrizeCode>
+				<PrizeJury>Christianity Today Magazine</PrizeJury>
+			</Prize>
+			<Prize>
+				<PrizeName><![CDATA[Best Outreach Resource]]></PrizeName>
+				<PrizeYear>2005</PrizeYear>
+				<PrizeCountry>US</PrizeCountry>
+				<PrizeCode>01</PrizeCode>
+				<PrizeJury>Outreach Magazine</PrizeJury>
+			</Prize>
+		</CollateralDetail>
+		<!--BLOCK 4-->
+		<PublishingDetail>
+			<Imprint>
+				<ImprintName>Zondervan</ImprintName>
+			</Imprint>
+			<Publisher>
+				<PublishingRole>01</PublishingRole>
+				<PublisherName>Zondervan</PublisherName>
+				<Website>
+					<WebsiteRole>01</WebsiteRole>
+					<WebsiteDescription>Corporate Website</WebsiteDescription>
+					<WebsiteLink>http://www.zondervan.com</WebsiteLink>
+				</Website>
+			</Publisher>
+			<CityOfPublication>Grand Rapids</CityOfPublication>
+			<CountryOfPublication>US</CountryOfPublication>
+			<PublishingStatus>20</PublishingStatus>
+			<PublishingStatusNote><![CDATA[20]]></PublishingStatusNote>
+			<PublishingDate>
+				<PublishingDateRole>01</PublishingDateRole>
+				<DateFormat>00</DateFormat>
+				<Date>20040817</Date>
+			</PublishingDate>
+			<PublishingDate>
+				<PublishingDateRole>11</PublishingDateRole>
+				<DateFormat>05</DateFormat>
+				<Date>2004</Date>
+			</PublishingDate>
+			<PublishingDate>
+				<PublishingDateRole>09</PublishingDateRole>
+				<DateFormat>00</DateFormat>
+				<Date>20040614</Date>
+			</PublishingDate>
+			<PublishingDate>
+				<PublishingDateRole>10</PublishingDateRole>
+				<DateFormat>00</DateFormat>
+				<Date>20040614</Date>
+			</PublishingDate>
+			<SalesRights>
+				<SalesRightsType>01</SalesRightsType>
+				<Territory>
+					<RegionsIncluded>WORLD</RegionsIncluded>
+				</Territory>
+				<PublisherName>Zondervan</PublisherName>
+			</SalesRights>
+		</PublishingDetail>
+		<!--BLOCK 5-->
+		<RelatedMaterial/>
+		<!--BLOCK 6-->
+		<ProductSupply>
+			<MarketPublishingDetail>
+				<MarketPublishingStatus>20</MarketPublishingStatus>
+				<MarketDate>
+					<MarketDateRole>01</MarketDateRole>
+					<DateFormat>00</DateFormat>
+					<Date>20040817</Date>
+				</MarketDate>
+			</MarketPublishingDetail>
+			<SupplyDetail>
+				<Supplier>
+					<SupplierRole>01</SupplierRole>
+					<SupplierIdentifier>
+						<SupplierIDType>07</SupplierIDType>
+						<IDTypeName>Supplier SAN</IDTypeName>
+						<IDValue>2989107</IDValue>
+					</SupplierIdentifier>
+					<SupplierName>Zondervan</SupplierName>
+					<TelephoneNumber>1-800-727-1309</TelephoneNumber>
+					<FaxNumber>1-800-934-6381</FaxNumber>
+				</Supplier>
+				<ProductAvailability>20</ProductAvailability>
+				<SupplyDate>
+					<SupplyDateRole>08</SupplyDateRole>
+					<DateFormat>00</DateFormat>
+					<Date>20040806</Date>
+				</SupplyDate>
+				<OrderTime>3</OrderTime>
+				<PackQuantity>44</PackQuantity>
+				<UnpricedItemType>02</UnpricedItemType>
+			</SupplyDetail>
+		</ProductSupply>
+	</Product>
+	<Product>
+		<RecordReference>com.zondervan.9780310266693</RecordReference>
+		<NotificationType>03</NotificationType>
+		<RecordSourceType>01</RecordSourceType>
+		<RecordSourceName>Zondervan</RecordSourceName>
+		<ProductIdentifier>
+			<ProductIDType>02</ProductIDType>
+			<IDValue>0310266696</IDValue>
+		</ProductIdentifier>
+		<ProductIdentifier>
+			<ProductIDType>03</ProductIDType>
+			<IDValue>9780310266693</IDValue>
+		</ProductIdentifier>
+		<ProductIdentifier>
+			<ProductIDType>04</ProductIDType>
+			<IDValue>025986266691</IDValue>
+		</ProductIdentifier>
+		<ProductIdentifier>
+			<ProductIDType>15</ProductIDType>
+			<IDValue>9780310266693</IDValue>
+		</ProductIdentifier>
+		<!--BLOCK 1-->
+		<DescriptiveDetail>
+			<ProductComposition>00</ProductComposition>
+			<ProductForm>BB</ProductForm>
+			<ProductFormDescription><![CDATA[Hardcover, Jacketed]]></ProductFormDescription>
+			<TradeCategory>07</TradeCategory>
+			<Measure>
+				<MeasureType>01</MeasureType>
+				<Measurement>9.30</Measurement>
+				<MeasureUnitCode>in</MeasureUnitCode>
+			</Measure>
+			<Measure>
+				<MeasureType>02</MeasureType>
+				<Measurement>6.30</Measurement>
+				<MeasureUnitCode>in</MeasureUnitCode>
+			</Measure>
+			<Measure>
+				<MeasureType>03</MeasureType>
+				<Measurement>0.90</Measurement>
+				<MeasureUnitCode>in</MeasureUnitCode>
+			</Measure>
+			<Measure>
+				<MeasureType>08</MeasureType>
+				<Measurement>0.955</Measurement>
+				<MeasureUnitCode>lb</MeasureUnitCode>
+			</Measure>
+			<Measure>
+				<MeasureType>01</MeasureType>
+				<Measurement>236</Measurement>
+				<MeasureUnitCode>mm</MeasureUnitCode>
+			</Measure>
+			<Measure>
+				<MeasureType>02</MeasureType>
+				<Measurement>160</Measurement>
+				<MeasureUnitCode>mm</MeasureUnitCode>
+			</Measure>
+			<Measure>
+				<MeasureType>03</MeasureType>
+				<Measurement>22</Measurement>
+				<MeasureUnitCode>mm</MeasureUnitCode>
+			</Measure>
+			<Measure>
+				<MeasureType>08</MeasureType>
+				<Measurement>432</Measurement>
+				<MeasureUnitCode>gr</MeasureUnitCode>
+			</Measure>
+			<CountryOfManufacture>US</CountryOfManufacture>
+			<NoCollection/>
+			<TitleDetail>
+				<TitleType>01</TitleType>
+				<TitleElement>
+					<TitleElementLevel>01</TitleElementLevel>
+					<TitleText><![CDATA[ Just Walk Across the Room]]></TitleText>
+					<TitleWithoutPrefix><![CDATA[Just Walk Across the Room]]></TitleWithoutPrefix>
+					<Subtitle><![CDATA[Simple Steps Pointing People to Faith]]></Subtitle>
+				</TitleElement>
+			</TitleDetail>
+			<Contributor>
+				<SequenceNumber>1</SequenceNumber>
+				<ContributorRole>A01</ContributorRole>
+				<NameIdentifier>
+					<NameIDType>01</NameIDType>
+					<IDTypeName>AuthorID</IDTypeName>
+					<IDValue>HybelsB</IDValue>
+				</NameIdentifier>
+				<PersonName><![CDATA[Bill Hybels]]></PersonName>
+				<PersonNameInverted><![CDATA[Hybels, Bill]]></PersonNameInverted>
+				<NamesBeforeKey><![CDATA[Bill]]></NamesBeforeKey>
+				<KeyNames><![CDATA[Hybels]]></KeyNames>
+				<Website>
+					<WebsiteRole>06</WebsiteRole>
+					<WebsiteDescription>Contributors Website URL 1</WebsiteDescription>
+					<WebsiteLink>www.willowcreek.org</WebsiteLink>
+				</Website>
+			</Contributor>
+			<NoEdition/>
+			<Language>
+				<LanguageRole>01</LanguageRole>
+				<LanguageCode>eng</LanguageCode>
+				<CountryCode>US</CountryCode>
+			</Language>
+			<Extent>
+				<ExtentType>00</ExtentType>
+				<ExtentValue>224.00</ExtentValue>
+				<ExtentUnit>3</ExtentUnit>
+			</Extent>
+			<IllustrationsNote><![CDATA[None]]></IllustrationsNote>
+			<Subject>
+				<SubjectSchemeIdentifier>22</SubjectSchemeIdentifier>
+				<SubjectSchemeVersion>2.0</SubjectSchemeVersion>
+				<SubjectCode>TP028</SubjectCode>
+				<SubjectHeadingText><![CDATA[Christian Interest]]></SubjectHeadingText>
+			</Subject>
+			<Subject>
+				<SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+				<SubjectSchemeName>bisac 1</SubjectSchemeName>
+				<SubjectSchemeVersion>2.7</SubjectSchemeVersion>
+				<SubjectCode>REL030000</SubjectCode>
+				<SubjectHeadingText><![CDATA[REL030000]]></SubjectHeadingText>
+			</Subject>
+			<Subject>
+				<SubjectSchemeIdentifier>22</SubjectSchemeIdentifier>
+				<SubjectSchemeName>merch theme 1</SubjectSchemeName>
+				<SubjectCode>TP028</SubjectCode>
+				<SubjectHeadingText><![CDATA[TP028]]></SubjectHeadingText>
+			</Subject>
+			<Subject>
+				<MainSubject/>
+				<SubjectSchemeIdentifier>33</SubjectSchemeIdentifier>
+				<SubjectSchemeName>Main Subject</SubjectSchemeName>
+				<SubjectCode>CHMCHLEVG</SubjectCode>
+				<SubjectHeadingText><![CDATA[CHURCH & MINISTRY/CHURCH LIFE/EVANGELISM & OUTREACH]]></SubjectHeadingText>
+			</Subject>
+			<AudienceCode>01</AudienceCode>
+			<Audience>
+				<AudienceCodeType>01</AudienceCodeType>
+				<AudienceCodeTypeName>Zondervan</AudienceCodeTypeName>
+				<AudienceCodeValue/>
+			</Audience>
+			<AudienceRange>
+				<AudienceRangeQualifier>17</AudienceRangeQualifier>
+				<AudienceRangePrecision>03</AudienceRangePrecision>
+				<AudienceRangeValue>18</AudienceRangeValue>
+				<AudienceRangePrecision>04</AudienceRangePrecision>
+				<AudienceRangeValue>99</AudienceRangeValue>
+			</AudienceRange>
+		</DescriptiveDetail>
+		<!--BLOCK 2-->
+		<CollateralDetail>
+			<TextContent>
+				<TextType>09</TextType>
+				<ContentAudience>00</ContentAudience>
+				<Text><![CDATA[Evangelism is as simple and as scary as walking across the room, according to Hybels, well known senior pastor of Willow Creek Community Church in South Barrington, Ill. His heartfelt burden for sharing the Christian message is clear as he guides readers to a new understanding of why and how they can help others meet God. He offers solid advice on evangelism, yet does so without sounding like he's checking off items on a spiritual list. His form of evangelism is relational, what he calls 'Living in 3D.' Hybels enlarges on the three Ds---develop friendships, discover stories, discern next steps---in a clear, conversational way, all the while challenging Christians to move beyond their insulated 'evangelism-void vacuum.' He encourages Christians to explore 'the power of story' and to learn how to tell their own spiritual narratives concisely and effectively. Readers will find inspiration and honesty in this book that mirrors Hybels's personal convictions and those of his church as well: 'It really is true: the spread of the gospel... boils down to whether you and I will continue to seek creative ways to engage our friends, inviting them to explore the abundance of the Christ-following life....' (Aug.)  -- Publisher's Weekly ]]></Text>
+				<TextAuthor>Bill Hybels  </TextAuthor>
+			</TextContent>
+			<TextContent>
+				<TextType>04</TextType>
+				<ContentAudience>00</ContentAudience>
+				<Text><![CDATA[Contents
+Acknowledgments \ 9
+Introduction \ 11
+Part I: The Single Greatest Gift
+1. The Ultimate Walk Across a Room \ 19
+2. The Way to Sustain Evangelism \ 35
+Part II: Living in 3D
+3. First, Develop Friendships \ 59
+4. Next, Discover Stories \ 77
+5. Finally, Discern Next Steps \ 93
+Part III: The Power of Story
+6. Your Own Before-and-After \ 115
+7. God's Good News \ 133
+8. Lessons from the Master \ 151
+Part IV: Grander Vision Living
+9. Big-Fish Invitations \ 171
+10. Matthew's Deepest Desire \ 191
+11. Open Doors \ 203
+Notes \ 221]]></Text>
+				<TextAuthor>Bill Hybels  </TextAuthor>
+				<TextSourceCorporate><![CDATA[Zondervan]]></TextSourceCorporate>
+			</TextContent>
+			<TextContent>
+				<TextType>04</TextType>
+				<ContentAudience>00</ContentAudience>
+				<Text><![CDATA[Just Walk Across the Room
+Copyright  2006 by Bill Hybels
+This title is also available as a Zondervan audio product.
+Visit www.zondervan.com/audiopages for more information.
+Requests for information should be addressed to:
+Zondervan, Grand Rapids, Michigan 49530
+Library of Congress Cataloging-in-Publication Data
+Hybels, Bill.
+Just walk across the room : simple steps pointing people
+to faith / Bill Hybels.
+p. cm.
+Includes bibliographical references.
+ISBN-13: 978-0-310-26669-3
+ISBN-10: 0-310-26669-6
+1. Witness bearing (Christianity).
+I. Title.
+BV4520.H93 2006
+248'.5 --- dc22
+2005035554
+All Scripture quotations, unless otherwise indicated, are taken from the Holy Bible: Today's New
+International Version. TNIV. Copyright  2001, 2004 by International Bible Society. Used by
+permission of Zondervan. All rights reserved.
+For Scripture quotations from The Message: Copyright  by Eugene H. Peterson 1993, 1994,
+1995, 1996, 2000, 2001, 2002. Used by permission of NavPress Publishing Group.
+The website addresses recommended throughout this book are offered as a resource to you. These
+websites are not intended in any way to be or imply an endorsement on the part of Zondervan, nor
+do we vouch for their content for the life of this book.
+All rights reserved. No part of this publication may be reproduced, stored in a retrieval system,
+or transmitted in any form or by any means --- electronic, mechanical, photocopy, recording, or
+any other --- except for brief quotations in printed reviews, without the prior permission of the
+publisher.
+Interior design by Beth Shagene
+Printed in the United States of America
+06 07 08 09 10 11 12 13 * 21 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1
+Introduction
+Two summers ago I experienced a serendipitous collision of circumstances
+while on a boating trip off the Wisconsin coast of Lake Michigan. I was
+alone, my heart was in a posture of worship, and I had some time on my
+hands. I'd pulled into a tiny harbor, tied up the boat, and was tidying
+up the place before relaxing for the evening. After studying my boating
+charts to determine where I would sail the next day, I realized I was only
+ten miles from the campground where I'd invited Christ to come into my
+life as a teenager.
+I had visited that same harbor on several occasions throughout the
+years, but for some divine reason on that particular day, I was prompted
+to go stand on the hillside where I'd first met Christ. The more I thought
+about it, the more the idea gained steam; so I decided to hunt down transportation
+to get there. After finding a phone booth, I placed a call to the
+only cab company in town. Surely they would make the twenty-mile
+round-trip for me.
+The dispatcher on the other end of the phone wasn't about to budge.
+'Sir, it's too long of a drive out there,' she regretted to tell me. 'We just
+don't do that.' I haggled with her and even threw more money into the
+equation, but as the minutes ticked by it became obvious to me that I
+wasn't getting any closer to my meaningful walk down memory lane.
+'Do you know anyone who would be willing to make the trip?' I
+pleaded.
+Then, with newfound optimism, she told me she did. She knew a guy
+who was down on his luck and would probably do anything for money.
+(Should have been my first clue.) If I were willing to take a chance with
+him, she'd pass along his number.
+12 Introduction
+I've never been opposed to reasonable risk, so twenty-five minutes
+later, a thoroughly trashed Ford Explorer pulled into the marina parking
+lot. Its owner looked equally ragged --- not surprising, given my phone call
+had jolted him from a dead sleep at four o'clock in the afternoon. If I were
+a betting man, I'd have put money on him having more tattoo-covered
+flesh than not, but nothing was going to eclipse the allure of the mission
+for me.
+I climbed in, and as we headed out, I noticed that all the things that
+were supposed to stay still on a car in motion were moving, rattling, shaking,
+and threatening to fall off at any moment. Ironically, the things that
+were supposed to move wouldn't --- such as the passenger window. But the
+guy was nice enough, and frankly I was just glad to finally be en route.
+The fuel gauge was on empty, and when I suggested we stop to let me
+buy him some gas, the man was incredulous. 'Really?' he asked. 'No . . .
+I couldn't do that.'
+'Come on, I insist,' I told him. 'You're really helping me out here, and
+I'd like to return the favor.' We eased into the station, and he hopped out
+to start the pump.
+'Two bucks. That's what I'm putting in,' he said, as if asking my
+permission.
+'Oh, go ahead and go crazy,' I hollered toward him. 'Make it ten!'
+When he joked that in the six months he had owned the vehicle, it had
+never had a full tank, we agreed to fill the thing up.
+Back on the road, he had this huge grin on his face. 'Handles different
+with a full tank!'
+'Just keep her on the road, my friend,' I laughed.
+A few minutes later, we arrived at the camp entrance, and he asked
+what he was supposed to do while I handled my business. I could tell he
+was a little unsure about why I had hired a stranger to drive me all the way
+out to a deserted campground.
+'I need to run up ahead for a few minutes to take care of something,' I
+explained. 'Why don't you wait here in the car --- I'll only be fifteen minutes
+or so, and then we'll head back.' That must have seemed reasonable
+enough, because he gave me a quick nod as I opened the door to get out.
+As soon as my feet hit the ground, I jogged away from the truck, quickly
+covering the three hundred yards or so to reach the exact place where I'd
+Introduction 13
+encountered grace for the first time. And as I slowed down to approach
+that little patch of real estate on the side of that hill, the sun beating down
+on my face, it all came rushing back to me. This was the spot!
+* * * * *
+By age seventeen I had already packed a lot of living into life. Even then I
+knew enough to recognize that the accumulation of more toys, the desperate
+search for approval, and the ceaseless striving for success just weren't
+cutting it. My spiritual experience that night at camp wasn't prompted by
+someone delivering a stirring message or by someone asking me three deep
+questions. I met Christ because while walking from a mess-hall gathering
+back to my cabin one night, I was suddenly penetrated by a single verse of
+Scripture that I had memorized as a kid: 'Not by works of righteousness
+which we have done, but according to God's mercy he saved us.'
+He saved us. He . . . saved . . . us.
+Just after nine o'clock that night, the words I'd read so many times
+before hit me in a fresh way. Could it really be true that God cared enough
+about me that he would make provision to save me? Even me?
+For the first time in my young life, I faced my biggest doubt head-on:
+There is no way I could matter so much to God that he would make salvation
+available to me as a gift --- free of charge. To that point, everything about my
+existence could be summed up in two words: 'Earn it.' My father had built
+into me a monstrous work ethic and had reinforced my Earn-It mantra
+daily. 'You earn every penny you make,' he would tell me. 'You earn your
+way into the starting lineup on the basketball team. You earn good grades.]]></Text>
+				<TextAuthor>Bill Hybels  </TextAuthor>
+				<TextSourceCorporate><![CDATA[Zondervan]]></TextSourceCorporate>
+			</TextContent>
+			<TextContent>
+				<TextType>02</TextType>
+				<ContentAudience>00</ContentAudience>
+				<Text><![CDATA[Believers universally affirm that evangelism is a vital part of what God calls them to do, but very few make a practice of doing it. They feel awkward and ill-equipped, either because they've never been trained, or because their lack of interaction with non- Christians prevents them from using and developing the skills they do have. Bill Hybels addresses these concerns and signals the next era in personal evangelism with Just Walk Across the Room. Drawing on fresh perspectives from the author's own experiences, as well as time-tested and practical illustrations, Just Walk Across the Room encourages and equips readers to routinely initiate spiritual conversations with those who don't know Christ.]]></Text>
+				<TextAuthor>Bill Hybels  </TextAuthor>
+				<TextSourceCorporate><![CDATA[Zondervan]]></TextSourceCorporate>
+			</TextContent>
+			<TextContent>
+				<TextType>03</TextType>
+				<ContentAudience>00</ContentAudience>
+				<Text><![CDATA[What if you knew that by simply crossing the room and saying hello to someone, you could change that person's forever? Just a few steps to make an eternal difference. It has nothing to do with methods and everything to do with taking a genuine interest in another human being. All you need is a heart that's in tune with the Holy Spirit and a willingness to venture out of your 'Circle of Comfort' and into another person's life.
+
+ 
+
+Just Walk Across the Room brings personal evangelism into the twenty-first century. Building on the solid foundation laid in Becoming a Contagious Christian, Bill Hybels shows how you can participate in the model first set by Jesus, who stepped down from heaven 2,000 years ago to bring hope and redemption to broken people living in a fallen world. Now it's your turn. Your journey may not be as dramatic, but it can have a life-changing impact for someone standing a few steps away from you---and for you as well, as you learn the power of extending care, compassion, and inclusiveness under the guidance of the Holy Spirit.
+
+ 
+
+The highest value in personal evangelism is cooperating with the Spirit, says Hybels. This means playing only the role you're meant to play---walking when the Spirit says to walk, talking when he says to talk, and falling silent when he suggests that you've said enough. Hybels encourages you to 'live in 3D' ...
+
+Developing friendships 
+Discovering stories 
+Discerning appropriate next steps 
+... as a means of learning to understand the Holy Spirit's promptings. With fresh perspectives from his own reflections and experiences collected during his most recent decade of ministry, Bill Hybels shows with convincing and inspiring clarity the power of this personal, richly relational approach to evangelism.
+
+ 
+
+The stakes are high. The implications are eternal. And you may be only a conversation away from having an eternal impact on someone's life---if you will just walk across the room.]]></Text>
+				<TextAuthor>Bill Hybels  </TextAuthor>
+				<TextSourceCorporate><![CDATA[Zondervan]]></TextSourceCorporate>
+			</TextContent>
+			<SupportingResource>
+				<!--Front Cover-->
+				<ResourceContentType>01</ResourceContentType>
+				<ContentAudience>00</ContentAudience>
+				<ResourceMode>03</ResourceMode>
+				<ResourceVersion>
+					<ResourceForm>01</ResourceForm>
+					<ResourceLink>http://www.zondervan.com/images/product/medium/0310266696.jpg</ResourceLink>
+				</ResourceVersion>
+			</SupportingResource>
+			<SupportingResource>
+				<!--Author Interview-->
+				<ResourceContentType>11</ResourceContentType>
+				<ContentAudience>00</ContentAudience>
+				<ResourceMode>03</ResourceMode>
+				<ResourceVersion>
+					<ResourceForm>01</ResourceForm>
+					<ResourceLink>http://www.zondervan.com/media/interviews/product/audio/0310266696_authintrvw.mp3</ResourceLink>
+				</ResourceVersion>
+			</SupportingResource>
+			<SupportingResource>
+				<!--First 1000 words-->
+				<ResourceContentType>15</ResourceContentType>
+				<ContentAudience>00</ContentAudience>
+				<ResourceMode>03</ResourceMode>
+				<ResourceVersion>
+					<ResourceForm>01</ResourceForm>
+					<ResourceLink>http://www.zondervan.com/media/samples/pdf/0310266696_samptxt.pdf</ResourceLink>
+				</ResourceVersion>
+			</SupportingResource>
+			<SupportingResource>
+				<!--Video Sample-->
+				<ResourceContentType>15</ResourceContentType>
+				<ContentAudience>00</ContentAudience>
+				<ResourceMode>03</ResourceMode>
+				<ResourceVersion>
+					<ResourceForm>01</ResourceForm>
+					<ResourceLink>http://www.zondervan.com/media/samples/video/excerpt/0310266696_videosample.flv</ResourceLink>
+				</ResourceVersion>
+			</SupportingResource>
+		</CollateralDetail>
+		<!--BLOCK 4-->
+		<PublishingDetail>
+			<Imprint>
+				<ImprintName>Zondervan</ImprintName>
+			</Imprint>
+			<Publisher>
+				<PublishingRole>01</PublishingRole>
+				<PublisherName>Zondervan</PublisherName>
+				<Website>
+					<WebsiteRole>01</WebsiteRole>
+					<WebsiteDescription>Corporate Website</WebsiteDescription>
+					<WebsiteLink>http://www.zondervan.com</WebsiteLink>
+				</Website>
+			</Publisher>
+			<CityOfPublication>Grand Rapids</CityOfPublication>
+			<CountryOfPublication>US</CountryOfPublication>
+			<PublishingStatus>20</PublishingStatus>
+			<PublishingStatusNote><![CDATA[20]]></PublishingStatusNote>
+			<PublishingDate>
+				<PublishingDateRole>01</PublishingDateRole>
+				<DateFormat>00</DateFormat>
+				<Date>20060718</Date>
+			</PublishingDate>
+			<PublishingDate>
+				<PublishingDateRole>11</PublishingDateRole>
+				<DateFormat>05</DateFormat>
+				<Date>2006</Date>
+			</PublishingDate>
+			<PublishingDate>
+				<PublishingDateRole>09</PublishingDateRole>
+				<DateFormat>00</DateFormat>
+				<Date>20051114</Date>
+			</PublishingDate>
+			<PublishingDate>
+				<PublishingDateRole>10</PublishingDateRole>
+				<DateFormat>00</DateFormat>
+				<Date>20051114</Date>
+			</PublishingDate>
+			<SalesRights>
+				<SalesRightsType>01</SalesRightsType>
+				<Territory>
+					<RegionsIncluded>WORLD</RegionsIncluded>
+				</Territory>
+				<PublisherName>Zondervan</PublisherName>
+			</SalesRights>
+		</PublishingDetail>
+		<!--BLOCK 5-->
+		<RelatedMaterial/>
+		<!--BLOCK 6-->
+		<ProductSupply>
+			<MarketPublishingDetail>
+				<MarketPublishingStatus>20</MarketPublishingStatus>
+				<MarketDate>
+					<MarketDateRole>01</MarketDateRole>
+					<DateFormat>00</DateFormat>
+					<Date>20060718</Date>
+				</MarketDate>
+			</MarketPublishingDetail>
+			<SupplyDetail>
+				<Supplier>
+					<SupplierRole>01</SupplierRole>
+					<SupplierIdentifier>
+						<SupplierIDType>07</SupplierIDType>
+						<IDTypeName>Supplier SAN</IDTypeName>
+						<IDValue>2989107</IDValue>
+					</SupplierIdentifier>
+					<SupplierName>Zondervan</SupplierName>
+					<TelephoneNumber>1-800-727-1309</TelephoneNumber>
+					<FaxNumber>1-800-934-6381</FaxNumber>
+				</Supplier>
+				<ProductAvailability>20</ProductAvailability>
+				<SupplyDate>
+					<SupplyDateRole>08</SupplyDateRole>
+					<DateFormat>00</DateFormat>
+					<Date>20060707</Date>
+				</SupplyDate>
+				<OrderTime>3</OrderTime>
+				<PackQuantity>24</PackQuantity>
+				<UnpricedItemType>02</UnpricedItemType>
+			</SupplyDetail>
+		</ProductSupply>
+	</Product>
+	<Product>
+		<RecordReference>com.zondervan.9780310272281</RecordReference>
+		<NotificationType>03</NotificationType>
+		<RecordSourceType>01</RecordSourceType>
+		<RecordSourceName>Zondervan</RecordSourceName>
+		<ProductIdentifier>
+			<ProductIDType>02</ProductIDType>
+			<IDValue>0310272289</IDValue>
+		</ProductIdentifier>
+		<ProductIdentifier>
+			<ProductIDType>03</ProductIDType>
+			<IDValue>9780310272281</IDValue>
+		</ProductIdentifier>
+		<ProductIdentifier>
+			<ProductIDType>04</ProductIDType>
+			<IDValue>025986272289</IDValue>
+		</ProductIdentifier>
+		<ProductIdentifier>
+			<ProductIDType>15</ProductIDType>
+			<IDValue>9780310272281</IDValue>
+		</ProductIdentifier>
+		<!--BLOCK 1-->
+		<DescriptiveDetail>
+			<ProductComposition>00</ProductComposition>
+			<ProductForm>BB</ProductForm>
+			<ProductFormDescription><![CDATA[Hardcover, Jacketed]]></ProductFormDescription>
+			<TradeCategory>07</TradeCategory>
+			<Measure>
+				<MeasureType>01</MeasureType>
+				<Measurement>8.30</Measurement>
+				<MeasureUnitCode>in</MeasureUnitCode>
+			</Measure>
+			<Measure>
+				<MeasureType>02</MeasureType>
+				<Measurement>5.70</Measurement>
+				<MeasureUnitCode>in</MeasureUnitCode>
+			</Measure>
+			<Measure>
+				<MeasureType>03</MeasureType>
+				<Measurement>0.70</Measurement>
+				<MeasureUnitCode>in</MeasureUnitCode>
+			</Measure>
+			<Measure>
+				<MeasureType>08</MeasureType>
+				<Measurement>0.620</Measurement>
+				<MeasureUnitCode>lb</MeasureUnitCode>
+			</Measure>
+			<Measure>
+				<MeasureType>01</MeasureType>
+				<Measurement>211</Measurement>
+				<MeasureUnitCode>mm</MeasureUnitCode>
+			</Measure>
+			<Measure>
+				<MeasureType>02</MeasureType>
+				<Measurement>145</Measurement>
+				<MeasureUnitCode>mm</MeasureUnitCode>
+			</Measure>
+			<Measure>
+				<MeasureType>03</MeasureType>
+				<Measurement>17</Measurement>
+				<MeasureUnitCode>mm</MeasureUnitCode>
+			</Measure>
+			<Measure>
+				<MeasureType>08</MeasureType>
+				<Measurement>281</Measurement>
+				<MeasureUnitCode>gr</MeasureUnitCode>
+			</Measure>
+			<CountryOfManufacture>US</CountryOfManufacture>
+			<NoCollection/>
+			<TitleDetail>
+				<TitleType>01</TitleType>
+				<TitleElement>
+					<TitleElementLevel>01</TitleElementLevel>
+					<TitleText><![CDATA[ Holy Discontent]]></TitleText>
+					<TitleWithoutPrefix><![CDATA[Holy Discontent]]></TitleWithoutPrefix>
+					<Subtitle><![CDATA[Fueling the Fire That Ignites Personal Vision]]></Subtitle>
+				</TitleElement>
+			</TitleDetail>
+			<Contributor>
+				<SequenceNumber>1</SequenceNumber>
+				<ContributorRole>A01</ContributorRole>
+				<NameIdentifier>
+					<NameIDType>01</NameIDType>
+					<IDTypeName>AuthorID</IDTypeName>
+					<IDValue>HybelsB</IDValue>
+				</NameIdentifier>
+				<PersonName><![CDATA[Bill Hybels]]></PersonName>
+				<PersonNameInverted><![CDATA[Hybels, Bill]]></PersonNameInverted>
+				<NamesBeforeKey><![CDATA[Bill]]></NamesBeforeKey>
+				<KeyNames><![CDATA[Hybels]]></KeyNames>
+				<Website>
+					<WebsiteRole>06</WebsiteRole>
+					<WebsiteDescription>Contributors Website URL 1</WebsiteDescription>
+					<WebsiteLink>www.willowcreek.org</WebsiteLink>
+				</Website>
+			</Contributor>
+			<NoEdition/>
+			<Language>
+				<LanguageRole>01</LanguageRole>
+				<LanguageCode>eng</LanguageCode>
+				<CountryCode>US</CountryCode>
+			</Language>
+			<Extent>
+				<ExtentType>00</ExtentType>
+				<ExtentValue>160.00</ExtentValue>
+				<ExtentUnit>3</ExtentUnit>
+			</Extent>
+			<Subject>
+				<SubjectSchemeIdentifier>22</SubjectSchemeIdentifier>
+				<SubjectSchemeVersion>2.0</SubjectSchemeVersion>
+				<SubjectCode>TP028</SubjectCode>
+				<SubjectHeadingText><![CDATA[Christian Interest]]></SubjectHeadingText>
+			</Subject>
+			<Subject>
+				<SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+				<SubjectSchemeName>bisac 1</SubjectSchemeName>
+				<SubjectSchemeVersion>2.7</SubjectSchemeVersion>
+				<SubjectCode>REL012000</SubjectCode>
+				<SubjectHeadingText><![CDATA[REL012000]]></SubjectHeadingText>
+			</Subject>
+			<Subject>
+				<SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+				<SubjectSchemeName>bisac 2</SubjectSchemeName>
+				<SubjectSchemeVersion>2.7</SubjectSchemeVersion>
+				<SubjectCode>REL012110</SubjectCode>
+				<SubjectHeadingText><![CDATA[REL012110]]></SubjectHeadingText>
+			</Subject>
+			<Subject>
+				<SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+				<SubjectSchemeName>bisac 3</SubjectSchemeName>
+				<SubjectSchemeVersion>2.7</SubjectSchemeVersion>
+				<SubjectCode>REL012120</SubjectCode>
+				<SubjectHeadingText><![CDATA[REL012120]]></SubjectHeadingText>
+			</Subject>
+			<Subject>
+				<SubjectSchemeIdentifier>22</SubjectSchemeIdentifier>
+				<SubjectSchemeName>merch theme 1</SubjectSchemeName>
+				<SubjectCode>TP028</SubjectCode>
+				<SubjectHeadingText><![CDATA[TP028]]></SubjectHeadingText>
+			</Subject>
+			<Subject>
+				<MainSubject/>
+				<SubjectSchemeIdentifier>33</SubjectSchemeIdentifier>
+				<SubjectSchemeName>Main Subject</SubjectSchemeName>
+				<SubjectCode>CLVCLFGEN</SubjectCode>
+				<SubjectHeadingText><![CDATA[CHRISTIAN LIVING/PRACTICAL LIFE/GENERAL]]></SubjectHeadingText>
+			</Subject>
+			<AudienceCode>01</AudienceCode>
+			<Audience>
+				<AudienceCodeType>01</AudienceCodeType>
+				<AudienceCodeTypeName>Zondervan</AudienceCodeTypeName>
+				<AudienceCodeValue/>
+			</Audience>
+			<AudienceRange>
+				<AudienceRangeQualifier>17</AudienceRangeQualifier>
+				<AudienceRangePrecision>03</AudienceRangePrecision>
+				<AudienceRangeValue>18</AudienceRangeValue>
+				<AudienceRangePrecision>04</AudienceRangePrecision>
+				<AudienceRangeValue>99</AudienceRangeValue>
+			</AudienceRange>
+		</DescriptiveDetail>
+		<!--BLOCK 2-->
+		<CollateralDetail>
+			<TextContent>
+				<TextType>08</TextType>
+				<ContentAudience>00</ContentAudience>
+				<Text><![CDATA['The book is peppered with humor and personal illustrations. Hybels doesn't come across as an expert but rather as a fellow traveler cheering us on to find our holy discontent, develop it, and keep it alive. If you find yourself frustrated by injustices in this world and wanting to do more than just complain about it, Hybels encourages: 'Figure out what you can't stand. Channel your holy discontent energy into helping to fix what's broken in this life.''  -- The Dallas Morning News  ]]></Text>
+				<TextAuthor>Bill Hybels  </TextAuthor>
+				<TextSourceCorporate><![CDATA[Zondervan]]></TextSourceCorporate>
+				<SourceTitle><![CDATA[The Dallas Morning News]]></SourceTitle>
+			</TextContent>
+			<TextContent>
+				<TextType>02</TextType>
+				<ContentAudience>00</ContentAudience>
+				<Text><![CDATA[Whether it is social injustice, AIDS, bad preaching, or wrecked marriages, what breaks the heart of someone who loves God most likely breaks God's heart too---and it is often these 'firestorms of frustration' that God will use to enlist you in setting what is wrong in this world right!]]></Text>
+				<TextAuthor>Bill Hybels  </TextAuthor>
+				<TextSourceCorporate><![CDATA[Zondervan]]></TextSourceCorporate>
+			</TextContent>
+			<TextContent>
+				<TextType>03</TextType>
+				<ContentAudience>00</ContentAudience>
+				<Text><![CDATA[What is the one aspect of this broken world that, when you see it, touch it, get near it, you just can't stand? Very likely, that firestorm of frustration reflects your holy discontent, a reality so troubling that you are thrust off the couch and into the game. It's during these defining times when your eyes open to the needs surrounding you and your heart hungers to respond that you hear God say, 'I feel the same way about this problem. Now, let's go solve it together!'
+
+Bill Hybels invites you to consider the dramatic impact your life will have when you allow your holy discontent to fuel instead of frustrate you. Using examples from the Bible, his own life, and the experiences of others, Hybels shows how you can find and feed your personal area of holy discontent, fight for it when things get risky, and follow it when it takes a mid-course turn. As you live from the energy of your holy discontent, you'll fulfill your role in setting what is wrong in this world right!]]></Text>
+				<TextAuthor>Bill Hybels  </TextAuthor>
+				<TextSourceCorporate><![CDATA[Zondervan]]></TextSourceCorporate>
+			</TextContent>
+			<SupportingResource>
+				<!--Front Cover-->
+				<ResourceContentType>01</ResourceContentType>
+				<ContentAudience>00</ContentAudience>
+				<ResourceMode>03</ResourceMode>
+				<ResourceVersion>
+					<ResourceForm>01</ResourceForm>
+					<ResourceLink>http://www.zondervan.com/images/product/medium/0310272289.jpg</ResourceLink>
+				</ResourceVersion>
+			</SupportingResource>
+			<SupportingResource>
+				<!--First 1000 words-->
+				<ResourceContentType>15</ResourceContentType>
+				<ContentAudience>00</ContentAudience>
+				<ResourceMode>03</ResourceMode>
+				<ResourceVersion>
+					<ResourceForm>01</ResourceForm>
+					<ResourceLink>http://www.zondervan.com/media/samples/pdf/0310272289_samptxt.pdf</ResourceLink>
+				</ResourceVersion>
+			</SupportingResource>
+			<SupportingResource>
+				<!--Video Sample-->
+				<ResourceContentType>15</ResourceContentType>
+				<ContentAudience>00</ContentAudience>
+				<ResourceMode>03</ResourceMode>
+				<ResourceVersion>
+					<ResourceForm>01</ResourceForm>
+					<ResourceLink>http://www.zondervan.com/media/samples/video/excerpt/0310272289_videosample.wmv</ResourceLink>
+				</ResourceVersion>
+			</SupportingResource>
+		</CollateralDetail>
+		<!--BLOCK 4-->
+		<PublishingDetail>
+			<Imprint>
+				<ImprintName>Zondervan</ImprintName>
+			</Imprint>
+			<Publisher>
+				<PublishingRole>01</PublishingRole>
+				<PublisherName>Zondervan</PublisherName>
+				<Website>
+					<WebsiteRole>01</WebsiteRole>
+					<WebsiteDescription>Corporate Website</WebsiteDescription>
+					<WebsiteLink>http://www.zondervan.com</WebsiteLink>
+				</Website>
+			</Publisher>
+			<CityOfPublication>Grand Rapids</CityOfPublication>
+			<CountryOfPublication>US</CountryOfPublication>
+			<PublishingStatus>20</PublishingStatus>
+			<PublishingStatusNote><![CDATA[20]]></PublishingStatusNote>
+			<PublishingDate>
+				<PublishingDateRole>01</PublishingDateRole>
+				<DateFormat>00</DateFormat>
+				<Date>20070515</Date>
+			</PublishingDate>
+			<PublishingDate>
+				<PublishingDateRole>11</PublishingDateRole>
+				<DateFormat>05</DateFormat>
+				<Date>2007</Date>
+			</PublishingDate>
+			<PublishingDate>
+				<PublishingDateRole>09</PublishingDateRole>
+				<DateFormat>00</DateFormat>
+				<Date>20061113</Date>
+			</PublishingDate>
+			<PublishingDate>
+				<PublishingDateRole>10</PublishingDateRole>
+				<DateFormat>00</DateFormat>
+				<Date>20061113</Date>
+			</PublishingDate>
+			<CopyrightStatement>
+				<CopyrightYear>2007</CopyrightYear>
+				<CopyrightOwner>
+					<PersonName><![CDATA[Bill Hybels]]></PersonName>
+				</CopyrightOwner>
+			</CopyrightStatement>
+			<SalesRights>
+				<SalesRightsType>01</SalesRightsType>
+				<Territory>
+					<RegionsIncluded>WORLD</RegionsIncluded>
+				</Territory>
+				<PublisherName>Zondervan</PublisherName>
+			</SalesRights>
+		</PublishingDetail>
+		<!--BLOCK 5-->
+		<RelatedMaterial/>
+		<!--BLOCK 6-->
+		<ProductSupply>
+			<MarketPublishingDetail>
+				<MarketPublishingStatus>20</MarketPublishingStatus>
+				<MarketDate>
+					<MarketDateRole>01</MarketDateRole>
+					<DateFormat>00</DateFormat>
+					<Date>20070515</Date>
+				</MarketDate>
+			</MarketPublishingDetail>
+			<SupplyDetail>
+				<Supplier>
+					<SupplierRole>01</SupplierRole>
+					<SupplierIdentifier>
+						<SupplierIDType>07</SupplierIDType>
+						<IDTypeName>Supplier SAN</IDTypeName>
+						<IDValue>2989107</IDValue>
+					</SupplierIdentifier>
+					<SupplierName>Zondervan</SupplierName>
+					<TelephoneNumber>1-800-727-1309</TelephoneNumber>
+					<FaxNumber>1-800-934-6381</FaxNumber>
+				</Supplier>
+				<ProductAvailability>20</ProductAvailability>
+				<SupplyDate>
+					<SupplyDateRole>08</SupplyDateRole>
+					<DateFormat>00</DateFormat>
+					<Date>20070504</Date>
+				</SupplyDate>
+				<OrderTime>3</OrderTime>
+				<PackQuantity>48</PackQuantity>
+				<UnpricedItemType>02</UnpricedItemType>
+			</SupplyDetail>
+		</ProductSupply>
+	</Product>
+	<Product>
+		<RecordReference>com.zondervan.9780310272366</RecordReference>
+		<NotificationType>03</NotificationType>
+		<RecordSourceType>01</RecordSourceType>
+		<RecordSourceName>Zondervan</RecordSourceName>
+		<ProductIdentifier>
+			<ProductIDType>02</ProductIDType>
+			<IDValue>031027236X</IDValue>
+		</ProductIdentifier>
+		<ProductIdentifier>
+			<ProductIDType>03</ProductIDType>
+			<IDValue>9780310272366</IDValue>
+		</ProductIdentifier>
+		<ProductIdentifier>
+			<ProductIDType>04</ProductIDType>
+			<IDValue>025986272364</IDValue>
+		</ProductIdentifier>
+		<ProductIdentifier>
+			<ProductIDType>15</ProductIDType>
+			<IDValue>9780310272366</IDValue>
+		</ProductIdentifier>
+		<!--BLOCK 1-->
+		<DescriptiveDetail>
+			<ProductComposition>00</ProductComposition>
+			<ProductForm>BB</ProductForm>
+			<ProductFormDescription><![CDATA[Hardcover, Jacketed]]></ProductFormDescription>
+			<TradeCategory>07</TradeCategory>
+			<Measure>
+				<MeasureType>01</MeasureType>
+				<Measurement>8.90</Measurement>
+				<MeasureUnitCode>in</MeasureUnitCode>
+			</Measure>
+			<Measure>
+				<MeasureType>02</MeasureType>
+				<Measurement>5.80</Measurement>
+				<MeasureUnitCode>in</MeasureUnitCode>
+			</Measure>
+			<Measure>
+				<MeasureType>03</MeasureType>
+				<Measurement>0.80</Measurement>
+				<MeasureUnitCode>in</MeasureUnitCode>
+			</Measure>
+			<Measure>
+				<MeasureType>08</MeasureType>
+				<Measurement>0.825</Measurement>
+				<MeasureUnitCode>lb</MeasureUnitCode>
+			</Measure>
+			<Measure>
+				<MeasureType>01</MeasureType>
+				<Measurement>226</Measurement>
+				<MeasureUnitCode>mm</MeasureUnitCode>
+			</Measure>
+			<Measure>
+				<MeasureType>02</MeasureType>
+				<Measurement>147</Measurement>
+				<MeasureUnitCode>mm</MeasureUnitCode>
+			</Measure>
+			<Measure>
+				<MeasureType>03</MeasureType>
+				<Measurement>20</Measurement>
+				<MeasureUnitCode>mm</MeasureUnitCode>
+			</Measure>
+			<Measure>
+				<MeasureType>08</MeasureType>
+				<Measurement>373</Measurement>
+				<MeasureUnitCode>gr</MeasureUnitCode>
+			</Measure>
+			<CountryOfManufacture>US</CountryOfManufacture>
+			<NoCollection/>
+			<TitleDetail>
+				<TitleType>01</TitleType>
+				<TitleElement>
+					<TitleElementLevel>01</TitleElementLevel>
+					<TitleText><![CDATA[ Axiom]]></TitleText>
+					<TitleWithoutPrefix><![CDATA[Axiom]]></TitleWithoutPrefix>
+					<Subtitle><![CDATA[Powerful Leadership Proverbs]]></Subtitle>
+				</TitleElement>
+			</TitleDetail>
+			<Contributor>
+				<SequenceNumber>1</SequenceNumber>
+				<ContributorRole>A01</ContributorRole>
+				<NameIdentifier>
+					<NameIDType>01</NameIDType>
+					<IDTypeName>AuthorID</IDTypeName>
+					<IDValue>HybelsB</IDValue>
+				</NameIdentifier>
+				<PersonName><![CDATA[Bill Hybels]]></PersonName>
+				<PersonNameInverted><![CDATA[Hybels, Bill]]></PersonNameInverted>
+				<NamesBeforeKey><![CDATA[Bill]]></NamesBeforeKey>
+				<KeyNames><![CDATA[Hybels]]></KeyNames>
+				<Website>
+					<WebsiteRole>06</WebsiteRole>
+					<WebsiteDescription>Contributors Website URL 1</WebsiteDescription>
+					<WebsiteLink>www.willowcreek.org</WebsiteLink>
+				</Website>
+			</Contributor>
+			<NoEdition/>
+			<Language>
+				<LanguageRole>01</LanguageRole>
+				<LanguageCode>eng</LanguageCode>
+				<CountryCode>US</CountryCode>
+			</Language>
+			<Extent>
+				<ExtentType>00</ExtentType>
+				<ExtentValue>224.00</ExtentValue>
+				<ExtentUnit>3</ExtentUnit>
+			</Extent>
+			<Subject>
+				<SubjectSchemeIdentifier>22</SubjectSchemeIdentifier>
+				<SubjectSchemeVersion>2.0</SubjectSchemeVersion>
+				<SubjectCode>TP028</SubjectCode>
+				<SubjectHeadingText><![CDATA[Christian Interest]]></SubjectHeadingText>
+			</Subject>
+			<Subject>
+				<SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+				<SubjectSchemeName>bisac 1</SubjectSchemeName>
+				<SubjectSchemeVersion>2.7</SubjectSchemeVersion>
+				<SubjectCode>REL108030</SubjectCode>
+				<SubjectHeadingText><![CDATA[REL108030]]></SubjectHeadingText>
+			</Subject>
+			<Subject>
+				<SubjectSchemeIdentifier>22</SubjectSchemeIdentifier>
+				<SubjectSchemeName>merch theme 1</SubjectSchemeName>
+				<SubjectCode>TP028</SubjectCode>
+				<SubjectHeadingText><![CDATA[TP028]]></SubjectHeadingText>
+			</Subject>
+			<Subject>
+				<MainSubject/>
+				<SubjectSchemeIdentifier>33</SubjectSchemeIdentifier>
+				<SubjectSchemeName>Main Subject</SubjectSchemeName>
+			</Subject>
+			<AudienceCode>06</AudienceCode>
+			<Audience>
+				<AudienceCodeType>01</AudienceCodeType>
+				<AudienceCodeTypeName>Zondervan</AudienceCodeTypeName>
+				<AudienceCodeValue/>
+			</Audience>
+			<AudienceRange>
+				<AudienceRangeQualifier>17</AudienceRangeQualifier>
+				<AudienceRangePrecision>03</AudienceRangePrecision>
+				<AudienceRangeValue>18</AudienceRangeValue>
+				<AudienceRangePrecision>04</AudienceRangePrecision>
+				<AudienceRangeValue>99</AudienceRangeValue>
+			</AudienceRange>
+		</DescriptiveDetail>
+		<!--BLOCK 2-->
+		<CollateralDetail>
+			<TextContent>
+				<TextType>09</TextType>
+				<ContentAudience>00</ContentAudience>
+				<Text><![CDATA['Toss out all your texts on leadership by theorists and read this masterpiece again and again. Bill serves up solid content, not cliches; axioms, not merely anecdotes. I love this book! The distilled wisdom is pure gold---classic Hybels.'  -- Rick Warren, Founding and senior pastor, Saddleback Church ]]></Text>
+				<TextAuthor>Bill Hybels  </TextAuthor>
+			</TextContent>
+			<TextContent>
+				<TextType>09</TextType>
+				<ContentAudience>00</ContentAudience>
+				<Text><![CDATA['Bill Hybels is a leader's leader.  Learn from one of the best as Bill shows you how to harness the powerful and memorable leadership proverbs that live in every true leader.  -- John C. Maxwell, Author, speaker, and founder of INJOY Stewardship Services and EQUIP ]]></Text>
+				<TextAuthor>Bill Hybels  </TextAuthor>
+			</TextContent>
+			<TextContent>
+				<TextType>09</TextType>
+				<ContentAudience>00</ContentAudience>
+				<Text><![CDATA[If credibility comes from integrity matched by production over time, then no one is more credible than Bill Hybels. In this wisdom-rich book, he offers us not his technology, which arrives and flees as the trends go, but his cardiology---the heart of the matter that rests far beneath the surface. Regardless who you are, regardless where you lead, you'll find this work profound.  -- Bob Roberts, Jr., author of Transformation, Glocalization and The Multiplying Church ]]></Text>
+				<TextAuthor>Bill Hybels  </TextAuthor>
+			</TextContent>
+			<TextContent>
+				<TextType>09</TextType>
+				<ContentAudience>00</ContentAudience>
+				<Text><![CDATA[Axiom is a wonderful collection of insight and wisdom coming from a man who has 'been there and done that.' Keep it handy, read a little every day.  And then read it again!  -- Patrick Lencioni, president, The Table Group and author of The Five Dysfunctions of a Team ]]></Text>
+				<TextAuthor>Bill Hybels  </TextAuthor>
+			</TextContent>
+			<TextContent>
+				<TextType>09</TextType>
+				<ContentAudience>00</ContentAudience>
+				<Text><![CDATA[Axiom is vintage Hybels.  Profound.  Practical.  Portable.  You and your entire team are going to love this book!  -- Andy Stanley, senior pastor, North Point Community Church ]]></Text>
+				<TextAuthor>Bill Hybels  </TextAuthor>
+			</TextContent>
+			<TextContent>
+				<TextType>09</TextType>
+				<ContentAudience>00</ContentAudience>
+				<Text><![CDATA[When it comes to leadership wisdom, Bill Hybels hits it out of the park. I read Axiom in one sitting but will reflect on it for years.  -- Larry Osborne, author and pastor, North Coast Church, Vista, Calif ]]></Text>
+				<TextAuthor>Bill Hybels  </TextAuthor>
+			</TextContent>
+			<TextContent>
+				<TextType>09</TextType>
+				<ContentAudience>00</ContentAudience>
+				<Text><![CDATA[Bill Hybels is a powerful leader with a passionate vision for joining God's work. This book's message for leaders who are courageous enough to catch it is that success comes only by persistence and the cultivation of strong partnerships. In his insightful book, Axiom, Hybels paints a much-needed picture of true success.  -- Eleanor Josaitis, Confounder, Focus: HOPE ]]></Text>
+				<TextAuthor>Bill Hybels  </TextAuthor>
+			</TextContent>
+			<TextContent>
+				<TextType>09</TextType>
+				<ContentAudience>00</ContentAudience>
+				<Text><![CDATA[Bill Hybels's Axiom has it all for the leader: time-tested wisdom, a-ha moments, and serious encouragement to persevere in the race.  -- Dr. John Townsend, Coauthor, Boundaries ]]></Text>
+				<TextAuthor>Bill Hybels  </TextAuthor>
+			</TextContent>
+			<TextContent>
+				<TextType>09</TextType>
+				<ContentAudience>00</ContentAudience>
+				<Text><![CDATA[Bill Hybels is one of the most dynamic Christian leaders of our time and packs tremendous leadership wisdom into these energizing, easy-to-read essays.  Don't miss them!  -- Ken Blanchard, Coauthor, The One-Minute Entrepreneur and Lead Like Jesus ]]></Text>
+				<TextAuthor>Bill Hybels  </TextAuthor>
+			</TextContent>
+			<TextContent>
+				<TextType>02</TextType>
+				<ContentAudience>00</ContentAudience>
+				<Text><![CDATA[Winning leaders have winning points of view---succinct, practical, portable leadership proverbs that help them arbitrate decisions and rouse troops to action. In Axiom: The Language of Leadership, Bill Hybels reveals eighty God-given, from-the-gut truths that continue to raise his game and his vision, thirty-plus years into his local-church leadership experience.]]></Text>
+				<TextAuthor>Bill Hybels  </TextAuthor>
+				<TextSourceCorporate><![CDATA[Zondervan]]></TextSourceCorporate>
+			</TextContent>
+			<TextContent>
+				<TextType>03</TextType>
+				<ContentAudience>00</ContentAudience>
+				<Text><![CDATA[The best leaders not only lead well but also reflect on their leadership long enough and thoughtfully enough to articulate the philosophies that cause them to do so. Whether serving in the marketplace or in ministry, as executives or rank-and-file employees, as salaried staff or volunteer servants, good leaders can pinpoint the rationale for their actions and decisions with the ease of reciting their home address. 
+
+In Axiom: author Bill Hybels divulges the God-given convictions that have dictated his leadership strategy for more than three decades as senior pastor of Willow Creek Community Church. Oriented toward four key leadership categories ...
+1. Vision and strategy ('Promote Shameless Profitability,' 'Take a Flyer')
+2. Teamwork and communication ('Obi-Wan Kenobi Isn't for Hire,' 'Disagree without Drawing Blood')
+3. Activity and assessment ('Develop a Mole System,' 'Sweat the Small Stuff')
+4. Personal integrity ('Admit Mistakes, and Your Stock Goes Up,' 'Fight for Your Family') 
+...Axiom brokers accessible wisdom from one leader's journey, as well as emboldens you to nail down the reasons why you lead like you lead.]]></Text>
+				<TextAuthor>Bill Hybels  </TextAuthor>
+				<TextSourceCorporate><![CDATA[Zondervan]]></TextSourceCorporate>
+			</TextContent>
+			<SupportingResource>
+				<!--Front Cover-->
+				<ResourceContentType>01</ResourceContentType>
+				<ContentAudience>00</ContentAudience>
+				<ResourceMode>03</ResourceMode>
+				<ResourceVersion>
+					<ResourceForm>01</ResourceForm>
+					<ResourceLink>http://www.zondervan.com/images/product/medium/031027236x.jpg</ResourceLink>
+				</ResourceVersion>
+			</SupportingResource>
+			<SupportingResource>
+				<!--First 1000 words-->
+				<ResourceContentType>15</ResourceContentType>
+				<ContentAudience>00</ContentAudience>
+				<ResourceMode>03</ResourceMode>
+				<ResourceVersion>
+					<ResourceForm>01</ResourceForm>
+					<ResourceLink>http://www.zondervan.com/media/samples/pdf/031027236x_samptxt.pdf</ResourceLink>
+				</ResourceVersion>
+			</SupportingResource>
+		</CollateralDetail>
+		<!--BLOCK 4-->
+		<PublishingDetail>
+			<Imprint>
+				<ImprintName>Zondervan</ImprintName>
+			</Imprint>
+			<Publisher>
+				<PublishingRole>01</PublishingRole>
+				<PublisherName>Zondervan</PublisherName>
+				<Website>
+					<WebsiteRole>01</WebsiteRole>
+					<WebsiteDescription>Corporate Website</WebsiteDescription>
+					<WebsiteLink>http://www.zondervan.com</WebsiteLink>
+				</Website>
+			</Publisher>
+			<CityOfPublication>Grand Rapids</CityOfPublication>
+			<CountryOfPublication>US</CountryOfPublication>
+			<PublishingStatus>20</PublishingStatus>
+			<PublishingStatusNote><![CDATA[20]]></PublishingStatusNote>
+			<PublishingDate>
+				<PublishingDateRole>01</PublishingDateRole>
+				<DateFormat>00</DateFormat>
+				<Date>20080729</Date>
+			</PublishingDate>
+			<PublishingDate>
+				<PublishingDateRole>11</PublishingDateRole>
+				<DateFormat>05</DateFormat>
+				<Date>2008</Date>
+			</PublishingDate>
+			<PublishingDate>
+				<PublishingDateRole>09</PublishingDateRole>
+				<DateFormat>00</DateFormat>
+				<Date>20071112</Date>
+			</PublishingDate>
+			<PublishingDate>
+				<PublishingDateRole>10</PublishingDateRole>
+				<DateFormat>00</DateFormat>
+				<Date>20071112</Date>
+			</PublishingDate>
+			<SalesRights>
+				<SalesRightsType>01</SalesRightsType>
+				<Territory>
+					<RegionsIncluded>WORLD</RegionsIncluded>
+				</Territory>
+				<PublisherName>Zondervan</PublisherName>
+			</SalesRights>
+		</PublishingDetail>
+		<!--BLOCK 5-->
+		<RelatedMaterial/>
+		<!--BLOCK 6-->
+		<ProductSupply>
+			<MarketPublishingDetail>
+				<MarketPublishingStatus>20</MarketPublishingStatus>
+				<MarketDate>
+					<MarketDateRole>01</MarketDateRole>
+					<DateFormat>00</DateFormat>
+					<Date>20080729</Date>
+				</MarketDate>
+			</MarketPublishingDetail>
+			<SupplyDetail>
+				<Supplier>
+					<SupplierRole>01</SupplierRole>
+					<SupplierIdentifier>
+						<SupplierIDType>07</SupplierIDType>
+						<IDTypeName>Supplier SAN</IDTypeName>
+						<IDValue>2989107</IDValue>
+					</SupplierIdentifier>
+					<SupplierName>Zondervan</SupplierName>
+					<TelephoneNumber>1-800-727-1309</TelephoneNumber>
+					<FaxNumber>1-800-934-6381</FaxNumber>
+				</Supplier>
+				<ProductAvailability>20</ProductAvailability>
+				<SupplyDate>
+					<SupplyDateRole>08</SupplyDateRole>
+					<DateFormat>00</DateFormat>
+					<Date>20080718</Date>
+				</SupplyDate>
+				<OrderTime>3</OrderTime>
+				<PackQuantity>44</PackQuantity>
+				<UnpricedItemType>02</UnpricedItemType>
+			</SupplyDetail>
+		</ProductSupply>
+	</Product>
+	<Product>
+		<RecordReference>com.zondervan.9780310320746</RecordReference>
+		<NotificationType>03</NotificationType>
+		<RecordSourceType>01</RecordSourceType>
+		<RecordSourceName>Zondervan</RecordSourceName>
+		<ProductIdentifier>
+			<ProductIDType>02</ProductIDType>
+			<IDValue>0310320747</IDValue>
+		</ProductIdentifier>
+		<ProductIdentifier>
+			<ProductIDType>03</ProductIDType>
+			<IDValue>9780310320746</IDValue>
+		</ProductIdentifier>
+		<ProductIdentifier>
+			<ProductIDType>04</ProductIDType>
+			<IDValue>025986320744</IDValue>
+		</ProductIdentifier>
+		<ProductIdentifier>
+			<ProductIDType>15</ProductIDType>
+			<IDValue>9780310320746</IDValue>
+		</ProductIdentifier>
+		<!--BLOCK 1-->
+		<DescriptiveDetail>
+			<ProductComposition>00</ProductComposition>
+			<ProductForm>BB</ProductForm>
+			<ProductFormFeature>
+				<ProductFormFeatureType>06</ProductFormFeatureType>
+				<ProductFormFeatureValue>00</ProductFormFeatureValue>
+				<ProductFormFeatureDescription><![CDATA[]]></ProductFormFeatureDescription>
+			</ProductFormFeature>
+			<ProductFormDescription><![CDATA[Hardcover, Jacketed]]></ProductFormDescription>
+			<TradeCategory>07</TradeCategory>
+			<Measure>
+				<MeasureType>01</MeasureType>
+				<Measurement>9.30</Measurement>
+				<MeasureUnitCode>in</MeasureUnitCode>
+			</Measure>
+			<Measure>
+				<MeasureType>02</MeasureType>
+				<Measurement>6.20</Measurement>
+				<MeasureUnitCode>in</MeasureUnitCode>
+			</Measure>
+			<Measure>
+				<MeasureType>03</MeasureType>
+				<Measurement>1.00</Measurement>
+				<MeasureUnitCode>in</MeasureUnitCode>
+			</Measure>
+			<Measure>
+				<MeasureType>08</MeasureType>
+				<Measurement>1.140</Measurement>
+				<MeasureUnitCode>lb</MeasureUnitCode>
+			</Measure>
+			<Measure>
+				<MeasureType>01</MeasureType>
+				<Measurement>236</Measurement>
+				<MeasureUnitCode>mm</MeasureUnitCode>
+			</Measure>
+			<Measure>
+				<MeasureType>02</MeasureType>
+				<Measurement>157</Measurement>
+				<MeasureUnitCode>mm</MeasureUnitCode>
+			</Measure>
+			<Measure>
+				<MeasureType>03</MeasureType>
+				<Measurement>25</Measurement>
+				<MeasureUnitCode>mm</MeasureUnitCode>
+			</Measure>
+			<Measure>
+				<MeasureType>08</MeasureType>
+				<Measurement>516</Measurement>
+				<MeasureUnitCode>gr</MeasureUnitCode>
+			</Measure>
+			<CountryOfManufacture>US</CountryOfManufacture>
+			<NoCollection/>
+			<TitleDetail>
+				<TitleType>01</TitleType>
+				<TitleElement>
+					<TitleElementLevel>01</TitleElementLevel>
+					<TitleText><![CDATA[The Power of a Whisper]]></TitleText>
+					<TitlePrefix>The</TitlePrefix>
+					<TitleWithoutPrefix><![CDATA[Power of a Whisper]]></TitleWithoutPrefix>
+					<Subtitle><![CDATA[Hearing God, Having the Guts to Respond]]></Subtitle>
+				</TitleElement>
+			</TitleDetail>
+			<Contributor>
+				<SequenceNumber>1</SequenceNumber>
+				<ContributorRole>A01</ContributorRole>
+				<NameIdentifier>
+					<NameIDType>01</NameIDType>
+					<IDTypeName>AuthorID</IDTypeName>
+					<IDValue>HybelsB</IDValue>
+				</NameIdentifier>
+				<PersonName><![CDATA[Bill Hybels]]></PersonName>
+				<PersonNameInverted><![CDATA[Hybels, Bill]]></PersonNameInverted>
+				<NamesBeforeKey><![CDATA[Bill]]></NamesBeforeKey>
+				<KeyNames><![CDATA[Hybels]]></KeyNames>
+				<Website>
+					<WebsiteRole>06</WebsiteRole>
+					<WebsiteDescription>Contributors Website URL 1</WebsiteDescription>
+					<WebsiteLink>www.willowcreek.org</WebsiteLink>
+				</Website>
+			</Contributor>
+			<NoEdition/>
+			<Language>
+				<LanguageRole>01</LanguageRole>
+				<LanguageCode>eng</LanguageCode>
+				<CountryCode>US</CountryCode>
+			</Language>
+			<Extent>
+				<ExtentType>00</ExtentType>
+				<ExtentValue>288.00</ExtentValue>
+				<ExtentUnit>3</ExtentUnit>
+			</Extent>
+			<Subject>
+				<SubjectSchemeIdentifier>22</SubjectSchemeIdentifier>
+				<SubjectSchemeVersion>2.0</SubjectSchemeVersion>
+				<SubjectCode>TP028</SubjectCode>
+				<SubjectHeadingText><![CDATA[Christian Interest]]></SubjectHeadingText>
+			</Subject>
+			<Subject>
+				<SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+				<SubjectSchemeName>bisac 1</SubjectSchemeName>
+				<SubjectSchemeVersion>2.7</SubjectSchemeVersion>
+				<SubjectCode>REL012120</SubjectCode>
+				<SubjectHeadingText><![CDATA[REL012120]]></SubjectHeadingText>
+			</Subject>
+			<Subject>
+				<SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+				<SubjectSchemeName>bisac 2</SubjectSchemeName>
+				<SubjectSchemeVersion>2.7</SubjectSchemeVersion>
+				<SubjectCode>REL012070</SubjectCode>
+				<SubjectHeadingText><![CDATA[REL012070]]></SubjectHeadingText>
+			</Subject>
+			<Subject>
+				<SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+				<SubjectSchemeName>bisac 3</SubjectSchemeName>
+				<SubjectSchemeVersion>2.7</SubjectSchemeVersion>
+				<SubjectCode>REL012040</SubjectCode>
+				<SubjectHeadingText><![CDATA[REL012040]]></SubjectHeadingText>
+			</Subject>
+			<Subject>
+				<SubjectSchemeIdentifier>22</SubjectSchemeIdentifier>
+				<SubjectSchemeName>merch theme 1</SubjectSchemeName>
+				<SubjectCode>TP028</SubjectCode>
+				<SubjectHeadingText><![CDATA[TP028]]></SubjectHeadingText>
+			</Subject>
+			<Subject>
+				<MainSubject/>
+				<SubjectSchemeIdentifier>33</SubjectSchemeIdentifier>
+				<SubjectSchemeName>Main Subject</SubjectSchemeName>
+			</Subject>
+			<AudienceCode>01</AudienceCode>
+			<Audience>
+				<AudienceCodeType>01</AudienceCodeType>
+				<AudienceCodeTypeName>Zondervan</AudienceCodeTypeName>
+				<AudienceCodeValue/>
+			</Audience>
+			<AudienceRange>
+				<AudienceRangeQualifier>17</AudienceRangeQualifier>
+				<AudienceRangePrecision>03</AudienceRangePrecision>
+				<AudienceRangeValue>18</AudienceRangeValue>
+				<AudienceRangePrecision>04</AudienceRangePrecision>
+				<AudienceRangeValue>99</AudienceRangeValue>
+			</AudienceRange>
+		</DescriptiveDetail>
+		<!--BLOCK 2-->
+		<CollateralDetail>
+			<TextContent>
+				<TextType>02</TextType>
+				<ContentAudience>00</ContentAudience>
+				<Text><![CDATA[Full-throttle faith resides in fully yielded hearts. In The Power of a Whisper: Hearing God, Having the Guts to Respond, Bill Hybels reveals the attitudes and actions that help us hear directly from heaven as we navigate the most significant challenges on earth.]]></Text>
+				<TextAuthor>Bill Hybels  </TextAuthor>
+				<TextSourceCorporate><![CDATA[Zondervan]]></TextSourceCorporate>
+			</TextContent>
+			<TextContent>
+				<TextType>03</TextType>
+				<ContentAudience>00</ContentAudience>
+				<Text><![CDATA['Without a hint of exaggeration,' says pastor and author Bill Hybels in his new book, The Power of a Whisper: Hearing God, Having the Guts to Respond, 'the ability to discern divine direction has saved me from a life of sure boredom and self-destruction. God's well-timed words have redirected my path, rescued me from temptation and re-energized me during some of my deepest moments of despair.' 
+
+In The Power of a Whisper, vision is cast for what life can look like when God's followers choose to hear from heaven as they navigate life on earth. Whispers that arbitrate key decisions, nudges that rescue from dark nights of the soul, promptings that spur on growth, urgings that come by way of another person, inspiration that opens once-glazed-over eyes to the terrible plight people face in this world---through firsthand accounts spanning fifty-seven years of life, more than thirty of which have been spent in the trenches of ministry, Hybels promotes passion in Christ-followers' hearts for being wide open to hearing from God, and for getting gutsier about doing exactly what he says to do. For more information go to: www.thewhisperwall.com.]]></Text>
+				<TextAuthor>Bill Hybels  </TextAuthor>
+				<TextSourceCorporate><![CDATA[Zondervan]]></TextSourceCorporate>
+			</TextContent>
+			<SupportingResource>
+				<!--Front Cover-->
+				<ResourceContentType>01</ResourceContentType>
+				<ContentAudience>00</ContentAudience>
+				<ResourceMode>03</ResourceMode>
+				<ResourceVersion>
+					<ResourceForm>01</ResourceForm>
+					<ResourceLink>http://www.zondervan.com/images/product/medium/0310320747.jpg</ResourceLink>
+				</ResourceVersion>
+			</SupportingResource>
+			<SupportingResource>
+				<!--Front Cover-->
+				<ResourceContentType>01</ResourceContentType>
+				<ContentAudience>00</ContentAudience>
+				<ResourceMode>03</ResourceMode>
+				<ResourceVersion>
+					<ResourceForm>01</ResourceForm>
+					<ResourceLink>http://www.zondervan.com/images/product/medium/0310320747_30.jpg</ResourceLink>
+				</ResourceVersion>
+			</SupportingResource>
+			<SupportingResource>
+				<!--Front Cover-->
+				<ResourceContentType>01</ResourceContentType>
+				<ContentAudience>00</ContentAudience>
+				<ResourceMode>03</ResourceMode>
+				<ResourceVersion>
+					<ResourceForm>01</ResourceForm>
+					<ResourceLink>http://www.zondervan.com/images/product/medium/0310320747_31.jpg</ResourceLink>
+				</ResourceVersion>
+			</SupportingResource>
+			<SupportingResource>
+				<!--First 1000 words-->
+				<ResourceContentType>15</ResourceContentType>
+				<ContentAudience>00</ContentAudience>
+				<ResourceMode>03</ResourceMode>
+				<ResourceVersion>
+					<ResourceForm>01</ResourceForm>
+					<ResourceLink>http://www.zondervan.com/media/samples/pdf/0310320747_samptxt.pdf</ResourceLink>
+				</ResourceVersion>
+			</SupportingResource>
+			<SupportingResource>
+				<!--Video Sample-->
+				<ResourceContentType>15</ResourceContentType>
+				<ContentAudience>00</ContentAudience>
+				<ResourceMode>03</ResourceMode>
+				<ResourceVersion>
+					<ResourceForm>01</ResourceForm>
+					<ResourceLink>http://www.zondervan.com/media/samples/video/excerpt/0310320747_videosample.flv</ResourceLink>
+				</ResourceVersion>
+			</SupportingResource>
+		</CollateralDetail>
+		<!--BLOCK 4-->
+		<PublishingDetail>
+			<Imprint>
+				<ImprintName>Zondervan</ImprintName>
+			</Imprint>
+			<Publisher>
+				<PublishingRole>01</PublishingRole>
+				<PublisherName>Zondervan</PublisherName>
+				<Website>
+					<WebsiteRole>01</WebsiteRole>
+					<WebsiteDescription>Corporate Website</WebsiteDescription>
+					<WebsiteLink>http://www.zondervan.com</WebsiteLink>
+				</Website>
+			</Publisher>
+			<CityOfPublication>Grand Rapids</CityOfPublication>
+			<CountryOfPublication>US</CountryOfPublication>
+			<PublishingStatus>20</PublishingStatus>
+			<PublishingStatusNote><![CDATA[20]]></PublishingStatusNote>
+			<PublishingDate>
+				<PublishingDateRole>01</PublishingDateRole>
+				<DateFormat>00</DateFormat>
+				<Date>20100725</Date>
+			</PublishingDate>
+			<PublishingDate>
+				<PublishingDateRole>11</PublishingDateRole>
+				<DateFormat>05</DateFormat>
+				<Date>2010</Date>
+			</PublishingDate>
+			<PublishingDate>
+				<PublishingDateRole>09</PublishingDateRole>
+				<DateFormat>00</DateFormat>
+				<Date>20091109</Date>
+			</PublishingDate>
+			<PublishingDate>
+				<PublishingDateRole>10</PublishingDateRole>
+				<DateFormat>00</DateFormat>
+				<Date>20091109</Date>
+			</PublishingDate>
+			<CopyrightStatement>
+				<CopyrightYear>2010</CopyrightYear>
+				<CopyrightOwner>
+					<PersonName><![CDATA[Bill Hybels]]></PersonName>
+				</CopyrightOwner>
+			</CopyrightStatement>
+			<SalesRights>
+				<SalesRightsType>01</SalesRightsType>
+				<Territory>
+					<RegionsIncluded>WORLD</RegionsIncluded>
+				</Territory>
+				<PublisherName>Zondervan</PublisherName>
+			</SalesRights>
+		</PublishingDetail>
+		<!--BLOCK 5-->
+		<RelatedMaterial/>
+		<!--BLOCK 6-->
+		<ProductSupply>
+			<MarketPublishingDetail>
+				<MarketPublishingStatus>20</MarketPublishingStatus>
+				<MarketDate>
+					<MarketDateRole>01</MarketDateRole>
+					<DateFormat>00</DateFormat>
+					<Date>20100725</Date>
+				</MarketDate>
+			</MarketPublishingDetail>
+			<SupplyDetail>
+				<Supplier>
+					<SupplierRole>01</SupplierRole>
+					<SupplierIdentifier>
+						<SupplierIDType>07</SupplierIDType>
+						<IDTypeName>Supplier SAN</IDTypeName>
+						<IDValue>2989107</IDValue>
+					</SupplierIdentifier>
+					<SupplierName>Zondervan</SupplierName>
+					<TelephoneNumber>1-800-727-1309</TelephoneNumber>
+					<FaxNumber>1-800-934-6381</FaxNumber>
+				</Supplier>
+				<ProductAvailability>20</ProductAvailability>
+				<SupplyDate>
+					<SupplyDateRole>08</SupplyDateRole>
+					<DateFormat>00</DateFormat>
+					<Date>20100714</Date>
+				</SupplyDate>
+				<OrderTime>3</OrderTime>
+				<PackQuantity>24</PackQuantity>
+				<UnpricedItemType>02</UnpricedItemType>
+			</SupplyDetail>
+		</ProductSupply>
+	</Product>
+	<Product>
+		<RecordReference>com.zondervan.9780310334132</RecordReference>
+		<NotificationType>03</NotificationType>
+		<RecordSourceType>01</RecordSourceType>
+		<RecordSourceName>Zondervan</RecordSourceName>
+		<ProductIdentifier>
+			<ProductIDType>02</ProductIDType>
+			<IDValue>0310334136</IDValue>
+		</ProductIdentifier>
+		<ProductIdentifier>
+			<ProductIDType>03</ProductIDType>
+			<IDValue>9780310334132</IDValue>
+		</ProductIdentifier>
+		<ProductIdentifier>
+			<ProductIDType>04</ProductIDType>
+			<IDValue>025986334130</IDValue>
+		</ProductIdentifier>
+		<ProductIdentifier>
+			<ProductIDType>15</ProductIDType>
+			<IDValue>9780310334132</IDValue>
+		</ProductIdentifier>
+		<!--BLOCK 1-->
+		<DescriptiveDetail>
+			<ProductComposition>00</ProductComposition>
+			<ProductForm>BB</ProductForm>
+			<ProductFormFeature>
+				<ProductFormFeatureType>06</ProductFormFeatureType>
+				<ProductFormFeatureValue>00</ProductFormFeatureValue>
+				<ProductFormFeatureDescription><![CDATA[]]></ProductFormFeatureDescription>
+			</ProductFormFeature>
+			<ProductFormDescription><![CDATA[Hardcover, Jacketed]]></ProductFormDescription>
+			<TradeCategory>07</TradeCategory>
+			<Measure>
+				<MeasureType>01</MeasureType>
+				<Measurement>0.00</Measurement>
+				<MeasureUnitCode>in</MeasureUnitCode>
+			</Measure>
+			<Measure>
+				<MeasureType>02</MeasureType>
+				<Measurement>0.00</Measurement>
+				<MeasureUnitCode>in</MeasureUnitCode>
+			</Measure>
+			<Measure>
+				<MeasureType>03</MeasureType>
+				<Measurement>0.00</Measurement>
+				<MeasureUnitCode>in</MeasureUnitCode>
+			</Measure>
+			<Measure>
+				<MeasureType>08</MeasureType>
+				<Measurement>0.000</Measurement>
+				<MeasureUnitCode>lb</MeasureUnitCode>
+			</Measure>
+			<Measure>
+				<MeasureType>01</MeasureType>
+				<Measurement>0</Measurement>
+				<MeasureUnitCode>mm</MeasureUnitCode>
+			</Measure>
+			<Measure>
+				<MeasureType>02</MeasureType>
+				<Measurement>0</Measurement>
+				<MeasureUnitCode>mm</MeasureUnitCode>
+			</Measure>
+			<Measure>
+				<MeasureType>03</MeasureType>
+				<Measurement>0</Measurement>
+				<MeasureUnitCode>mm</MeasureUnitCode>
+			</Measure>
+			<Measure>
+				<MeasureType>08</MeasureType>
+				<Measurement>0</Measurement>
+				<MeasureUnitCode>gr</MeasureUnitCode>
+			</Measure>
+			<CountryOfManufacture>US</CountryOfManufacture>
+			<NoCollection/>
+			<TitleDetail>
+				<TitleType>01</TitleType>
+				<TitleElement>
+					<TitleElementLevel>01</TitleElementLevel>
+					<TitleText><![CDATA[ God Unboxed]]></TitleText>
+					<TitleWithoutPrefix><![CDATA[God Unboxed]]></TitleWithoutPrefix>
+				</TitleElement>
+			</TitleDetail>
+			<Contributor>
+				<SequenceNumber>1</SequenceNumber>
+				<ContributorRole>A01</ContributorRole>
+				<NameIdentifier>
+					<NameIDType>01</NameIDType>
+					<IDTypeName>AuthorID</IDTypeName>
+					<IDValue>HybelsB</IDValue>
+				</NameIdentifier>
+				<PersonName><![CDATA[Bill Hybels]]></PersonName>
+				<PersonNameInverted><![CDATA[Hybels, Bill]]></PersonNameInverted>
+				<NamesBeforeKey><![CDATA[Bill]]></NamesBeforeKey>
+				<KeyNames><![CDATA[Hybels]]></KeyNames>
+				<Website>
+					<WebsiteRole>06</WebsiteRole>
+					<WebsiteDescription>Contributors Website URL 1</WebsiteDescription>
+					<WebsiteLink>www.willowcreek.org</WebsiteLink>
+				</Website>
+			</Contributor>
+			<NoEdition/>
+			<Language>
+				<LanguageRole>01</LanguageRole>
+				<LanguageCode>eng</LanguageCode>
+				<CountryCode>US</CountryCode>
+			</Language>
+			<Extent>
+				<ExtentType>00</ExtentType>
+				<ExtentValue>320.00</ExtentValue>
+				<ExtentUnit>3</ExtentUnit>
+			</Extent>
+			<Subject>
+				<SubjectSchemeIdentifier>22</SubjectSchemeIdentifier>
+				<SubjectSchemeVersion>2.0</SubjectSchemeVersion>
+				<SubjectCode>TP028</SubjectCode>
+				<SubjectHeadingText><![CDATA[Christian Interest]]></SubjectHeadingText>
+			</Subject>
+			<Subject>
+				<SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+				<SubjectSchemeName>bisac 1</SubjectSchemeName>
+				<SubjectSchemeVersion>2.7</SubjectSchemeVersion>
+				<SubjectCode>REL012120</SubjectCode>
+				<SubjectHeadingText><![CDATA[REL012120]]></SubjectHeadingText>
+			</Subject>
+			<Subject>
+				<SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+				<SubjectSchemeName>bisac 2</SubjectSchemeName>
+				<SubjectSchemeVersion>2.7</SubjectSchemeVersion>
+				<SubjectCode>REL012070</SubjectCode>
+				<SubjectHeadingText><![CDATA[REL012070]]></SubjectHeadingText>
+			</Subject>
+			<Subject>
+				<SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+				<SubjectSchemeName>bisac 3</SubjectSchemeName>
+				<SubjectSchemeVersion>2.7</SubjectSchemeVersion>
+				<SubjectCode>REL012040</SubjectCode>
+				<SubjectHeadingText><![CDATA[REL012040]]></SubjectHeadingText>
+			</Subject>
+			<Subject>
+				<SubjectSchemeIdentifier>22</SubjectSchemeIdentifier>
+				<SubjectSchemeName>merch theme 1</SubjectSchemeName>
+				<SubjectCode>TP028</SubjectCode>
+				<SubjectHeadingText><![CDATA[TP028]]></SubjectHeadingText>
+			</Subject>
+			<Subject>
+				<MainSubject/>
+				<SubjectSchemeIdentifier>33</SubjectSchemeIdentifier>
+				<SubjectSchemeName>Main Subject</SubjectSchemeName>
+			</Subject>
+			<AudienceCode>01</AudienceCode>
+			<Audience>
+				<AudienceCodeType>01</AudienceCodeType>
+				<AudienceCodeTypeName>Zondervan</AudienceCodeTypeName>
+				<AudienceCodeValue/>
+			</Audience>
+			<AudienceRange>
+				<AudienceRangeQualifier>17</AudienceRangeQualifier>
+				<AudienceRangePrecision>03</AudienceRangePrecision>
+				<AudienceRangeValue>18</AudienceRangeValue>
+				<AudienceRangePrecision>04</AudienceRangePrecision>
+				<AudienceRangeValue>99</AudienceRangeValue>
+			</AudienceRange>
+		</DescriptiveDetail>
+		<!--BLOCK 2-->
+		<CollateralDetail>
+			<TextContent>
+				<TextType>02</TextType>
+				<ContentAudience>00</ContentAudience>
+				<Text><![CDATA[Distant Deity or intimate companion? Disciplinarian or second-chance giver? Deal-maker or immoveable One? Who exactly is this God we serve? Bill Hybels, author and Senior Pastor of Willow Creek Community Church, examines the paradox of God's rock-solid consistency of character and his alarmingly inconsistent interactions with key personalities in the ancient world. Take God out of the box: Examine your presuppositions about who you think He is, and draw near who He really is.]]></Text>
+				<TextAuthor>Bill Hybels  </TextAuthor>
+				<TextSourceCorporate><![CDATA[Zondervan]]></TextSourceCorporate>
+			</TextContent>
+		</CollateralDetail>
+		<!--BLOCK 4-->
+		<PublishingDetail>
+			<Imprint>
+				<ImprintName>Zondervan</ImprintName>
+			</Imprint>
+			<Publisher>
+				<PublishingRole>01</PublishingRole>
+				<PublisherName>Zondervan</PublisherName>
+				<Website>
+					<WebsiteRole>01</WebsiteRole>
+					<WebsiteDescription>Corporate Website</WebsiteDescription>
+					<WebsiteLink>http://www.zondervan.com</WebsiteLink>
+				</Website>
+			</Publisher>
+			<CityOfPublication>Grand Rapids</CityOfPublication>
+			<CountryOfPublication>US</CountryOfPublication>
+			<PublishingStatus>10</PublishingStatus>
+			<PublishingStatusNote><![CDATA[10]]></PublishingStatusNote>
+			<PublishingDate>
+				<PublishingDateRole>01</PublishingDateRole>
+				<DateFormat>00</DateFormat>
+				<Date>20111115</Date>
+			</PublishingDate>
+			<PublishingDate>
+				<PublishingDateRole>11</PublishingDateRole>
+				<DateFormat>05</DateFormat>
+				<Date>2011</Date>
+			</PublishingDate>
+			<PublishingDate>
+				<PublishingDateRole>09</PublishingDateRole>
+				<DateFormat>00</DateFormat>
+				<Date>20101108</Date>
+			</PublishingDate>
+			<PublishingDate>
+				<PublishingDateRole>10</PublishingDateRole>
+				<DateFormat>00</DateFormat>
+				<Date>20101108</Date>
+			</PublishingDate>
+			<SalesRights>
+				<SalesRightsType>01</SalesRightsType>
+				<Territory>
+					<RegionsIncluded>WORLD</RegionsIncluded>
+				</Territory>
+				<PublisherName>Zondervan</PublisherName>
+			</SalesRights>
+		</PublishingDetail>
+		<!--BLOCK 5-->
+		<RelatedMaterial/>
+		<!--BLOCK 6-->
+		<ProductSupply>
+			<MarketPublishingDetail>
+				<MarketPublishingStatus>10</MarketPublishingStatus>
+				<MarketDate>
+					<MarketDateRole>01</MarketDateRole>
+					<DateFormat>00</DateFormat>
+					<Date>20111115</Date>
+				</MarketDate>
+			</MarketPublishingDetail>
+			<SupplyDetail>
+				<Supplier>
+					<SupplierRole>01</SupplierRole>
+					<SupplierIdentifier>
+						<SupplierIDType>07</SupplierIDType>
+						<IDTypeName>Supplier SAN</IDTypeName>
+						<IDValue>2989107</IDValue>
+					</SupplierIdentifier>
+					<SupplierName>Zondervan</SupplierName>
+					<TelephoneNumber>1-800-727-1309</TelephoneNumber>
+					<FaxNumber>1-800-934-6381</FaxNumber>
+				</Supplier>
+				<ProductAvailability>10</ProductAvailability>
+				<SupplyDate>
+					<SupplyDateRole>08</SupplyDateRole>
+					<DateFormat>00</DateFormat>
+					<Date>20111104</Date>
+				</SupplyDate>
+				<OrderTime>3</OrderTime>
+				<PackQuantity>0</PackQuantity>
+				<UnpricedItemType>02</UnpricedItemType>
+			</SupplyDetail>
+		</ProductSupply>
+	</Product>
+</ONIXMessage>
