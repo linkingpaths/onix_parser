@@ -20,7 +20,7 @@ module OnixParser
         file_path = "/tmp/#{isbn}.jpg"
         cover = File.exists?(file_path) ? File.new(file_path) : nil
 
-        products << OnixParser::Product.new(title, author, subject, publisher, cover, synopsis, isbn)
+        products << OnixParser::Product.new(title, author, subject, publisher, cover, synopsis, isbn, product.to_s)
       end
 
       products

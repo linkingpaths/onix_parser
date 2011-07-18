@@ -64,6 +64,12 @@ describe OnixParser::Parser3 do
     end
   end
 
+  it "should set the xml" do
+    (0..5).each do |n|
+      @products[n].xml.should_not be_nil
+    end
+  end
+  
 #  it "should set the price" do
 #
 #  end

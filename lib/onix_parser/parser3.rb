@@ -40,7 +40,7 @@ module OnixParser
 
         # TODO: PRICE
 
-        products << OnixParser::Product.new(title, author, subject, publisher, cover, synopsis, isbn)
+        products << OnixParser::Product.new(title, author, subject, publisher, cover, synopsis, isbn, xml_product.to_s)
       end
 
       products
