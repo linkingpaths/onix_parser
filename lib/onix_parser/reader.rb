@@ -3,6 +3,7 @@ require 'hpricot'
 module OnixParser
   class Reader
     attr_reader :products
+    attr_accessor :onix_version
 
     def initialize(input)
       if input.kind_of?(String)
@@ -12,13 +13,16 @@ module OnixParser
       else
         raise ArgumentError, "Unable to read from file or IO stream"
       end
-
-      @onix_parser = if @doc.root.search('/Product/DescriptiveDetail').any?
-        OnixParser::Parser3
+      
+      if @doc.root.search('/Product/DescriptiveDetail').any?
+        @onix_parser = OnixParser::Parser3
+        @onix_version = '3.0'
       elsif @doc.search("//RecordReference").any?
-        OnixParser::Parser2long
+        @onix_parser = OnixParser::Parser2long
+        @onix_version = '2.1 long'
       elsif @doc.search("//a001").any?
-        OnixParser::Parser2short
+        @onix_parser = OnixParser::Parser2short
+        @onix_version = '2.1 short'
       else
         raise ArgumentError, "Unable to identify ONIX schema version."
       end

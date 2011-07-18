@@ -20,6 +20,11 @@ describe OnixParser::Reader do
   end
 
   context "Onix 3.0 file" do
+    it "should set the onix_version" do
+      reader = OnixParser::Reader.new(@onix3)
+      reader.onix_version.should eql("3.0")  
+    end
+
     it "should use the Onix 3.0 parser" do
       reader = OnixParser::Reader.new(@onix3)
       reader.instance_variable_get("@onix_parser").should eql(OnixParser::Parser3)
@@ -37,7 +42,12 @@ describe OnixParser::Reader do
     end
   end
 
-  context "Onix 2.1 file" do
+  context "Onix 2.1 short tags file" do
+    it "should set the onix_version" do
+      reader = OnixParser::Reader.new(@onix2_short)
+      reader.onix_version.should eql("2.1 short")
+    end
+
     it "should use the Onix 2.1 short tag parser" do
       reader = OnixParser::Reader.new(@onix2_short)
       reader.instance_variable_get("@onix_parser").should eql(OnixParser::Parser2short)
