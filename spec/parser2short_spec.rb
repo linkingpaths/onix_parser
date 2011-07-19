@@ -29,6 +29,26 @@ describe OnixParser::Parser2short do
     @products[0].isbn.should eql("9781418573102")
   end
 
+  it "should set the ISBN-10" do
+    @products[0].isbn10.should eql('')
+  end
+
+  it "should set the GTIN-13" do
+    @products[0].gtin.should eql('')
+  end
+
+  it "should set the UPC" do
+    @products[0].upc.should eql('')
+  end
+
+  it "should set the language" do
+    @products[0].lang.should eql('eng')
+  end
+
+  it "should se the country" do
+    @products[0].country.should eql('')
+  end
+
   it "should set the synopsis" do
     @products[0].synopsis.start_with?('This personal growth diet companion').should be_true
   end

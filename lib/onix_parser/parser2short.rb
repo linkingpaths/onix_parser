@@ -8,6 +8,8 @@ module OnixParser
         author = product.search('/contributor/b036').text.strip
         publisher = product.search('/publisher/b081').text.strip
         synopsis = product.search('/othertext/d104').first.innerText.gsub(/<\/?[^>]*>/, "").strip
+        language = product.search('/language/b252').first.innerText.strip
+        country = ''
 
 #        subject = product.search('').text
         subject = nil
@@ -16,11 +18,15 @@ module OnixParser
         isbn_node = product.search('//productidentifier/b244') unless isbn_node.any?
         isbn = isbn_node.first.innerText
 
+        isbn10 = ''
+        gtin = ''
+        upc = ''
+
         # TODO: other file types
         file_path = "/tmp/#{isbn}.jpg"
         cover = File.exists?(file_path) ? File.new(file_path) : nil
 
-        products << OnixParser::Product.new(title, author, subject, publisher, cover, synopsis, isbn, product.to_s)
+        products << OnixParser::Product.new(title, author, subject, publisher, cover, synopsis, isbn, isbn10, gtin, upc, language, country, product.to_s)
       end
 
       products

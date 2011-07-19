@@ -6,10 +6,17 @@ module OnixParser
         title = xml_product.search("/DescriptiveDetail/TitleDetail/TitleElement/TitleText").text.strip
         author = xml_product.search("/DescriptiveDetail/Contributor/PersonName").text.strip
         subject = xml_product.search("/DescriptiveDetail/Subject/SubjectSchemeIdentifier[text() = '22']/../SubjectSchemeVersion[text() = '2.0']/../SubjectHeadingText").text.strip
+        language = xml_product.search("/DescriptiveDetail/Language/LanguageCode").text.strip
+        country = xml_product.search("/DescriptiveDetail/Language/CountryCode").text.strip
 
         isbn = xml_product.search("/ProductIdentifier/ProductIDType[text() = 15]/../IDValue").text.strip
-        isbn = xml_product.search("/ProductIdentifier/ProductIDType[text() = 02]/../IDValue").text.strip unless isbn.any?
-        
+        isbn10_node = xml_product.search("/ProductIdentifier/ProductIDType[text() = 02]/../IDValue")
+        isbn10 = isbn10_node.text.strip if isbn10_node.any?
+        gtin_node = xml_product.search("/ProductIdentifier/ProductIDType[text() = 03]/../IDValue")
+        gtin = gtin_node.text.strip if gtin_node.any?
+        upc_node = xml_product.search("/ProductIdentifier/ProductIDType[text() = 04]/../IDValue")
+        upc = upc_node.text.strip if upc_node.any?
+
         collateral_detail = xml_product.search("/CollateralDetail")
         cover = nil
         if (collateral_detail.any?)
@@ -40,7 +47,7 @@ module OnixParser
 
         # TODO: PRICE
 
-        products << OnixParser::Product.new(title, author, subject, publisher, cover, synopsis, isbn, xml_product.to_s)
+        products << OnixParser::Product.new(title, author, subject, publisher, cover, synopsis, isbn, isbn10, gtin, upc, language, country, xml_product.to_s)
       end
 
       products
