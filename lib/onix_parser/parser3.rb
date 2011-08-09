@@ -3,8 +3,8 @@ module OnixParser
     def self.find_products(doc)
       products = []
       doc.root.search("/Product").each do |xml_product|
-        title = xml_product.search("/DescriptiveDetail/TitleDetail/TitleElement/TitleText").text.strip
-        author = xml_product.search("/DescriptiveDetail/Contributor/PersonName").text.strip
+        title = xml_product.search("/DescriptiveDetail/TitleDetail/TitleElement/TitleText").first.innerText.strip
+        author = xml_product.search("/DescriptiveDetail/Contributor/PersonName").collect(&:innerText).join(',')
         subject = xml_product.search("/DescriptiveDetail/Subject/SubjectSchemeIdentifier[text() = '22']/../SubjectSchemeVersion[text() = '2.0']/../SubjectHeadingText").text.strip
         language = xml_product.search("/DescriptiveDetail/Language/LanguageCode").text.strip
         country = xml_product.search("/DescriptiveDetail/Language/CountryCode").text.strip

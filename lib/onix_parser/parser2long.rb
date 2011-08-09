@@ -4,8 +4,8 @@ module OnixParser
       products = []
 
       doc.search('//product').each do |product|
-        title = product.search('//title/TitleText').text
-        author = product.search('//contributor/PersonName').text
+        title = product.search('//title/TitleText').first.innerText
+        author = product.search('//contributor/PersonName').collect(&:innerText).join(',')
         publisher = product.search('//publisher/PublisherName').text
         synopsis = product.search('//othertext/Text').first.innerText.gsub(/<\/?[^>]*>/, "")
 
