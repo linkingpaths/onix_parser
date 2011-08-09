@@ -26,7 +26,25 @@ module OnixParser
         file_path = "/tmp/#{isbn}.jpg"
         cover = File.exists?(file_path) ? File.new(file_path) : nil
 
-        products << OnixParser::Product.new(title, author, subject, publisher, cover, synopsis, isbn, isbn10, gtin, upc, language, country, product.to_s)
+        # prices
+        prices = []
+        product.search('/supplydetail/price').each do |price_node|
+          price_data = {:price => price_node.search('/j151').first.innerText, :start_date => nil, :end_date => nil}
+          # Placeholder for PriceEffectiveFrom
+          if price_node.search("/j161").any?
+
+          end
+
+          # Placeholder for PriceEffectiveUntil
+          if price_node.search("/j162").any?
+
+          end
+
+          prices << price_data
+        end
+
+
+        products << OnixParser::Product.new(title, author, subject, publisher, cover, synopsis, isbn, isbn10, gtin, upc, language, country, prices, product.to_s)
       end
 
       products

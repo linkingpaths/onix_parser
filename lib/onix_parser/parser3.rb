@@ -41,13 +41,22 @@ module OnixParser
           synopsis = long_synopsis_node.any? ? long_synopsis_node.text.strip : ''
           short_synopsis_node = collateral_detail.search("/TextContent/TextType[text() = '02']/../Text")
           synopsis = short_synopsis_node.text.strip if synopsis == '' && short_synopsis_node.any?
+
         end
 
         publisher = xml_product.search("/PublishingDetail/Publisher/PublisherName").text.strip
 
         # TODO: PRICE
-
-        products << OnixParser::Product.new(title, author, subject, publisher, cover, synopsis, isbn, isbn10, gtin, upc, language, country, xml_product.to_s)
+        prices = []
+        xml_product.search("/ProductSupply/SupplyDetail/Price").each do |price_node|
+          price_data = {:price => price_node.search("/PriceAmount").first.innerText, :start_date => nil, :end_date => nil}
+          if price_node.search("/PriceDate").any?
+            # Placeholder for when we have multiple prices to deal with
+          end
+          prices << price_data
+        end
+        
+        products << OnixParser::Product.new(title, author, subject, publisher, cover, synopsis, isbn, isbn10, gtin, upc, language, country, prices, xml_product.to_s)
       end
 
       products

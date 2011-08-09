@@ -19,6 +19,15 @@ describe OnixParser::Parser3 do
     it "should set multiple author/contributors" do
       @products[11].author.should eql('Charles R. Solomon,Stephen F. Olford')
     end
+
+    it "should set the price" do
+      @products[0].prices.should eql [{:price => '11.99', :start_date => nil, :end_date => nil}]
+      @products[1].prices.should eql [{:price => '24.99', :start_date => nil, :end_date => nil}]
+      @products[2].prices.should eql [{:price => '12.99', :start_date => nil, :end_date => nil}]
+      @products[3].prices.should eql [{:price => '10.99', :start_date => nil, :end_date => nil}]
+      @products[4].prices.should eql [{:price => '10.99', :start_date => nil, :end_date => nil}]
+      @products[5].prices.should eql [{:price => '10.99', :start_date => nil, :end_date => nil}]
+    end
   end
 
   context "onix_3 file" do

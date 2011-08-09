@@ -1,9 +1,9 @@
 module OnixParser
   class Product
     attr_accessor :title, :author, :subject, :publisher, :cover, :synopsis,
-                  :isbn, :isbn10, :upc, :gtin, :lang, :country, :xml
+                  :isbn, :isbn10, :upc, :gtin, :lang, :country, :xml, :prices
 
-    def initialize(title, author, subject, publisher, cover, synopsis, isbn, isbn10, gtin, upc, language, country, xml)
+    def initialize(title, author, subject, publisher, cover, synopsis, isbn, isbn10, gtin, upc, language, country, prices, xml)
       self.title = title
       self.author = author
       self.subject = subject
@@ -17,6 +17,7 @@ module OnixParser
       self.lang = language
       self.country = country
       self.xml = xml
+      self.prices = prices
     end
   end
 end

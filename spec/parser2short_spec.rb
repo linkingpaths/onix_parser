@@ -57,11 +57,13 @@ describe OnixParser::Parser2short do
     @products[0].publisher.should eql('Thomas Nelson')
   end
 
+  it "should set the price" do
+    @products[0].prices.should eql [{:price => '14.99', :start_date => nil, :end_date => nil}]
+  end
+
   it "should set the xml" do
     @products[0].xml.should_not be_nil
   end
   
-#  it "should set the price" do
-#
-#  end
+
 end
