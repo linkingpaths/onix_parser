@@ -28,21 +28,25 @@ module OnixParser
 
         # prices
         prices = []
-        product.search('/supplydetail/price').each do |price_node|
-          price_data = {:price => price_node.search('/j151').first.innerText, :start_date => nil, :end_date => nil}
-          # Placeholder for PriceEffectiveFrom
-          if price_node.search("/j161").any?
+        price_nodes = product.search('/supplydetail/price')
+        if price_nodes.any?
+          price_nodes.each do |price_node|
+            price_data = {:price => price_node.search('/j151').first.innerText, :start_date => nil, :end_date => nil}
+            # Placeholder for PriceEffectiveFrom
+            if price_node.search("/j161").any?
 
+            end
+
+            # Placeholder for PriceEffectiveUntil
+            if price_node.search("/j162").any?
+
+            end
+
+            prices << price_data
           end
-
-          # Placeholder for PriceEffectiveUntil
-          if price_node.search("/j162").any?
-
-          end
-
-          prices << price_data
+        else
+          prices << {:price => 0, :start_date => nil, :end_date => nil}  
         end
-
 
         products << OnixParser::Product.new(title, author, subject, publisher, cover, synopsis, isbn, isbn10, gtin, upc, language, country, prices, product.to_s)
       end

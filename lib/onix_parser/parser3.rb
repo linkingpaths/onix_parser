@@ -48,12 +48,17 @@ module OnixParser
 
         # TODO: PRICE
         prices = []
-        xml_product.search("/ProductSupply/SupplyDetail/Price").each do |price_node|
-          price_data = {:price => price_node.search("/PriceAmount").first.innerText, :start_date => nil, :end_date => nil}
-          if price_node.search("/PriceDate").any?
-            # Placeholder for when we have multiple prices to deal with
+        price_nodes = xml_product.search("/ProductSupply/SupplyDetail/Price")
+        if price_nodes.any?
+          price_nodes.each do |price_node|
+            price_data = {:price => price_node.search("/PriceAmount").first.innerText, :start_date => nil, :end_date => nil}
+            if price_node.search("/PriceDate").any?
+              # Placeholder for when we have multiple prices to deal with
+            end
+            prices << price_data
           end
-          prices << price_data
+        else
+          prices << {:price => 0, :start_date => nil, :end_date => nil}
         end
         
         products << OnixParser::Product.new(title, author, subject, publisher, cover, synopsis, isbn, isbn10, gtin, upc, language, country, prices, xml_product.to_s)

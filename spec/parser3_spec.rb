@@ -132,6 +132,12 @@ describe OnixParser::Parser3 do
       end
     end
 
+    it "should set the price" do
+      (0..5).each do |n|
+        @products[n].prices.should eql([{:price => 0, :start_date => nil, :end_date => nil}])
+      end
+    end
+
     it "should set the xml" do
       (0..5).each do |n|
         @products[n].xml.should_not be_nil
