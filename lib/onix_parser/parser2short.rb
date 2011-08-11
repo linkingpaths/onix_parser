@@ -22,7 +22,6 @@ module OnixParser
         gtin = ''
         upc = ''
 
-        # TODO: other file types
         file_path = "/tmp/#{isbn}.jpg"
         cover = File.exists?(file_path) ? File.new(file_path) : nil
 
@@ -48,7 +47,15 @@ module OnixParser
           prices << {:price => 0, :start_date => nil, :end_date => nil}  
         end
 
-        products << OnixParser::Product.new(title, author, subject, publisher, cover, synopsis, isbn, isbn10, gtin, upc, language, country, prices, product.to_s)
+        excerpt_node = product.search("/othertext/d102[text() = '23']/../d104")
+        excerpt = ''
+        if(excerpt_node.any?)
+          excerpt = excerpt_node.first.innerText
+
+        end
+        
+
+        products << OnixParser::Product.new(title, author, subject, publisher, cover, synopsis, isbn, isbn10, gtin, upc, language, country, prices, product.to_s, excerpt)
       end
 
       products
