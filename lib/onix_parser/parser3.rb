@@ -3,26 +3,27 @@ module OnixParser
     def self.find_products(doc)
       products = []
       doc.root.search("/Product").each do |xml_product|
-        title = xml_product.search("/DescriptiveDetail/TitleDetail/TitleElement/TitleText").first.innerText.strip
-        author = xml_product.search("/DescriptiveDetail/Contributor/PersonName").collect(&:innerText).join(',')
-        subject = xml_product.search("/DescriptiveDetail/Subject/SubjectSchemeIdentifier[text() = '22']/../SubjectSchemeVersion[text() = '2.0']/../SubjectHeadingText").text.strip
-        language = xml_product.search("/DescriptiveDetail/Language/LanguageCode").text.strip
-        country = xml_product.search("/DescriptiveDetail/Language/CountryCode").text.strip
+        parsed_values = {}
+        parsed_values[:title] = xml_product.search("/DescriptiveDetail/TitleDetail/TitleElement/TitleText").first.innerText.strip
+        parsed_values[:author] = xml_product.search("/DescriptiveDetail/Contributor/PersonName").collect(&:innerText).join(',')
+        parsed_values[:subject] = xml_product.search("/DescriptiveDetail/Subject/SubjectSchemeIdentifier[text() = '22']/../SubjectSchemeVersion[text() = '2.0']/../SubjectHeadingText").text.strip
+        parsed_values[:language] = xml_product.search("/DescriptiveDetail/Language/LanguageCode").text.strip
+        parsed_values[:country] = xml_product.search("/DescriptiveDetail/Language/CountryCode").text.strip
 
-        isbn = xml_product.search("/ProductIdentifier/ProductIDType[text() = 15]/../IDValue").text.strip
+        parsed_values[:isbn] = xml_product.search("/ProductIdentifier/ProductIDType[text() = 15]/../IDValue").text.strip
         isbn10_node = xml_product.search("/ProductIdentifier/ProductIDType[text() = 02]/../IDValue")
-        isbn10 = isbn10_node.text.strip if isbn10_node.any?
+        parsed_values[:isbn10] = isbn10_node.text.strip if isbn10_node.any?
         gtin_node = xml_product.search("/ProductIdentifier/ProductIDType[text() = 03]/../IDValue")
-        gtin = gtin_node.text.strip if gtin_node.any?
+        parsed_values[:gtin] = gtin_node.text.strip if gtin_node.any?
         upc_node = xml_product.search("/ProductIdentifier/ProductIDType[text() = 04]/../IDValue")
-        upc = upc_node.text.strip if upc_node.any?
+        parsed_values[:upc] = upc_node.text.strip if upc_node.any?
 
         collateral_detail = xml_product.search("/CollateralDetail")
-        cover = nil
+        parsed_values[:cover] = nil
         if (collateral_detail.any?)
-          file_path = "/tmp/#{isbn}.jpg"
+          file_path = "/tmp/#{parsed_values[:isbn]}.jpg"
           if File.exists?(file_path)
-            cover = File.new(file_path)
+            parsed_values[:cover] = File.new(file_path)
           else
             cover_node = collateral_detail.search("/SupportingResource/ResourceContentType[text() = '01']/../ResourceVersion/ResourceLink")
 
@@ -31,20 +32,20 @@ module OnixParser
               uri = URI.parse(cover_url)
               Net::HTTP.start(uri.host) {|http|
                 resp = http.get(uri.path)
-                cover = Tempfile.new('book_cover')
-                cover.write(resp.body)
+                parsed_values[:cover] = Tempfile.new('book_cover')
+                parsed_values[:cover].write(resp.body)
               }
             end
           end
 
           long_synopsis_node = collateral_detail.search("/TextContent/TextType[text() = '03']/../Text")
-          synopsis = long_synopsis_node.any? ? long_synopsis_node.text.strip : ''
+          parsed_values[:synopsis] = long_synopsis_node.any? ? long_synopsis_node.text.strip : ''
           short_synopsis_node = collateral_detail.search("/TextContent/TextType[text() = '02']/../Text")
-          synopsis = short_synopsis_node.text.strip if synopsis == '' && short_synopsis_node.any?
+          parsed_values[:synopsis] = short_synopsis_node.text.strip if parsed_values[:synopsis] == '' && short_synopsis_node.any?
 
         end
 
-        publisher = xml_product.search("/PublishingDetail/Publisher/PublisherName").text.strip
+        parsed_values[:publisher] = xml_product.search("/PublishingDetail/Publisher/PublisherName").text.strip
 
         # TODO: PRICE
         prices = []
@@ -60,8 +61,11 @@ module OnixParser
         else
           prices << {:price => 0, :start_date => nil, :end_date => nil}
         end
+        parsed_values[:prices] = prices
+
+        parsed_values[:xml] = xml_product.to_s
         
-        products << OnixParser::Product.new(title, author, subject, publisher, cover, synopsis, isbn, isbn10, gtin, upc, language, country, prices, xml_product.to_s)
+        products << OnixParser::Product.new(parsed_values)
       end
 
       products

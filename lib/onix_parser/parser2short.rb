@@ -4,26 +4,27 @@ module OnixParser
       products = []
 
       doc.root.search('/product').each do |product|
-        title = product.search('/title/b203').first.innerText.strip
-        author = product.search('/contributor/b036').collect(&:innerText).join(',')
-        publisher = product.search('/publisher/b081').text.strip
-        synopsis = product.search('/othertext/d104').first.innerText.gsub(/<\/?[^>]*>/, "").strip
-        language = product.search('/language/b252').first.innerText.strip
-        country = ''
+        parsed_values = {}
+        parsed_values[:title] = product.search('/title/b203').first.innerText.strip
+        parsed_values[:author] = product.search('/contributor/b036').collect(&:innerText).join(',')
+        parsed_values[:publisher] = product.search('/publisher/b081').text.strip
+        parsed_values[:synopsis] = product.search('/othertext/d104').first.innerText.gsub(/<\/?[^>]*>/, "").strip
+        parsed_values[:language] = product.search('/language/b252').first.innerText.strip
+        parsed_values[:country] = ''
 
 #        subject = product.search('').text
-        subject = nil
+        parsed_values[:subject] = nil
 
         isbn_node = product.search('//productidentifier/b004')
         isbn_node = product.search('//productidentifier/b244') unless isbn_node.any?
-        isbn = isbn_node.first.innerText
+        parsed_values[:isbn] = isbn_node.first.innerText
 
-        isbn10 = ''
-        gtin = ''
-        upc = ''
+        parsed_values[:isbn10] = ''
+        parsed_values[:gtin] = ''
+        parsed_values[:upc] = ''
 
-        file_path = "/tmp/#{isbn}.jpg"
-        cover = File.exists?(file_path) ? File.new(file_path) : nil
+        file_path = "/tmp/#{parsed_values[:isbn]}.jpg"
+        parsed_values[:cover] = File.exists?(file_path) ? File.new(file_path) : nil
 
         # prices
         prices = []
@@ -46,16 +47,16 @@ module OnixParser
         else
           prices << {:price => 0, :start_date => nil, :end_date => nil}  
         end
+        parsed_values[:prices] = prices
 
         excerpt_node = product.search("/othertext/d102[text() = '23']/../d104")
-        excerpt = ''
+        parsed_values[:excerpt] = ''
         if(excerpt_node.any?)
-          excerpt = excerpt_node.first.innerText
-
+          parsed_values[:excerpt] = excerpt_node.first.innerText
         end
-        
+        parsed_values[:xml] = product.to_s
 
-        products << OnixParser::Product.new(title, author, subject, publisher, cover, synopsis, isbn, isbn10, gtin, upc, language, country, prices, product.to_s, excerpt)
+        products << OnixParser::Product.new(parsed_values)
       end
 
       products

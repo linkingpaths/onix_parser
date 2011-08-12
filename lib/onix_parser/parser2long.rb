@@ -4,23 +4,27 @@ module OnixParser
       products = []
 
       doc.search('//product').each do |product|
-        title = product.search('//title/TitleText').first.innerText
-        author = product.search('//contributor/PersonName').collect(&:innerText).join(',')
-        publisher = product.search('//publisher/PublisherName').text
-        synopsis = product.search('//othertext/Text').first.innerText.gsub(/<\/?[^>]*>/, "")
+        parsed_values = {}
+        parsed_values[:title] = product.search('//title/TitleText').first.innerText
+        parsed_values[:author] = product.search('//contributor/PersonName').collect(&:innerText).join(',')
+        parsed_values[:publisher] = product.search('//publisher/PublisherName').text
+        parsed_values[:synopsis] = product.search('//othertext/Text').first.innerText.gsub(/<\/?[^>]*>/, "")
 
 #        subject = product.search('').text
-        subject = nil
+        parsed_values[:subject] = nil
 
         isbn_node = product.search('//productidentifier/ISBN')
         isbn_node = product.search('//productidentifier/IDValue') unless isbn_node.present?
-        isbn = isbn_node.first.innerText
+        parsed_values[:isbn] = isbn_node.first.innerText
 
         # TODO: other file types
-        file_path = "/tmp/#{isbn}.jpg"
-        cover = File.exists?(file_path) ? File.new(file_path) : nil
+        file_path = "/tmp/#{parsed_values[:isbn]}.jpg"
+        parsed_values[:cover] = File.exists?(file_path) ? File.new(file_path) : nil
 
-        products << OnixParser::Product.new(title, author, subject, publisher, cover, synopsis, isbn, product.to_s)
+        parsed_values[:excerpt] = nil
+        parsed_values[:xml] = product.to_s
+
+        products << OnixParser::Product.new(parsed_values)
       end
 
       products
