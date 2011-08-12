@@ -19,6 +19,9 @@ module OnixParser
         isbn_node = product.search('//productidentifier/b244') unless isbn_node.any?
         parsed_values[:isbn] = isbn_node.first.innerText
 
+        other_isbn_node = product.search("/relatedproduct/h208[text() = '13']/../productidentifier/b244")
+        parsed_values[:other_isbn] = other_isbn_node.collect(&:innerText) if other_isbn_node.any?
+
         parsed_values[:isbn10] = ''
         parsed_values[:gtin] = ''
         parsed_values[:upc] = ''

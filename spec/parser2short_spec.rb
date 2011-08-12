@@ -5,6 +5,19 @@ describe OnixParser::Parser2short do
     @data_path = File.join(File.dirname(__FILE__), "..", "data")
   end
 
+  context "related file" do
+    before(:each) do
+      @related = File.join(@data_path, "related.xml")
+      doc = Hpricot(File.read(@related))
+      @products = OnixParser::Parser2short.find_products(doc)
+    end
+
+    it "should populate the other_isbn field" do
+      @products[0].isbn.should eql "9781418586560"
+      @products[0].other_isbn.should eql ["9781418526542"]
+    end
+  end
+
   context "simon file" do
     before(:each) do
       @simon = File.join(@data_path, "simon.xml")
