@@ -59,6 +59,9 @@ module OnixParser
         end
         parsed_values[:xml] = product.to_s
 
+        cover_node = product.search("/mediafile/f114[text() = '04']/../f117")
+        parsed_values[:cover_url] = cover_node.first.innerText if cover_node.any?
+
         products << OnixParser::Product.new(parsed_values)
       end
 

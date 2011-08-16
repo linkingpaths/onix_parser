@@ -36,6 +36,11 @@ describe OnixParser::Parser2short do
       @products[16].excerpt.start_with?("\n<body><p align=\"center\"><b><br/><b>CHAPTER<br/>1").should be_true
       @products[17].excerpt.start_with?("\n<b><center><b>PROLOGUE</b></center></b> <P><b><center><b>Charl").should be_true
     end
+
+    it "should set the cover_url" do
+      @products[0].cover_url.should eql('http://www.netread.com/jcusers2/1247/740/9781416575740/image/lgcover.9781416575740.jpg')
+      @products[1].cover_url.should eql('http://www.netread.com/jcusers2/1247/872/9781442419872/image/lgcover.9781442419872.jpg')
+    end
   end
 
   context "short_tags file" do
