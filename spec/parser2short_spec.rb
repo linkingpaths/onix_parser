@@ -41,6 +41,12 @@ describe OnixParser::Parser2short do
       @products[0].cover_url.should eql('http://www.netread.com/jcusers2/1247/740/9781416575740/image/lgcover.9781416575740.jpg')
       @products[1].cover_url.should eql('http://www.netread.com/jcusers2/1247/872/9781442419872/image/lgcover.9781442419872.jpg')
     end
+
+    it "should set the isbn, isbn10 and gtin13 correctly" do
+      @products[0].isbn.should eql('9781416575740')
+      @products[0].isbn10.should eql('141657574X')
+      @products[0].gtin.should eql('9781416575740')
+    end
   end
 
   context "short_tags file" do

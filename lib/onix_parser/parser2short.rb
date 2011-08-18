@@ -15,16 +15,16 @@ module OnixParser
 #        subject = product.search('').text
         parsed_values[:subject] = nil
 
-        isbn_node = product.search('//productidentifier/b004')
-        isbn_node = product.search('//productidentifier/b244') unless isbn_node.any?
-        parsed_values[:isbn] = isbn_node.first.innerText
+        isbn10_node = product.search('//productidentifier/b221[text() = "02"]/../b244')
+        gtin_node = product.search('//productidentifier/b221[text() = "03"]/../b244')
+        isbn_node = product.search('//productidentifier/b221[text() = "15"]/../b244')
+        parsed_values[:isbn10] = isbn10_node.any? ? isbn10_node.first.innerText : ''
+        parsed_values[:gtin] = gtin_node.any? ? gtin_node.first.innerText : ''
+        parsed_values[:isbn] = isbn_node.any? ? isbn_node.first.innerText : ''
+        parsed_values[:upc] = ''
 
         other_isbn_node = product.search("/relatedproduct/h208[text() = '13']/../productidentifier/b244")
         parsed_values[:other_isbn] = other_isbn_node.collect(&:innerText) if other_isbn_node.any?
-
-        parsed_values[:isbn10] = ''
-        parsed_values[:gtin] = ''
-        parsed_values[:upc] = ''
 
         file_path = "/tmp/#{parsed_values[:isbn]}.jpg"
         parsed_values[:cover] = File.exists?(file_path) ? File.new(file_path) : nil
