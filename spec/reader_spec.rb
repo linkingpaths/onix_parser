@@ -19,6 +19,11 @@ describe OnixParser::Reader do
     end
   end
 
+  it "should initialize with the XML passed as a String" do
+    reader = OnixParser::Reader.new(xml)
+    reader.instance_variable_get("@doc").should be_a_kind_of(Hpricot::Doc)
+  end
+
   context "Onix 3.0 file" do
     it "should set the onix_version" do
       reader = OnixParser::Reader.new(@onix3)
