@@ -9,7 +9,10 @@ describe OnixParser::Parser3 do
     before(:each) do
       @file2 = File.join(@data_path, "books_3.xml")
       doc = Hpricot(File.read(@file2))
-      @products = OnixParser::Parser3.find_products(doc)
+      @products = []
+      OnixParser::Parser3.find_products(doc) do |product|
+        @products << product
+      end
     end
 
     it "should only use the first TitleElement to set the title" do
@@ -34,7 +37,10 @@ describe OnixParser::Parser3 do
     before(:each) do
       @file1 = File.join(@data_path, "onix_3.xml")
       doc = Hpricot(File.read(@file1))
-      @products = OnixParser::Parser3.find_products(doc)
+      @products = []
+      OnixParser::Parser3.find_products(doc) do |product|
+        @products << product
+      end
     end
     
     it "should obtain the products" do

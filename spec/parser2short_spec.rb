@@ -9,7 +9,10 @@ describe OnixParser::Parser2short do
     before(:each) do
       @related = File.join(@data_path, "related.xml")
       doc = Hpricot(File.read(@related))
-      @products = OnixParser::Parser2short.find_products(doc)
+      @products = []
+      OnixParser::Parser2short.find_products(doc) do |product|
+        @products << product
+      end
     end
 
     it "should populate the other_isbn field" do
@@ -22,7 +25,10 @@ describe OnixParser::Parser2short do
     before(:each) do
       @simon = File.join(@data_path, "simon.xml")
       doc = Hpricot(File.read(@simon))
-      @products = OnixParser::Parser2short.find_products(doc)
+      @products = []
+      OnixParser::Parser2short.find_products(doc) do |product|
+        @products << product
+      end
     end
 
     it "should set the excerpt" do
@@ -53,7 +59,10 @@ describe OnixParser::Parser2short do
     before(:each) do
       @file1 = File.join(@data_path, "short_tags.xml")
       doc = Hpricot(File.read(@file1))
-      @products = OnixParser::Parser2short.find_products(doc)
+      @products = []
+      OnixParser::Parser2short.find_products(doc) do |product|
+        @products << product
+      end
     end
 
     it "should obtain the products" do

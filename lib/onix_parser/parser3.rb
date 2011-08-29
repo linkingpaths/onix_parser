@@ -1,7 +1,6 @@
 module OnixParser
   class Parser3
-    def self.find_products(doc)
-      products = []
+    def self.find_products(doc, &block)
       doc.root.search("/Product").each do |xml_product|
         parsed_values = {}
         parsed_values[:title] = xml_product.search("/DescriptiveDetail/TitleDetail/TitleElement/TitleText").first.innerText.strip
@@ -65,10 +64,8 @@ module OnixParser
 
         parsed_values[:xml] = xml_product.to_s
         
-        products << OnixParser::Product.new(parsed_values)
+        yield OnixParser::Product.new(parsed_values)
       end
-
-      products
     end
   end
 end

@@ -1,8 +1,6 @@
 module OnixParser
   class Parser2short
-    def self.find_products(doc)
-      products = []
-
+    def self.find_products(doc, &block)
       doc.root.search('/product').each do |product|
         parsed_values = {}
         parsed_values[:title] = product.search('/title/b203').first.innerText.strip
@@ -64,10 +62,8 @@ module OnixParser
         cover_node = product.search("/mediafile/f114[text() = '04']/../f117")
         parsed_values[:cover_url] = cover_node.first.innerText if cover_node.any?
 
-        products << OnixParser::Product.new(parsed_values)
+        yield OnixParser::Product.new(parsed_values)
       end
-
-      products
     end
   end
 end

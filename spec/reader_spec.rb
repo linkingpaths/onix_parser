@@ -19,11 +19,6 @@ describe OnixParser::Reader do
     end
   end
 
-  it "should initialize with the XML passed as a String" do
-    reader = OnixParser::Reader.new(xml)
-    reader.instance_variable_get("@doc").should be_a_kind_of(Hpricot::Doc)
-  end
-
   context "Onix 3.0 file" do
     it "should set the onix_version" do
       reader = OnixParser::Reader.new(@onix3)
@@ -36,9 +31,8 @@ describe OnixParser::Reader do
     end
 
     it "should iterate over all product records in an ONIX file" do
-      reader = OnixParser::Reader.new(@onix3)
       counter = 0
-      reader.each do |product|
+      OnixParser::Reader.parse(@onix3) do |product|
         product.should be_a_kind_of(OnixParser::Product)
         counter += 1
       end
@@ -59,9 +53,8 @@ describe OnixParser::Reader do
     end
 
     it "should iterate over all product records in an ONIX file" do
-      reader = OnixParser::Reader.new(@onix2_short)
       counter = 0
-      reader.each do |product|
+      OnixParser::Reader.parse(@onix2_short) do |product|
         product.should be_a_kind_of(OnixParser::Product)
         counter += 1
       end
