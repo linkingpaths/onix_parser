@@ -32,7 +32,7 @@ describe OnixParser::Reader do
 
     it "should iterate over all product records in an ONIX file" do
       counter = 0
-      OnixParser::Reader.parse(@onix3) do |product|
+      OnixParser::Reader.new(@onix3).parse do |product|
         product.should be_a_kind_of(OnixParser::Product)
         counter += 1
       end
@@ -54,7 +54,7 @@ describe OnixParser::Reader do
 
     it "should iterate over all product records in an ONIX file" do
       counter = 0
-      OnixParser::Reader.parse(@onix2_short) do |product|
+      OnixParser::Reader.new(@onix2_short).parse do |product|
         product.should be_a_kind_of(OnixParser::Product)
         counter += 1
       end
