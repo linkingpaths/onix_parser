@@ -34,7 +34,9 @@ module OnixParser
         price_nodes = product.search('/supplydetail/price')
         if price_nodes.any?
           price_nodes.each do |price_node|
-            price_data = {:price => price_node.search('/j151').first.innerText, :start_date => nil, :end_date => nil}
+            price_data = {:price => nil, :start_date => nil, :end_date => nil}
+            price_data[:price] = price_node.search('/j151').first.innerText if price_node.search('/j151').any?
+
             # Placeholder for PriceEffectiveFrom
             if price_node.search("/j161").any?
 
