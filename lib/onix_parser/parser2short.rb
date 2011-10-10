@@ -34,23 +34,34 @@ module OnixParser
         price_nodes = product.search('/supplydetail/price')
         if price_nodes.any?
           price_nodes.each do |price_node|
-            price_data = {:price => nil, :start_date => nil, :end_date => nil}
+            price_data = {:price => nil, :start_date => nil, :end_date => nil, :currency => nil}
             price_data[:price] = price_node.search('/j151').first.innerText if price_node.search('/j151').any?
 
-            # Placeholder for PriceEffectiveFrom
-            if price_node.search("/j161").any?
+            # PriceEffectiveFrom
+            price_data[:start_date] = price_node.search("/j161").first.innerText if price_node.search("/j161").any?
 
-            end
+            # PriceEffectiveUntil
+            price_data[:end_date] = price_node.search("/j162").first.innerText if price_node.search("/j162").any?
 
-            # Placeholder for PriceEffectiveUntil
-            if price_node.search("/j162").any?
+            # CurrencyType
+            price_data[:currency] = price_node.search("/j152").first.innerText if price_node.search("/j152").any?
 
-            end
+            territory = {}
+
+            # Region Included
+            territory[:region_included] = price_node.search("/j303").any? ? price_node.search("/j303").first.innerText : ''
+            # Region Excluded
+            territory[:region_excluded] = price_node.search("/j305").any? ? price_node.search("/j305").first.innerText : ''
+            # Country Included
+            territory[:country_included] = price_node.search("/b251").any? ? price_node.search("/b251").first.innerText : ''
+            # Country Excluded
+            territory[:country_excluded] = price_node.search("/j304").any? ? price_node.search("/j304").first.innerText : ''
+            price_data[:territory] = territory
 
             prices << price_data
           end
         else
-          prices << {:price => 0, :start_date => nil, :end_date => nil}  
+          prices << {:price => 0, :start_date => nil, :end_date => nil, :region => 'WORLD', :currency => 'USD'}  
         end
         parsed_values[:prices] = prices
 

@@ -44,28 +44,103 @@ module OnixParser
 
         end
 
-        parsed_values[:publisher] = xml_product.search("/PublishingDetail/Publisher/PublisherName").text.strip
+        default_territory = {:region_included => '', :region_excluded => '',
+                             :country_included => '', :country_excluded => ''}
+        publishing_detail = xml_product.search("/PublishingDetail")
+        if publishing_detail.any?
+          parsed_values[:publisher] = publishing_detail.search("/Publisher/PublisherName").text.strip
 
-        # TODO: PRICE
-        prices = []
-        price_nodes = xml_product.search("/ProductSupply/SupplyDetail/Price")
-        if price_nodes.any?
-          price_nodes.each do |price_node|
-            price_data = {:price => price_node.search("/PriceAmount").first.innerText, :start_date => nil, :end_date => nil}
-            if price_node.search("/PriceDate").any?
-              # Placeholder for when we have multiple prices to deal with
-            end
-            prices << price_data
+          sales_rights_territory = publishing_detail.search("/SalesRights/Territory")
+          if sales_rights_territory.any?
+            default_territory[:region_included] = sales_rights_territory.search("/RegionsIncluded").first.innerText if sales_rights_territory.search("/RegionsIncluded").any?
+            default_territory[:region_excluded] = sales_rights_territory.search("/RegionsExcluded").first.innerText if sales_rights_territory.search("/RegionsExcluded").any?
+            default_territory[:country_included] = sales_rights_territory.search("/CountryIncluded").first.innerText if sales_rights_territory.search("/CountryIncluded").any?
+            default_territory[:country_excluded] = sales_rights_territory.search("/CountryExcluded").first.innerText if sales_rights_territory.search("/CountryExcluded").any?
           end
-        else
-          prices << {:price => 0, :start_date => nil, :end_date => nil}
         end
-        parsed_values[:prices] = prices
 
+        prices = []
+        product_supplies = xml_product.search("/ProductSupply")
+        market_count = xml_product.search("/ProductSupply/Market").count
+
+        if market_count > 1
+          prices << self.parse_markets(product_supplies)
+        else
+          prices << self.parse_markets(product_supplies, default_territory)
+        end
+
+        parsed_values[:prices] = prices.flatten
         parsed_values[:xml] = xml_product.to_s
-        
+
         yield OnixParser::Product.new(parsed_values)
       end
+    end
+
+    def self.parse_markets(product_supplies, default_territories = {})
+      prices = []
+      product_supplies.each do |product_supply|
+        default_market_territories = {}
+        market_territories = product_supply.search("/Market/Territory")
+        if market_territories.any?
+          market_territory = market_territories.first
+          default_market_territories[:region_included] = market_territory.search("/RegionsIncluded").any? ? market_territory.search("/RegionsIncluded").first.innerText : ''
+          default_market_territories[:region_excluded] = market_territory.search("/RegionsExcluded").any? ? market_territory.search("/RegionsExcluded").first.innerText : ''
+          default_market_territories[:country_included] = market_territory.search("/CountriesIncluded").any? ? market_territory.search("/CountriesIncluded").first.innerText : ''
+          default_market_territories[:country_excluded] = market_territory.search("/CountriesExcluded").any? ? market_territory.search("/CountriesExcluded").first.innerText : ''
+        else
+          default_market_territories[:region_included] = default_territories[:region_included]  
+          default_market_territories[:region_excluded] = default_territories[:region_excluded]
+          default_market_territories[:country_included] = default_territories[:country_included]
+          default_market_territories[:country_excluded] = default_territories[:country_excluded]
+        end
+
+        price_nodes = product_supply.search("/SupplyDetail/Price")
+        if price_nodes.count > 1
+          prices << self.parse_prices(price_nodes)
+        else
+          prices << self.parse_prices(price_nodes, default_market_territories)
+        end
+      end
+      prices.flatten
+    end
+
+    def self.parse_prices(prices_nodes, default_territories = {})
+      prices = []
+      prices_nodes.each do |price_node|
+        price_data = {:price => price_node.search("/PriceAmount").first.innerText, :start_date => nil, :end_date => nil}
+        price_data[:currency] = price_node.search("/CurrencyCode").first.innerText if price_node.search("/CurrencyCode").any?
+
+        territory_nodes = price_node.search("/Territory")
+        currency_zone_nodes = price_node.search("/CurrencyZone")
+        price_territory = {}
+        if territory_nodes.any?
+          territory = territory_nodes.first
+          price_territory[:region_included] = territory.search("/RegionsIncluded").any? ? territory.search("/RegionsIncluded").first.innerText : ''
+          price_territory[:region_excluded] = territory.search("/RegionsExcluded").any? ? territory.search("/RegionsExcluded").first.innerText : ''
+          price_territory[:country_included] = territory.search("/CountriesIncluded").any? ? territory.search("/CountriesIncluded").first.innerText : ''
+          price_territory[:country_excluded] = territory.search("/CountriesExcluded").any? ? territory.search("/CountriesExcluded").first.innerText : ''
+        elsif currency_zone_nodes.any?
+          price_territory[:currency_zone] = currency_zone_nodes.first.innerText
+        else
+          price_territory[:region_included] = default_territories[:region_included]
+          price_territory[:region_excluded] = default_territories[:region_excluded] 
+          price_territory[:country_included] = default_territories[:country_included]
+          price_territory[:country_excluded] = default_territories[:country_excluded]
+        end
+
+        price_data[:territory] = price_territory
+
+        if price_node.search("/PriceDate").any?
+          start_date_node = price_node.search("/PriceDate/PriceDateRole[text() = '14']/../Date")
+          price_data[:start_date] = start_date_node.first.innerText if start_date_node.any?
+
+          end_date_node = price_node.search("/PriceDate/PriceDateRole[text() = '15']/../Date")
+          price_data[:end_date] = end_date_node.first.innerText if end_date_node.any?
+        end
+        prices << price_data
+      end
+      prices << {:price => 0, :start_date => nil, :end_date => nil, :currency => 'USD'} if prices.empty?
+      prices
     end
   end
 end

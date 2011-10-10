@@ -5,6 +5,38 @@ describe OnixParser::Parser2short do
     @data_path = File.join(File.dirname(__FILE__), "..", "data")
   end
 
+  context "mult_prices file" do
+    before(:each) do
+      @multiple_prices = File.join(@data_path, "mult_prices_onix_2_short.xml")
+      doc = Hpricot(File.read(@multiple_prices))
+      @products = []
+      OnixParser::Parser2short.find_products(doc) do |product|
+        @products << product
+      end
+    end
+
+    it "should have two price records" do
+      @products[0].prices.count.should == 2
+    end
+
+    it "should have 1 price with no dates" do
+      first_price = @products[0].prices[0]
+      first_price[:start_date].should be_nil
+      first_price[:end_date].should be_nil
+      first_price[:territory][:region_included].should == 'WORLD'
+      first_price[:currency].should == 'USD'
+    end
+
+    it "should have 1 price with start and end dates" do
+      second_price = @products[0].prices[1]
+      second_price[:start_date].should == '20110801'
+      second_price[:end_date].should == '20110831'
+      second_price[:territory][:region_included].should == 'WORLD'
+      second_price[:currency].should == 'USD'
+    end
+  end
+
+  
   context "related file" do
     before(:each) do
       @related = File.join(@data_path, "related.xml")
@@ -115,7 +147,9 @@ describe OnixParser::Parser2short do
     end
 
     it "should set the price" do
-      @products[0].prices.should eql [{:price => '14.99', :start_date => nil, :end_date => nil}]
+      @products[0].prices.should eql [{:price => '14.99', :start_date => nil, :end_date => nil, :currency => 'USD',
+                                       :territory => {:region_included => 'WORLD', :region_excluded => '',
+                                                      :country_included => '', :country_excluded => ''}}]
     end
 
     it "should set the xml" do

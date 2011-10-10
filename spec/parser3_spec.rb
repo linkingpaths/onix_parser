@@ -5,6 +5,111 @@ describe OnixParser::Parser3 do
     @data_path = File.join(File.dirname(__FILE__), "..", "data")
   end
 
+  context "Pricing" do
+    context "example 1" do
+      before(:each) do
+        @pricing_file = File.join(@data_path, "pricing_1_onix3.xml")
+        doc = Hpricot(File.read(@pricing_file))
+        @products = []
+        OnixParser::Parser3.find_products(doc) do |product|
+          @products << product
+        end
+      end
+
+      it "should set the price appropriately" do
+        price = @products[0].prices.first
+        price[:price].should == '12.99'
+        price[:currency].should == 'USD'
+      end
+    end
+
+    context "example 2" do
+      before(:each) do
+        @pricing_file = File.join(@data_path, "pricing_2_onix3.xml")
+        doc = Hpricot(File.read(@pricing_file))
+        @products = []
+        OnixParser::Parser3.find_products(doc) do |product|
+          @products << product
+        end
+      end
+
+      it "should set the prices appropriately" do
+        first_price = @products[0].prices[0]
+        first_price[:price].should == '12.99'
+        first_price[:currency].should == 'USD'
+        first_price[:end_date].should == '20110305'
+
+        second_price = @products[0].prices[1]
+        second_price[:price].should == '8.99'
+        second_price[:currency].should == 'USD'
+        second_price[:start_date].should == '20110306'
+      end
+    end
+
+    context "example 3" do
+      before(:each) do
+        @pricing_file = File.join(@data_path, "pricing_3_onix3.xml")
+        doc = Hpricot(File.read(@pricing_file))
+        @products = []
+        OnixParser::Parser3.find_products(doc) do |product|
+          @products << product
+        end
+      end
+
+      it "should set the prices appropriately" do
+        first_price = @products[0].prices[0]
+        first_price[:price].should == '12.99'
+        first_price[:currency].should == 'USD'
+        first_price[:territory][:country_included].should == 'US'
+
+        second_price = @products[0].prices[1]
+        second_price[:price].should == '7.50'
+        second_price[:currency].should == 'USD'
+        second_price[:territory][:country_included].should == 'IN'
+
+        third_price = @products[0].prices[2]
+        third_price[:price].should == '12.99'
+        third_price[:currency].should == 'USD'
+        third_price[:territory][:region_included].should == 'WORLD'
+        third_price[:territory][:country_excluded].should == 'US IN'
+      end
+    end
+
+    context "example 4" do
+      before(:each) do
+        @pricing_file = File.join(@data_path, "pricing_4_onix3.xml")
+        doc = Hpricot(File.read(@pricing_file))
+        @products = []
+        OnixParser::Parser3.find_products(doc) do |product|
+          @products << product
+        end
+      end
+
+      it "should set the prices appropriately" do
+        first_price = @products[0].prices[0]
+        first_price[:price].should == '9.99'
+        first_price[:currency].should == 'GBP'
+        first_price[:territory][:country_included].should == 'GB'
+
+        second_price = @products[0].prices[1]
+        second_price[:price].should == '11.99'
+        second_price[:currency].should == 'USD'
+        second_price[:territory][:country_included].should == 'US'
+
+        third_price = @products[0].prices[2]
+        third_price[:price].should == '9.50'
+        third_price[:currency].should == 'EUR'
+        third_price[:territory][:currency_zone].should == 'EUR'
+
+        fourth_price = @products[0].prices[3]
+        fourth_price[:price].should == '8.50'
+        fourth_price[:currency].should == 'GBP'
+        fourth_price[:territory][:region_included].should == 'WORLD'
+        fourth_price[:territory][:country_excluded].should == 'US GB AT BE CY DE ES FI FR GR IE IT LU NL MT PT SI SK'
+      end
+    end
+  end
+
   context "books_3 file" do
     before(:each) do
       @file2 = File.join(@data_path, "books_3.xml")
@@ -24,12 +129,38 @@ describe OnixParser::Parser3 do
     end
 
     it "should set the price" do
-      @products[0].prices.should eql [{:price => '11.99', :start_date => nil, :end_date => nil}]
-      @products[1].prices.should eql [{:price => '24.99', :start_date => nil, :end_date => nil}]
-      @products[2].prices.should eql [{:price => '12.99', :start_date => nil, :end_date => nil}]
-      @products[3].prices.should eql [{:price => '10.99', :start_date => nil, :end_date => nil}]
-      @products[4].prices.should eql [{:price => '10.99', :start_date => nil, :end_date => nil}]
-      @products[5].prices.should eql [{:price => '10.99', :start_date => nil, :end_date => nil}]
+      @products[0].prices.should eql [{:price => '11.99', :start_date => nil, :end_date => nil, :currency => 'USD',
+                                       :territory => {:region_included => 'WORLD',
+                                                        :region_excluded => '',
+                                                        :country_included => '',
+                                                        :country_excluded => ''}}]
+
+
+      @products[1].prices.should eql [{:price => '24.99', :start_date => nil, :end_date => nil, :currency => 'USD',
+                                       :territory => {:region_included => 'WORLD',
+                                                        :region_excluded => '',
+                                                        :country_included => '',
+                                                        :country_excluded => ''}}]
+      @products[2].prices.should eql [{:price => '12.99', :start_date => nil, :end_date => nil, :currency => 'USD',
+                                       :territory => {:region_included => 'WORLD',
+                                                        :region_excluded => '',
+                                                        :country_included => '',
+                                                        :country_excluded => ''}}]
+      @products[3].prices.should eql [{:price => '10.99', :start_date => nil, :end_date => nil, :currency => 'USD',
+                                       :territory => {:region_included => 'WORLD',
+                                                        :region_excluded => '',
+                                                        :country_included => '',
+                                                        :country_excluded => ''}}]
+      @products[4].prices.should eql [{:price => '10.99', :start_date => nil, :end_date => nil, :currency => 'USD',
+                                       :territory => {:region_included => 'WORLD',
+                                                        :region_excluded => '',
+                                                        :country_included => '',
+                                                        :country_excluded => ''}}]
+      @products[5].prices.should eql [{:price => '10.99', :start_date => nil, :end_date => nil, :currency => 'USD',
+                                       :territory => {:region_included => 'WORLD',
+                                                        :region_excluded => '',
+                                                        :country_included => '',
+                                                        :country_excluded => ''}}]
     end
   end
 
@@ -42,7 +173,7 @@ describe OnixParser::Parser3 do
         @products << product
       end
     end
-    
+
     it "should obtain the products" do
       @products.count.should eql(6)
     end
@@ -140,7 +271,7 @@ describe OnixParser::Parser3 do
 
     it "should set the price" do
       (0..5).each do |n|
-        @products[n].prices.should eql([{:price => 0, :start_date => nil, :end_date => nil}])
+        @products[n].prices.should eql([{:price => 0, :start_date => nil, :end_date => nil, :currency => 'USD'}])
       end
     end
 
@@ -150,8 +281,4 @@ describe OnixParser::Parser3 do
       end
     end
   end
-
-#  it "should set the price" do
-#
-#  end
 end
