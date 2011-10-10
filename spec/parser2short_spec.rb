@@ -34,6 +34,11 @@ describe OnixParser::Parser2short do
       second_price[:territory][:region_included].should == 'WORLD'
       second_price[:currency].should == 'USD'
     end
+
+    it "should have a workidentifier for the first product" do
+      @products[0].other_ids.count.should == 1
+      @products[0].other_ids[0][1].should == '9781595548047' 
+    end
   end
 
   

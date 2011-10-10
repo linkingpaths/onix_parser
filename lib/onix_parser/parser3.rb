@@ -44,6 +44,12 @@ module OnixParser
 
         end
 
+        parsed_values[:other_ids] = []
+        related_products = xml_product.search("/RelatedMaterial/RelatedProduct/ProductRelationCode[text() = '13']/../ProductIdentifier")
+        related_products.each do |related_product|
+          parsed_values[:other_ids] << [find_product_type(related_product.search('/ProductIDType').first.innerText), related_product.search('/IDValue').first.innerText]
+        end
+
         default_territory = {:region_included => '', :region_excluded => '',
                              :country_included => '', :country_excluded => ''}
         publishing_detail = xml_product.search("/PublishingDetail")
@@ -88,7 +94,7 @@ module OnixParser
           default_market_territories[:country_included] = market_territory.search("/CountriesIncluded").any? ? market_territory.search("/CountriesIncluded").first.innerText : ''
           default_market_territories[:country_excluded] = market_territory.search("/CountriesExcluded").any? ? market_territory.search("/CountriesExcluded").first.innerText : ''
         else
-          default_market_territories[:region_included] = default_territories[:region_included]  
+          default_market_territories[:region_included] = default_territories[:region_included]
           default_market_territories[:region_excluded] = default_territories[:region_excluded]
           default_market_territories[:country_included] = default_territories[:country_included]
           default_market_territories[:country_excluded] = default_territories[:country_excluded]
@@ -123,7 +129,7 @@ module OnixParser
           price_territory[:currency_zone] = currency_zone_nodes.first.innerText
         else
           price_territory[:region_included] = default_territories[:region_included]
-          price_territory[:region_excluded] = default_territories[:region_excluded] 
+          price_territory[:region_excluded] = default_territories[:region_excluded]
           price_territory[:country_included] = default_territories[:country_included]
           price_territory[:country_excluded] = default_territories[:country_excluded]
         end
@@ -141,6 +147,26 @@ module OnixParser
       end
       prices << {:price => 0, :start_date => nil, :end_date => nil, :currency => 'USD'} if prices.empty?
       prices
+    end
+
+    def self.find_product_type(id)
+      types = {'01' => 'Proprietary',
+               '02' => 'ISBN-10',
+               '03' => 'GTIN-13',
+               '04' => 'UPC',
+               '05' => 'ISMN-10',
+               '06' => 'DOI',
+               '13' => 'LCCN',
+               '14' => 'GTIN-14',
+               '15' => 'ISBN-13',
+               '17' => 'Legal Deposit number',
+               '22' => 'URN',
+               '23' => 'OCLC number',
+               '24' => "Co-publisher's ISBN-13",
+               '25' => 'ISMN-13'
+      }
+
+      types[id]
     end
   end
 end

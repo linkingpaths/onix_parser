@@ -21,6 +21,11 @@ describe OnixParser::Parser3 do
         price[:price].should == '12.99'
         price[:currency].should == 'USD'
       end
+
+      it "should have a related product" do
+        @products[0].other_ids.count.should == 1
+        @products[0].other_ids[0][1].should == '9780842300520'
+      end
     end
 
     context "example 2" do

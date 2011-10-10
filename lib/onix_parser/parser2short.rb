@@ -1,5 +1,6 @@
 module OnixParser
   class Parser2short
+
     def self.find_products(doc, &block)
       doc.root.search('/product').each do |product|
         parsed_values = {}
@@ -28,6 +29,12 @@ module OnixParser
 
         file_path = "/tmp/#{parsed_values[:isbn]}.jpg"
         parsed_values[:cover] = File.exists?(file_path) ? File.new(file_path) : nil
+
+        # workidentifier (other ids by which the same content is identified (usually physical books)
+        parsed_values[:other_ids] = []
+        product.search('/workidentifier').each do |workid|
+          parsed_values[:other_ids] << [find_product_type(workid.search('/b201').first.innerText), workid.search('/b244').first.innerText]
+        end
 
         # prices
         prices = []
@@ -61,13 +68,13 @@ module OnixParser
             prices << price_data
           end
         else
-          prices << {:price => 0, :start_date => nil, :end_date => nil, :region => 'WORLD', :currency => 'USD'}  
+          prices << {:price => 0, :start_date => nil, :end_date => nil, :region => 'WORLD', :currency => 'USD'}
         end
         parsed_values[:prices] = prices
 
         excerpt_node = product.search("/othertext/d102[text() = '23']/../d104")
         parsed_values[:excerpt] = ''
-        if(excerpt_node.any?)
+        if (excerpt_node.any?)
           parsed_values[:excerpt] = excerpt_node.first.innerText
         end
         parsed_values[:xml] = product.to_s
@@ -77,6 +84,26 @@ module OnixParser
 
         yield OnixParser::Product.new(parsed_values)
       end
+    end
+
+    def self.find_product_type(id)
+      types = {'01' => 'Proprietary',
+               '02' => 'ISBN-10',
+               '03' => 'GTIN-13',
+               '04' => 'UPC',
+               '05' => 'ISMN-10',
+               '06' => 'DOI',
+               '13' => 'LCCN',
+               '14' => 'GTIN-14',
+               '15' => 'ISBN-13',
+               '17' => 'Legal Deposit number',
+               '22' => 'URN',
+               '23' => 'OCLC number',
+               '24' => "Co-publisher's ISBN-13",
+               '25' => 'ISMN-13'
+      }
+
+      types[id]
     end
   end
 end
