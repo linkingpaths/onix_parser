@@ -17,7 +17,7 @@ module OnixParser
       if @doc.root.search('/Product/DescriptiveDetail').any?
         @onix_parser = OnixParser::Parser3
         @onix_version = '3.0'
-      elsif @doc.search("//RecordReference").any?
+      elsif @doc.root.search("/Product/RecordReference").any?
         @onix_parser = OnixParser::Parser2long
         @onix_version = '2.1 long'
       elsif @doc.search("//a001").any?

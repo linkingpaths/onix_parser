@@ -1,0 +1,708 @@
+<?xml version="1.0"?>
+<!DOCTYPE ONIXMessage SYSTEM
+"http://www.editeur.org/onix/2.1/reference/onix-international.dtd">
+<ONIXMessage>
+<Header>
+<FromSAN>2117991</FromSAN>
+<FromCompany>Good News Publishers</FromCompany>
+<FromPerson>Raymond Elliott, 630-682-4300 x6029</FromPerson>
+<FromEmail>infosys@crossway.org</FromEmail>
+<SentDate>20111108</SentDate>
+<MessageNote>Complete ebook listing on 20111108</MessageNote>
+<DefaultLanguageOfText>eng</DefaultLanguageOfText>
+<DefaultPriceTypeCode>01</DefaultPriceTypeCode>
+<DefaultCurrencyCode>USD</DefaultCurrencyCode>
+</Header>
+<Product>
+<RecordReference>1433521679</RecordReference>
+<NotificationType>03</NotificationType>
+<ProductIdentifier>
+<ProductIDType>02</ProductIDType>
+<IDValue>1433521679</IDValue>
+</ProductIdentifier>
+<ProductIdentifier>
+<ProductIDType>03</ProductIDType>
+<IDValue>9781433521676</IDValue>
+</ProductIdentifier>
+<ProductIdentifier>
+<ProductIDType>15</ProductIDType>
+<IDValue>9781433521676</IDValue>
+</ProductIdentifier>
+<ProductForm>DG</ProductForm>
+<EpubType>031</EpubType>
+<EpubFormat>11</EpubFormat>
+<Title>
+<TitleType>01</TitleType>
+<TitleText>King Solomon</TitleText>
+<Subtitle>The Temptations of Money, Sex, and Power</Subtitle>
+</Title>
+<Contributor>
+  <SequenceNumber>1</SequenceNumber>
+  <ContributorRole>A01</ContributorRole>
+  <PersonNameInverted>Ryken, Philip Graham</PersonNameInverted>
+</Contributor>
+<BASICMainSubject>REL012000</BASICMainSubject>
+<OtherText>
+<TextTypeCode>02</TextTypeCode>
+<Text textformat="02">&lt;p>Tracing King Solomon&amp;rsquo;s life from triumph to tragic failure, Philip Ryken helps readers connect Solomon&amp;rsquo;s experiences to the Christian life and urges us to avoid Solomon&amp;rsquo;s mistakes. Study guide included.&lt;/p></Text>
+</OtherText>
+<OtherText>
+<TextTypeCode>03</TextTypeCode>
+<Text textformat="02">&lt;p>King Solomon had all the fame and fortune that any man could want. He was the world&amp;rsquo;s wisest and wealthiest king. And yet, tragically, he threw it all away for the love of money, the pleasures of sex, and the powers of an earthly kingdom.&lt;/p>&lt;p>In studying the life of Solomon, we see both the true greatness and the tragic failure of our own humanity&amp;mdash;from godly devotion to self-serving excess. Even in the midst of our best intentions, we are all prone to succumb to the same temptations of money, sex, and power. And if Solomon&amp;rsquo;s incredible wisdom could not prevent him from such tragic mistakes, then how are we to triumph over the same temptations?&lt;/p>&lt;p>Philip Graham Ryken shows us how, by the grace of God, to prevent those downfalls and to seek God&amp;rsquo;s glory amid earthly temptations through this rich, Christ-centered study of the life of Solomon.&lt;/p></Text>
+</OtherText>
+<OtherText>
+<TextTypeCode>13</TextTypeCode>
+<Text textformat="02">&lt;p>&lt;strong>PHILIP GRAHAM RYKEN&lt;/strong> (PhD, Oxford University), president of Wheaton College, was formerly senior minister of Philadelphia&amp;rsquo;s Tenth Presbyterian Church. He has written and edited more than thirty books, including expositional commentaries on Exodus, Ecclesiastes, and Jeremiah.&lt;/p></Text>
+</OtherText>
+<OtherText>
+<TextTypeCode>30</TextTypeCode>
+<Text textformat="02">&lt;p>&amp;ldquo;Articulate and challenging, Ryken brings fresh insight to familiar problems from less familiar passages of scripture. With power and practicality he helps us understand why these temptations are so great but why Christ is greater still.&amp;rdquo;&lt;br>&amp;mdash;&lt;strong>James MacDonald&lt;/strong>, Senior Pastor, Harvest Bible Chapel, Chicagoland Area; radio teacher, &lt;cite>Walk in the Word&lt;/cite>&lt;/p>&lt;p>&amp;ldquo;With the skill of a theologian and the heart of a pastor, Ryken takes you from the demise of one king to the victory of the King of kings. Read and you&amp;rsquo;ll find more than the story of Solomon; you&amp;rsquo;ll find the gospel in beautiful and powerful relief.&amp;rdquo;&lt;br>&amp;mdash;&lt;strong>Paul Tripp&lt;/strong>, President, Paul Tripp Ministries; author, &lt;em>What Did You Expect?: Redeeming the Realities of Marriage&lt;/em>&lt;/p>&lt;p>&amp;ldquo;Vintage Ryken: full of truth, wisdom, and insight. This book tells the story of Solomon, his rise and fall, and expertly traces the themes of his strange tragedy in the light of the hope of the gospel. There is a range of compelling and motivating illustrations drawn from classical and contemporary sources, as well as literary insights about how the story of Solomon fits into the Bible. Ryken leaves open the question as to whether Solomon in the end came back to God, although implies he may well have done so, through the lens of the end of Ecclesiastes. The section where Ryken describes, in pastoral and effective detail, the possible temptations that may come with power and success and how to avoid them are particularly helpful. All in all a great read, an insightful meditation on Solomon, and a case for maintaining godliness in the midst of the pressure of success well made.&amp;rdquo;&lt;br>&amp;mdash;&lt;strong>Josh Moody&lt;/strong>, Senior Pastor, College Church, Wheaton, Illinois; author, &lt;em>The God-Centered Life: Insights from Jonathan Edwards&lt;/em>&lt;/p>&lt;p>&amp;ldquo;Ryken has produced another excellent pastoral asset to assist believers in their spiritual growth while also equipping leaders for an effective, gospel-centered discipleship ministry. The display of the majesty of Christ, &amp;lsquo;One greater than Solomon,&amp;rsquo; is the pinnacle blessing from this biblically faithful, biographical treatment of the life of Solomon. As Phil traverses Solomon&amp;rsquo;s life, examining his divine gift of wisdom, startling passions, and significant achievements, he simultaneously exposes the great sins of Solomon and the greater grace of God in Christ. This astounding exposition also allows the reader to benefit from informative insights as to the subtle snares and entangling schemes of Satan in the idolatrous use of money, power, and sex. Although a page-turner, it warrants intentional pauses for thoughtful meditation and reflection, allowing us to make life applications that fulfill the biblical admonition to &amp;lsquo;not be ignorant of Satan&amp;rsquo;s devices&amp;rsquo; yet focus upon the sufficiency of the great King, Christ Jesus, our Lord.&amp;rdquo;&lt;br>&amp;mdash;&lt;strong>Harry L. Reeder III&lt;/strong>, Senior Pastor, Briarwood Presbyterian Church, Birmingham, Alabama&lt;/p></Text>
+</OtherText>
+<MediaFile>
+<MediaFileTypeCode>04</MediaFileTypeCode>
+<MediaFileFormatCode>03</MediaFileFormatCode>
+<MediaFileLinkTypeCode>01</MediaFileLinkTypeCode>
+<MediaFileLink>http://images.gnpcb.org/products/9781433521676.jpg</MediaFileLink>
+</MediaFile>
+<Imprint>
+<NameCodeType>02</NameCodeType>
+<NameCodeTypeName>In-House</NameCodeTypeName>
+<NameCodeValue>GNP002</NameCodeValue>
+<ImprintName>Crossway Books</ImprintName>
+</Imprint>
+<Publisher>
+<PublisherName>Crossway</PublisherName>
+<Website>
+<WebsiteLink>http://crossway.org</WebsiteLink>
+</Website>
+</Publisher>
+<PublishingStatus>04</PublishingStatus>
+<PublicationDate>20110707</PublicationDate>
+<SalesRights>
+<SalesRightsType>02</SalesRightsType>
+<RightsTerritory>WORLD</RightsTerritory>
+</SalesRights>
+<RelatedProduct>
+<RelationCode>13</RelationCode>
+<ProductIdentifier>
+<ProductIDType>15</ProductIDType>
+<IDValue>9781433521546</IDValue>
+</ProductIdentifier>
+</RelatedProduct>
+<SupplyDetail>
+<SupplierIdentifier>
+<SupplierIDType>07</SupplierIDType>
+<IDValue>2117991</IDValue>
+</SupplierIdentifier>
+<TelephoneNumber>1-800-323-3890</TelephoneNumber>
+<FaxNumber>1-630-682-4785</FaxNumber>
+<EmailAddress>sales@crossway.org</EmailAddress>
+<Website>
+<WebsiteLink>http://crossway.org</WebsiteLink>
+</Website>
+<SupplierRole>01</SupplierRole>
+<AvailabilityCode>IP</AvailabilityCode>
+<ProductAvailability>21</ProductAvailability>
+<Price>
+<PriceTypeCode>01</PriceTypeCode>
+<DiscountCoded>
+<DiscountCodeType>02</DiscountCodeType>
+<DiscountCodeTypeName>Crossway</DiscountCodeTypeName>
+<DiscountCode>BK</DiscountCode>
+</DiscountCoded>
+<PriceAmount>9.99</PriceAmount>
+</Price>
+</SupplyDetail>
+</Product>
+<Product>
+<RecordReference>1433521717</RecordReference>
+<NotificationType>03</NotificationType>
+<ProductIdentifier>
+<ProductIDType>02</ProductIDType>
+<IDValue>1433521717</IDValue>
+</ProductIdentifier>
+<ProductIdentifier>
+<ProductIDType>03</ProductIDType>
+<IDValue>9781433521713</IDValue>
+</ProductIdentifier>
+<ProductIdentifier>
+<ProductIDType>15</ProductIDType>
+<IDValue>9781433521713</IDValue>
+</ProductIdentifier>
+<ProductForm>DG</ProductForm>
+<EpubType>031</EpubType>
+<EpubFormat>11</EpubFormat>
+<TitleOfSeries>The Gospel Coalition</TitleOfSeries>
+<Title>
+<TitleType>01</TitleType>
+<TitleText>Don't Call It a Comeback (Foreword by D. A. Carson)</TitleText>
+<Subtitle>The Old Faith for a New Day</Subtitle>
+</Title>
+<Contributor>
+<SequenceNumber>1</SequenceNumber>
+<ContributorRole>A01</ContributorRole>
+<PersonNameInverted>DeYoung, Kevin</PersonNameInverted>
+</Contributor>
+<Contributor>
+<SequenceNumber>2</SequenceNumber>
+<ContributorRole>A23</ContributorRole>
+<PersonNameInverted>Carson, D. A.</PersonNameInverted>
+</Contributor>
+<Contributor>
+<SequenceNumber>3</SequenceNumber>
+<ContributorRole>A32</ContributorRole>
+<PersonNameInverted>Kluck, Ted</PersonNameInverted>
+</Contributor>
+<Contributor>
+<SequenceNumber>4</SequenceNumber>
+<ContributorRole>A32</ContributorRole>
+<PersonNameInverted>Moore, Russell D.</PersonNameInverted>
+</Contributor>
+<Contributor>
+<SequenceNumber>5</SequenceNumber>
+<ContributorRole>A32</ContributorRole>
+<PersonNameInverted>Tchividjian, Tullian</PersonNameInverted>
+</Contributor>
+<Contributor>
+<SequenceNumber>6</SequenceNumber>
+<ContributorRole>A32</ContributorRole>
+<PersonNameInverted>Challies, Tim</PersonNameInverted>
+</Contributor>
+<Contributor>
+<SequenceNumber>7</SequenceNumber>
+<ContributorRole>A32</ContributorRole>
+<PersonNameInverted>Taylor, Justin</PersonNameInverted>
+</Contributor>
+<Contributor>
+<SequenceNumber>8</SequenceNumber>
+<ContributorRole>A32</ContributorRole>
+<PersonNameInverted>Hansen, Collin</PersonNameInverted>
+</Contributor>
+<Contributor>
+<SequenceNumber>9</SequenceNumber>
+<ContributorRole>A32</ContributorRole>
+<PersonNameInverted>Leeman, Jonathan </PersonNameInverted>
+</Contributor>
+<Contributor>
+<SequenceNumber>10</SequenceNumber>
+<ContributorRole>A32</ContributorRole>
+<PersonNameInverted>Gilbert, Greg</PersonNameInverted>
+</Contributor>
+<Contributor>
+<SequenceNumber>11</SequenceNumber>
+<ContributorRole>A32</ContributorRole>
+<PersonNameInverted>Strachan, Owen</PersonNameInverted>
+</Contributor>
+<Contributor>
+<SequenceNumber>12</SequenceNumber>
+<ContributorRole>A32</ContributorRole>
+<PersonNameInverted>Anyabwile, Thabiti M.</PersonNameInverted>
+</Contributor>
+<Contributor>
+<SequenceNumber>13</SequenceNumber>
+<ContributorRole>A32</ContributorRole>
+<PersonNameInverted>Burk, Denny</PersonNameInverted>
+</Contributor>
+<Contributor>
+<SequenceNumber>14</SequenceNumber>
+<ContributorRole>A32</ContributorRole>
+<PersonNameInverted>Harvey, Jay</PersonNameInverted>
+</Contributor>
+<Contributor>
+<SequenceNumber>15</SequenceNumber>
+<ContributorRole>A32</ContributorRole>
+<PersonNameInverted>Mathis, David</PersonNameInverted>
+</Contributor>
+<Contributor>
+<SequenceNumber>16</SequenceNumber>
+<ContributorRole>A32</ContributorRole>
+<PersonNameInverted>Naselli, Andrew David</PersonNameInverted>
+</Contributor>
+<Contributor>
+<SequenceNumber>17</SequenceNumber>
+<ContributorRole>A32</ContributorRole>
+<PersonNameInverted>Patrick, Darrin</PersonNameInverted>
+</Contributor>
+<Contributor>
+<SequenceNumber>18</SequenceNumber>
+<ContributorRole>A32</ContributorRole>
+<PersonNameInverted>Peays, Ben</PersonNameInverted>
+</Contributor>
+<Contributor>
+<SequenceNumber>19</SequenceNumber>
+<ContributorRole>A32</ContributorRole>
+<PersonNameInverted>Redmond, Eric C.</PersonNameInverted>
+</Contributor>
+<BASICMainSubject>REL067000</BASICMainSubject>
+<OtherText>
+<TextTypeCode>02</TextTypeCode>
+<Text textformat="02">&lt;p>Unites some of today&amp;rsquo;s most promising young evangelicals in a bold assertion of the stability, relevance, and necessity of Christian orthodoxy, and reasserts the theological nature of evangelicalism.&lt;/p></Text>
+</OtherText>
+<OtherText>
+<TextTypeCode>03</TextTypeCode>
+<Text textformat="02">&lt;p>Recent cultural interest in evangelicalism has led to considerable confusion about what the term actually means. Many young Christians are tempted to discard the label altogether. But evangelicalism is not merely a political movement in decline or a sociological phenomenon on the rise, as it has sometimes been portrayed. It is, in fact, a helpful theological profile that manifests itself in beliefs, ethics, and church life.&lt;/p>&lt;p>DeYoung and other key twenty- and thirty-something evangelical Christian leaders present&amp;nbsp;&lt;em>Don&amp;rsquo;t Call It a Comeback: The Same Evangelical Faith for a New Day&lt;/em>&amp;nbsp;to assert the stability, relevance, and necessity of Christian orthodoxy today. This book introduces young, new, and under-discipled Christians to the most essential and basic issues of faith in general and of evangelicalism in particular.&lt;/p>&lt;p>Kevin DeYoung and contributors like Russell Moore, Tullian Tchividjian, Darrin Patrick, Justin Taylor, Thabiti Anyabwile, and Tim Challies examine what evangelical Christianity is and does within the broad categories of history, theology, and practice. They demonstrate that evangelicalism is still biblically and historically rooted and remains the same framework for faith that we need today.&lt;/p></Text>
+</OtherText>
+<OtherText>
+<TextTypeCode>13</TextTypeCode>
+<Text textformat="02">&lt;p>&lt;strong>KEVIN DEYOUNG&lt;/strong> (MDiv, Gordon-Conwell Theological Seminary) is senior pastor at University Reformed Church in East Lansing, Michigan. He is the author of several popular books, including &lt;em>Just Do Something&lt;/em> and &lt;em>Why We Love the Church&lt;/em>.&lt;/p></Text>
+</OtherText>
+<OtherText>
+<TextTypeCode>30</TextTypeCode>
+<Text textformat="02">&lt;p>&amp;ldquo;I absolutely &lt;em>love&lt;/em> this book! First, each chapter solidly tackles a critical component of our Evangelical faith and practice. Second, the authors demonstrate not only a strong grasp of God&amp;rsquo;s Word, but also of the perspective of church history, which is sadly lacking in most contemporary books. Third, these guys write tight, making every sentence count, so even though it packed with truth, the book is a quick read. I am so proud of these brilliant, godly men.&amp;rdquo;&lt;br>&amp;mdash;&lt;strong>Rick Warren&lt;/strong>&lt;strong>, &lt;/strong>Pastor, Saddleback Church; author, &lt;em>The Purpose Driven Life&lt;/em>&lt;/p>&lt;p>&amp;ldquo;It brings this aging man great joy to see a rising generation address contemporary questions with theologically informed answers. These are the right guys, on the right topics, at the right time.&amp;rdquo;&lt;br>&amp;mdash;&lt;strong>C. J. Mahaney&lt;/strong>&lt;strong>,&lt;/strong> Sovereign Grace Ministries&lt;/p>&lt;p>&amp;ldquo;Sometimes I wonder how I could have spent my entire life in the church, safely ensconced in the evangelical subculture, and yet have such a difficult time articulating the essence of significant biblical concepts and convictions that I claim to have built my life upon. And I don&amp;rsquo;t think I&amp;rsquo;m alone. &lt;em>Don&amp;rsquo;t Call It a Comeback&lt;/em> is more than just a primer for the young and uninitiated; it is essential reading for all who want to make sure they are clear and convinced on the things that matter most.&amp;rdquo;&lt;br>&amp;mdash;&lt;strong>Nancy Guthrie&lt;/strong>, Bible Teacher; author, &lt;em>The One Year Book of Discovering Jesus in the Old Testament&lt;/em>&lt;/p></Text>
+</OtherText>
+<MediaFile>
+<MediaFileTypeCode>04</MediaFileTypeCode>
+<MediaFileFormatCode>03</MediaFileFormatCode>
+<MediaFileLinkTypeCode>01</MediaFileLinkTypeCode>
+<MediaFileLink>http://images.gnpcb.org/products/9781433521713.jpg</MediaFileLink>
+</MediaFile>
+<Imprint>
+<NameCodeType>02</NameCodeType>
+<NameCodeTypeName>In-House</NameCodeTypeName>
+<NameCodeValue>GNP002</NameCodeValue>
+<ImprintName>Crossway Books</ImprintName>
+</Imprint>
+<Publisher>
+<PublisherName>Crossway</PublisherName>
+<Website>
+<WebsiteLink>http://crossway.org</WebsiteLink>
+</Website>
+</Publisher>
+<PublishingStatus>04</PublishingStatus>
+<PublicationDate>20110106</PublicationDate>
+<SalesRights>
+<SalesRightsType>02</SalesRightsType>
+<RightsTerritory>WORLD</RightsTerritory>
+</SalesRights>
+<RelatedProduct>
+<RelationCode>13</RelationCode>
+<ProductIdentifier>
+<ProductIDType>15</ProductIDType>
+<IDValue>9781433521690</IDValue>
+</ProductIdentifier>
+</RelatedProduct>
+<SupplyDetail>
+<SupplierIdentifier>
+<SupplierIDType>07</SupplierIDType>
+<IDValue>2117991</IDValue>
+</SupplierIdentifier>
+<TelephoneNumber>1-800-323-3890</TelephoneNumber>
+<FaxNumber>1-630-682-4785</FaxNumber>
+<EmailAddress>sales@crossway.org</EmailAddress>
+<Website>
+<WebsiteLink>http://crossway.org</WebsiteLink>
+</Website>
+<SupplierRole>01</SupplierRole>
+<AvailabilityCode>IP</AvailabilityCode>
+<ProductAvailability>21</ProductAvailability>
+<Price>
+<PriceTypeCode>01</PriceTypeCode>
+<DiscountCoded>
+<DiscountCodeType>02</DiscountCodeType>
+<DiscountCodeTypeName>Crossway</DiscountCodeTypeName>
+<DiscountCode>BK</DiscountCode>
+</DiscountCoded>
+<PriceAmount>9.99</PriceAmount>
+</Price>
+</SupplyDetail>
+</Product>
+<Product>
+<RecordReference>1433529963</RecordReference>
+<NotificationType>03</NotificationType>
+<ProductIdentifier>
+<ProductIDType>02</ProductIDType>
+<IDValue>1433529963</IDValue>
+</ProductIdentifier>
+<ProductIdentifier>
+<ProductIDType>03</ProductIDType>
+<IDValue>9781433529962</IDValue>
+</ProductIdentifier>
+<ProductIdentifier>
+<ProductIDType>15</ProductIDType>
+<IDValue>9781433529962</IDValue>
+</ProductIdentifier>
+<ProductForm>DG</ProductForm>
+<EpubType>029</EpubType>
+<EpubFormat>06</EpubFormat>
+<Title>
+<TitleType>01</TitleType>
+<TitleText>ePub-The Four Holy Gospels</TitleText>
+</Title>
+<NoContributor />
+<ReligiousText>
+<Bible>
+<BibleContents>GE</BibleContents>
+<BibleVersion>ESV</BibleVersion>
+</Bible>
+</ReligiousText>
+<BASICMainSubject>bib003030</BASICMainSubject>
+<MediaFile>
+<MediaFileTypeCode>04</MediaFileTypeCode>
+<MediaFileFormatCode>03</MediaFileFormatCode>
+<MediaFileLinkTypeCode>01</MediaFileLinkTypeCode>
+<MediaFileLink>http://images.gnpcb.org/products/9781433521942.jpg</MediaFileLink>
+</MediaFile>
+<Imprint>
+<NameCodeType>02</NameCodeType>
+<NameCodeTypeName>In-House</NameCodeTypeName>
+<NameCodeValue>GNP003</NameCodeValue>
+<ImprintName>Crossway Bibles</ImprintName>
+</Imprint>
+<Publisher>
+<PublisherName>Crossway</PublisherName>
+<Website>
+<WebsiteLink>http://crossway.org</WebsiteLink>
+</Website>
+</Publisher>
+<PublishingStatus>04</PublishingStatus>
+<PublicationDate>20110114</PublicationDate>
+<SalesRights>
+<SalesRightsType>02</SalesRightsType>
+<RightsTerritory>WORLD</RightsTerritory>
+</SalesRights>
+<RelatedProduct>
+<RelationCode>13</RelationCode>
+<ProductIdentifier>
+<ProductIDType>15</ProductIDType>
+<IDValue>9781433521942</IDValue>
+</ProductIdentifier>
+</RelatedProduct>
+<SupplyDetail>
+<SupplierIdentifier>
+<SupplierIDType>07</SupplierIDType>
+<IDValue>2117991</IDValue>
+</SupplierIdentifier>
+<TelephoneNumber>1-800-323-3890</TelephoneNumber>
+<FaxNumber>1-630-682-4785</FaxNumber>
+<EmailAddress>sales@crossway.org</EmailAddress>
+<Website>
+<WebsiteLink>http://crossway.org</WebsiteLink>
+</Website>
+<SupplierRole>01</SupplierRole>
+<AvailabilityCode>IP</AvailabilityCode>
+<ProductAvailability>21</ProductAvailability>
+<Price>
+<PriceTypeCode>01</PriceTypeCode>
+<DiscountCoded>
+<DiscountCodeType>02</DiscountCodeType>
+<DiscountCodeTypeName>Crossway</DiscountCodeTypeName>
+<DiscountCode>BK</DiscountCode>
+</DiscountCoded>
+<PriceAmount>14.99</PriceAmount>
+</Price>
+</SupplyDetail>
+</Product>
+<Product>
+<RecordReference>143351950X</RecordReference>
+<NotificationType>03</NotificationType>
+<ProductIdentifier>
+<ProductIDType>02</ProductIDType>
+<IDValue>143351950X</IDValue>
+</ProductIdentifier>
+<ProductIdentifier>
+<ProductIDType>03</ProductIDType>
+<IDValue>9781433519505</IDValue>
+</ProductIdentifier>
+<ProductIdentifier>
+<ProductIDType>15</ProductIDType>
+<IDValue>9781433519505</IDValue>
+</ProductIdentifier>
+<ProductForm>DG</ProductForm>
+<EpubType>029</EpubType>
+<EpubFormat>06</EpubFormat>
+<Title>
+<TitleType>01</TitleType>
+<TitleText>Pollution and the Death of Man</TitleText>
+</Title>
+<Contributor>
+<SequenceNumber>1</SequenceNumber>
+<ContributorRole>A01</ContributorRole>
+<PersonNameInverted>Schaeffer, Francis A.</PersonNameInverted>
+</Contributor>
+<Contributor>
+<SequenceNumber>2</SequenceNumber>
+<ContributorRole>A01</ContributorRole>
+<PersonNameInverted>Middelmann, Udo W.</PersonNameInverted>
+</Contributor>
+<Contributor>
+<SequenceNumber>3</SequenceNumber>
+<ContributorRole>A32</ContributorRole>
+<PersonNameInverted>White Jr., Lynn</PersonNameInverted>
+</Contributor>
+<Contributor>
+<SequenceNumber>4</SequenceNumber>
+<ContributorRole>A32</ContributorRole>
+<PersonNameInverted>Means, Richard</PersonNameInverted>
+</Contributor>
+<BASICMainSubject>REL012110</BASICMainSubject>
+<OtherText>
+<TextTypeCode>02</TextTypeCode>
+<Text textformat="02">&lt;p>Schaeffer&amp;rsquo;s important classic outlines a theology of ecology, arguing for a renewed understanding of the creation account and a return to the biblical mandate of godly stewardship. Repackaged and republished.&lt;/p></Text>
+</OtherText>
+<OtherText>
+<TextTypeCode>03</TextTypeCode>
+<Text textformat="02">&lt;p>At the creation of the world, God gave mankind the responsibility to exercise dominion over the earth. Man was to use the earth and its abundance of resources to satisfy his physical needs, but he was also to care for the earth and its creatures as a wise and godly steward. Reading about endangered species or another oil spill will make it abundantly clear that the human race has failed miserably in its God-given mandate. How did we get to this point? Where should we go from here?&lt;/p>&lt;p>This classic by Francis Schaeffer, now repackaged, looks at contemporary ecological crises through the lens of theology and Scripture. Renowned for his work in applied philosophy and theology, Schaeffer answers serious philosophical questions about creation and ecology. He concludes that we must return to a profoundly and radically biblical understanding of God&amp;rsquo;s relationship to the earth, and of our divine mandate to exercise godly dominion over it. Repackaged and republished,&amp;nbsp;&lt;em>Pollution and the Death of Man&lt;/em>&amp;nbsp;carries an important and relevant message for our day. With concluding chapter by Udo Middelmann.&lt;/p></Text>
+</OtherText>
+<OtherText>
+<TextTypeCode>13</TextTypeCode>
+<Text textformat="02">&lt;p>&lt;strong>FRANCIS A. SCHAEFFER &lt;/strong>(1912&amp;ndash;1984) has been recognized internationally for his work in Christianity and culture. He was the author of more than twenty books and, with his wife, Edith, the founder of L&amp;rsquo;Abri Fellowship. More than fifteen years after his death, his influence and legacy continue worldwide.&lt;/p>&lt;p>&lt;strong>UDO W. MIDDELMANN &lt;/strong>is president of the Francis A. Schaeffer Foundation. He is the author of several books, including &lt;em>The Innocence of God&lt;/em>, and has been a longtime worker at Swiss L&amp;rsquo;Abri.&lt;/p></Text>
+</OtherText>
+<MediaFile>
+<MediaFileTypeCode>04</MediaFileTypeCode>
+<MediaFileFormatCode>03</MediaFileFormatCode>
+<MediaFileLinkTypeCode>01</MediaFileLinkTypeCode>
+<MediaFileLink>http://images.gnpcb.org/products/9781433519505.jpg</MediaFileLink>
+</MediaFile>
+<Imprint>
+<NameCodeType>02</NameCodeType>
+<NameCodeTypeName>In-House</NameCodeTypeName>
+<NameCodeValue>GNP002</NameCodeValue>
+<ImprintName>Crossway Books</ImprintName>
+</Imprint>
+<Publisher>
+<PublisherName>Crossway</PublisherName>
+<Website>
+<WebsiteLink>http://crossway.org</WebsiteLink>
+</Website>
+</Publisher>
+<PublishingStatus>04</PublishingStatus>
+<PublicationDate>20110302</PublicationDate>
+<SalesRights>
+<SalesRightsType>02</SalesRightsType>
+<RightsCountry>CA PH US GB</RightsCountry>
+</SalesRights>
+<SalesRights>
+<SalesRightsType>03</SalesRightsType>
+<RightsTerritory>ROW</RightsTerritory>
+</SalesRights>
+<RelatedProduct>
+<RelationCode>13</RelationCode>
+<ProductIdentifier>
+<ProductIDType>15</ProductIDType>
+<IDValue>9781433519475</IDValue>
+</ProductIdentifier>
+</RelatedProduct>
+<SupplyDetail>
+<SupplierIdentifier>
+<SupplierIDType>07</SupplierIDType>
+<IDValue>2117991</IDValue>
+</SupplierIdentifier>
+<TelephoneNumber>1-800-323-3890</TelephoneNumber>
+<FaxNumber>1-630-682-4785</FaxNumber>
+<EmailAddress>sales@crossway.org</EmailAddress>
+<Website>
+<WebsiteLink>http://crossway.org</WebsiteLink>
+</Website>
+<SupplierRole>01</SupplierRole>
+<AvailabilityCode>IP</AvailabilityCode>
+<ProductAvailability>21</ProductAvailability>
+<Price>
+<PriceTypeCode>01</PriceTypeCode>
+<DiscountCoded>
+<DiscountCodeType>02</DiscountCodeType>
+<DiscountCodeTypeName>Crossway</DiscountCodeTypeName>
+<DiscountCode>BK</DiscountCode>
+</DiscountCoded>
+<PriceAmount>9.99</PriceAmount>
+</Price>
+</SupplyDetail>
+</Product>
+<Product>
+<RecordReference>1433508761</RecordReference>
+<NotificationType>03</NotificationType>
+<ProductIdentifier>
+<ProductIDType>02</ProductIDType>
+<IDValue>1433508761</IDValue>
+</ProductIdentifier>
+<ProductIdentifier>
+<ProductIDType>03</ProductIDType>
+<IDValue>9781433508769</IDValue>
+</ProductIdentifier>
+<ProductIdentifier>
+<ProductIDType>15</ProductIDType>
+<IDValue>9781433508769</IDValue>
+</ProductIdentifier>
+<ProductForm>DG</ProductForm>
+<EpubType>031</EpubType>
+<EpubFormat>11</EpubFormat>
+<TitleOfSeries>Foundations of Evangelical Theology</TitleOfSeries>
+<NumberWithinSeries>3</NumberWithinSeries>
+<Title>
+<TitleType>01</TitleType>
+<TitleText>To Know and Love God</TitleText>
+<Subtitle>Method for Theology</Subtitle>
+</Title>
+<Contributor>
+<SequenceNumber>1</SequenceNumber>
+<ContributorRole>A01</ContributorRole>
+<PersonNameInverted>Clark, David K.</PersonNameInverted>
+</Contributor>
+<Contributor>
+<SequenceNumber>2</SequenceNumber>
+<ContributorRole>B09</ContributorRole>
+<PersonNameInverted>Feinberg, John S.</PersonNameInverted>
+</Contributor>
+<BASICMainSubject>REL067000</BASICMainSubject>
+<MediaFile>
+<MediaFileTypeCode>04</MediaFileTypeCode>
+<MediaFileFormatCode>03</MediaFileFormatCode>
+<MediaFileLinkTypeCode>01</MediaFileLinkTypeCode>
+<MediaFileLink>http://images.gnpcb.org/products/9781433508769.jpg</MediaFileLink>
+</MediaFile>
+<Imprint>
+<NameCodeType>02</NameCodeType>
+<NameCodeTypeName>In-House</NameCodeTypeName>
+<NameCodeValue>GNP002</NameCodeValue>
+<ImprintName>Crossway Books</ImprintName>
+</Imprint>
+<Publisher>
+<PublisherName>Crossway</PublisherName>
+<Website>
+<WebsiteLink>http://crossway.org</WebsiteLink>
+</Website>
+</Publisher>
+<PublishingStatus>04</PublishingStatus>
+<PublicationDate>20030410</PublicationDate>
+<SalesRights>
+<SalesRightsType>02</SalesRightsType>
+<RightsTerritory>WORLD</RightsTerritory>
+</SalesRights>
+<RelatedProduct>
+<RelationCode>13</RelationCode>
+<ProductIdentifier>
+<ProductIDType>15</ProductIDType>
+<IDValue>9781433521898</IDValue>
+</ProductIdentifier>
+</RelatedProduct>
+<SupplyDetail>
+<SupplierIdentifier>
+<SupplierIDType>07</SupplierIDType>
+<IDValue>2117991</IDValue>
+</SupplierIdentifier>
+<TelephoneNumber>1-800-323-3890</TelephoneNumber>
+<FaxNumber>1-630-682-4785</FaxNumber>
+<EmailAddress>sales@crossway.org</EmailAddress>
+<Website>
+<WebsiteLink>http://crossway.org</WebsiteLink>
+</Website>
+<SupplierRole>01</SupplierRole>
+<AvailabilityCode>IP</AvailabilityCode>
+<ProductAvailability>21</ProductAvailability>
+<Price>
+<PriceTypeCode>01</PriceTypeCode>
+<DiscountCoded>
+<DiscountCodeType>02</DiscountCodeType>
+<DiscountCodeTypeName>Crossway</DiscountCodeTypeName>
+<DiscountCode>BK</DiscountCode>
+</DiscountCoded>
+<PriceAmount>9.99</PriceAmount>
+</Price>
+</SupplyDetail>
+</Product>
+<Product>
+<RecordReference>1433522462</RecordReference>
+<NotificationType>03</NotificationType>
+<ProductIdentifier>
+<ProductIDType>02</ProductIDType>
+<IDValue>1433522462</IDValue>
+</ProductIdentifier>
+<ProductIdentifier>
+<ProductIDType>03</ProductIDType>
+<IDValue>9781433522468</IDValue>
+</ProductIdentifier>
+<ProductIdentifier>
+<ProductIDType>15</ProductIDType>
+<IDValue>9781433522468</IDValue>
+</ProductIdentifier>
+<ProductForm>DG</ProductForm>
+<EpubType>029</EpubType>
+<EpubFormat>06</EpubFormat>
+<Title>
+<TitleType>01</TitleType>
+<TitleText>Practicing Affirmation (Foreword by John Piper)</TitleText>
+<Subtitle>God-Centered Praise of Those Who Are Not God</Subtitle>
+</Title>
+<Contributor>
+<SequenceNumber>1</SequenceNumber>
+<ContributorRole>A01</ContributorRole>
+<PersonNameInverted>Crabtree, Sam</PersonNameInverted>
+</Contributor>
+<Contributor>
+<SequenceNumber>2</SequenceNumber>
+<ContributorRole>A23</ContributorRole>
+<PersonNameInverted>Piper, John</PersonNameInverted>
+</Contributor>
+<BASICMainSubject>REL012100</BASICMainSubject>
+<OtherText>
+<TextTypeCode>02</TextTypeCode>
+<Text textformat="02">&lt;p>Commending what&amp;rsquo;s commendable in others refreshes them and honors God. This book helps readers strengthen communication and relationships through the practice of God-centered affirmation.&lt;/p></Text>
+</OtherText>
+<OtherText>
+<TextTypeCode>03</TextTypeCode>
+<Text textformat="02">&lt;p>It happens in marriages, parent-child relationships, friendships, workplaces, and churches: Communication falters, friendships wane, teenagers withdraw, marriages fail, and bitter rifts sever once-strong ties. Christian communities are no exception. Why do so many of our relationships suffer from alienation, indifference, and even hostility? &amp;nbsp;&lt;/p>&lt;p>Author Sam Crabtree believes that&amp;nbsp;&lt;span>often&amp;nbsp;&lt;/span>&lt;span>at the heart of these breakdowns is a lack of affirmation. He observes in Scripture that God grants mercy to those who refresh others, and in life that people tend to be influenced by those who praise them. Crabtree shows how a robust &amp;ldquo;God-centered affirmation ratio&amp;rdquo; refreshes others and honors God.&lt;/span>&lt;/p>&lt;p>&amp;nbsp;&lt;/p>&lt;p>&lt;em>Practicing Affirmation&lt;/em>&amp;nbsp;sounds a call to recognize and affirm the character of Christ in others. When done well, affirmation does not fuel pride in the person&lt;span>, but refreshes them and honors God&lt;/span>. All who are discouraged in relationships will find wisdom and practical insight in this book.&amp;nbsp;&lt;/p></Text>
+</OtherText>
+<OtherText>
+<TextTypeCode>13</TextTypeCode>
+<Text textformat="02">&lt;p>&lt;strong>SAM CRABTREE&lt;/strong> (MA, South Dakota State), is a former public school teacher and has served as executive pastor at Bethlehem Baptist Church in Minneapolis since 1997. He is also lead pastor for life training, serving as the &amp;ldquo;vision keeper&amp;rdquo; of the church.&lt;/p></Text>
+</OtherText>
+<OtherText>
+<TextTypeCode>30</TextTypeCode>
+<Text textformat="02">&lt;p>&amp;ldquo;Who needs a book about affirming others? For starters, I do&amp;mdash;and I suspect you do too. Too many of us use most of our words each day for criticizing and complaining. My friend Sam Crabtree, on the other hand, is a practitioner of affirmation. To meet him is to be encouraged. His words, both in person and in these pages, are thoughtful, intentional, and full of gratefulness. If you find that your communication lacks encouragement, if you want to grow in affirming others, if you plan to say any words at all today&amp;mdash;please read this book!&amp;rdquo;&lt;br>&amp;mdash;&lt;strong>C. J. Mahaney&lt;/strong>&lt;strong>,&lt;/strong> Sovereign Grace Ministries&lt;/p>&lt;p>&amp;ldquo;Sam lives what he preaches. I&amp;rsquo;ve never forgotten a short, hand-written note of God-centered affirmation he sent me years ago, having met only once briefly. His words not only encouraged me personally at the time, but have influenced our ministry in a significant way ever since. I am grateful for this book&amp;mdash;if no one else needs it, I know I do!&amp;rdquo;&lt;br>&amp;mdash;&lt;strong>Nancy Leigh DeMoss&lt;/strong>, author, &lt;em>Biblical Womanhood in the Home&lt;/em>; radio host, &lt;em>Revive Our Hearts&lt;/em>&lt;/p>&lt;p>&amp;ldquo;When it comes to affirming and encouraging others, some people come by it naturally. For the Christian, we come by it supernaturally. However, even the most mature believer must hone and cultivate the act of affirmation&amp;mdash;that&amp;rsquo;s why this new book by Sam Crabtree is such an invaluable resource to the church. How do we effectively &amp;lsquo;build each other up in the faith?&amp;rsquo; You're holding the answer in your hands!&amp;rdquo;&lt;br>&amp;mdash;&lt;strong>Joni Eareckson Tada&lt;/strong>, Founder and CEO, Joni and Friends International Disability Center&lt;/p>&lt;p>&amp;ldquo;We all welcome words of affirmation. Sam tells us how the practice and power of affirmation will make a difference in the life of anyone, young or old. &lt;em>Practicing Affirmation&lt;/em> will help you make a positive investment in your relationships with family members, co-workers, friends and neighbors, even the clerk at the store&amp;mdash;even when people are difficult.&amp;rdquo;&lt;br>&amp;mdash;&lt;strong>Bruce Johnson&lt;/strong>&lt;strong>, &lt;/strong>President, SIM, Charlotte, North Carolina&lt;/p>&lt;p>&amp;ldquo;For over 30 years now I have watched my friend, Sam Crabtree, flesh out the truths he has written about in this book. My wife, children, and I have been blessed to taste firsthand the sweetness of the soul strengthening effects of Sam's God-centered affirmations.&amp;rdquo;&lt;br>&amp;mdash;&lt;strong>Ron Wickard&lt;/strong>&lt;strong>, &lt;/strong>Pastor, Richland Church, Mina, South Dakota&lt;/p></Text>
+</OtherText>
+<MediaFile>
+<MediaFileTypeCode>04</MediaFileTypeCode>
+<MediaFileFormatCode>03</MediaFileFormatCode>
+<MediaFileLinkTypeCode>01</MediaFileLinkTypeCode>
+<MediaFileLink>http://images.gnpcb.org/products/9781433522468.jpg</MediaFileLink>
+</MediaFile>
+<Imprint>
+<NameCodeType>02</NameCodeType>
+<NameCodeTypeName>In-House</NameCodeTypeName>
+<NameCodeValue>GNP002</NameCodeValue>
+<ImprintName>Crossway Books</ImprintName>
+</Imprint>
+<Publisher>
+<PublisherName>Crossway</PublisherName>
+<Website>
+<WebsiteLink>http://crossway.org</WebsiteLink>
+</Website>
+</Publisher>
+<PublishingStatus>04</PublishingStatus>
+<PublicationDate>20110119</PublicationDate>
+<SalesRights>
+<SalesRightsType>02</SalesRightsType>
+<RightsTerritory>WORLD</RightsTerritory>
+</SalesRights>
+<RelatedProduct>
+<RelationCode>13</RelationCode>
+<ProductIdentifier>
+<ProductIDType>15</ProductIDType>
+<IDValue>9781433522437</IDValue>
+</ProductIdentifier>
+</RelatedProduct>
+<SupplyDetail>
+<SupplierIdentifier>
+<SupplierIDType>07</SupplierIDType>
+<IDValue>2117991</IDValue>
+</SupplierIdentifier>
+<TelephoneNumber>1-800-323-3890</TelephoneNumber>
+<FaxNumber>1-630-682-4785</FaxNumber>
+<EmailAddress>sales@crossway.org</EmailAddress>
+<Website>
+<WebsiteLink>http://crossway.org</WebsiteLink>
+</Website>
+<SupplierRole>01</SupplierRole>
+<AvailabilityCode>IP</AvailabilityCode>
+<ProductAvailability>21</ProductAvailability>
+<Price>
+<PriceTypeCode>01</PriceTypeCode>
+<DiscountCoded>
+<DiscountCodeType>02</DiscountCodeType>
+<DiscountCodeTypeName>Crossway</DiscountCodeTypeName>
+<DiscountCode>BK</DiscountCode>
+</DiscountCoded>
+<PriceAmount>9.99</PriceAmount>
+</Price>
+</SupplyDetail>
+</Product>
+</ONIXMessage>

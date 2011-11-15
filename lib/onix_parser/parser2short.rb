@@ -8,7 +8,7 @@ module OnixParser
         parsed_values[:author] = product.search('/contributor/b036').collect(&:innerText).join(',')
         parsed_values[:publisher] = product.search('/publisher/b081').text.strip
 
-        synopsis_nodes = product.search('/othertext/d104')
+        synopsis_nodes = product.search("/othertext/d102[text() = '01']/../d104")
         parsed_values[:synopsis] = synopsis_nodes.first.innerText.gsub(/<\/?[^>]*>/, "").strip if synopsis_nodes.any?
         parsed_values[:language] = product.search('/language/b252').first.innerText.strip
         parsed_values[:country] = ''
@@ -73,10 +73,8 @@ module OnixParser
         parsed_values[:prices] = prices
 
         excerpt_node = product.search("/othertext/d102[text() = '23']/../d104")
-        parsed_values[:excerpt] = ''
-        if (excerpt_node.any?)
-          parsed_values[:excerpt] = excerpt_node.first.innerText
-        end
+        parsed_values[:excerpt] = excerpt_node.any? ? excerpt_node.first.innerText : ''
+
         parsed_values[:xml] = product.to_s
 
         cover_node = product.search("/mediafile/f114[text() = '04']/../f117")

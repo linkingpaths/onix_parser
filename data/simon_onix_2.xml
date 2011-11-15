@@ -1,0 +1,216 @@
+<?xml version="1.0"  encoding="ISO-8859-1"?>
+<!DOCTYPE ONIXmessage SYSTEM "http://www.editeur.org/onix/2.1/03/short/onix-international.dtd">
+<ONIXmessage release="2.1">
+
+<header>
+<m174>Simon and Schuster</m174>
+
+<m175>Helene Green, (212) 698-2767, helene.green@simonandschuster.com</m175>
+
+<m182>20110905</m182>
+<m183>Title information from Simon and Schuster</m183>
+<m184>eng</m184>
+<m185>01</m185>
+<m186>USD</m186>
+<m187>in</m187>
+<m188>oz</m188>
+<m193>General trade</m193>
+
+</header>
+<product>
+<a001>1451651929</a001>
+<a002>03</a002>
+<productidentifier>
+<b221>02</b221>
+<b244>1451651929</b244>
+</productidentifier>
+<productidentifier>
+<b221>03</b221>
+<b244>9781451651928</b244>
+</productidentifier>
+<productidentifier>
+<b221>15</b221>
+<b244>9781451651928</b244>
+</productidentifier>
+<b012>DG</b012>
+<b211>029</b211>
+<n338/>
+<title>
+<b202>01</b202>
+<b203>Legends of the Dragonrealm, Vol. III</b203>
+</title>
+<contributor>
+<b034>1</b034>
+<b035>A01</b035>
+<b036>Richard A. Knaak</b036>
+<b037>Knaak, Richard A.</b037>
+<b039>Richard A.</b039>
+<b040>Knaak</b040>
+<b044><![CDATA[
+Richard A. Knaak is the <I>New York Times</i> bestselling author of some three dozen novels, including the <I>The Sin War</i> trilogy for <I>Diablo</i> and the <I>Legend of Huma</i> for <I>Dragonlance</i>. He has penned the <I>War of the Ancients</i> trilogy, <I>Day of the Dragon</i> and its upcoming followup, <I>Night of the Dragon</i>. His other works include his own <I>Dragonrealm</i> series, the <I>Minotaur Wars</i> for <I>Dragonlance</i>, the <I>Aquilonia</i> trilogy of the Age of Conan, and the <I>Sunwell Trilogy</i> -- the first Warcraft manga. In addition, his novels and short stories have been published worldwide in such diverse places as China, Iceland, the Czech Republic, and Brazil.&nbsp; <P>]]>
+</b044>
+</contributor>
+<n386/>
+<language>
+<b253>01</b253>
+<b252>eng</b252>
+</language>
+<b061>688</b061>
+<b064>FIC009000</b064>
+<b065>FA</b065>
+<subject>
+<b067>10</b067>
+<b069>FIC009020</b069>
+</subject>
+<subject>
+<b067>10</b067>
+<b069>FIC000000</b069>
+</subject>
+<b073>01</b073>
+<othertext>
+<d102>01</d102>
+<d103>00</d103>
+<d104><![CDATA[
+The epic fantasy series Legends of the Dragonrealm continues in this omnibus edition by New York Times bestselling author Richard A. Knaak...including three bonus novellas in print for the first time!]]>
+</d104>
+</othertext>
+<othertext>
+<d102>23</d102>
+<d103>02</d103>
+<d104><![CDATA[
+<b><b>INTRODUCTION</b></b><P>WHEN SIMON &amp; Schuster published the first three novels of the Dragonrealm series as the trade omnibus <I>Legends of the Dragonrealm</i>, I naturally hoped there would be enough interest from the readers for a second volume. Little could I imagine how much interest! The first volume quickly went into a second, third, then fourth printing. People began contacting me on my website looking for information on the stories that followed and asking if they would be included in another collection.<P>I&rsquo;m happy the wait was not a long one. It&rsquo;s been a tremendous pleasure to return to these stories and visit again with some of my favorite creations: Cabe Bedlam, the heir to a legacy of magic with both its bright and dark sides; Gwen, the Lady of the Amber and Cabe&rsquo;s wife; Gryphon, part man, part avian, part leonine; and the unique figures of Darkhorse and Shade.<P>It&rsquo;s Darkhorse and Shade who truly bind the stories in this omnibus together. Not only because they are present throughout but because of what we learn about two of the most powerful&#8212;not to mention nigh immortal&#8212;beings in all the Dragonrealm.<P>Those awaiting their return after their abrupt departure in <I>Firedrake</i> should enjoy their equally abrupt return in <I>Shadow Steed</i>. However, this is no happy homecoming. Not only does the shadowy stallion become embroiled in the machinations of a bitter king but he must also deal with Shade, whose personality has become more erratic than ever. Add to this the plotting of a Dragon King and the inner struggle of a princess who may be Darkhorse&rsquo;s only hope and we have quite a story, indeed.<P>The next two tales take a very different turn from those presented before. In the world&rsquo;s distant past&#8212;and, in fact, beginning beyond that world in <I>The Shrouded Realm</i>, we meet the progenitors of the humans living in the Dragonrealm, the powerful Vraad. However, the Vraad suffer a great hubris that is about to meet with a new reality. Their legacy will touch the future of the Dragonrealm in more ways than one, especially the choices of Dru Zeree and the unfortunate Gerrod Tezerenee.<P>And then there&rsquo;s what Dru discovers in the empty realm beyond his world and the Dragonrealm&hellip;<P>And in <I>Children of the Drake</i>, we discover the ultimate truth behind the rise of the Dragon Kings and how the world of the Dragonrealm has, in many ways, come full circle.<P>Also included in this volume is the novella <I>Skins</i>, previously available only as an eBook. Fans of <I>Wolfhelm</i> will recognize its protagonist, Morgis, son of the Blue Dragon. I had always wanted to return to this character and give some hint of what happened after the novel, and now I&rsquo;m very happy to share it with readers as a bonus tale!<P>Lest the reader think these stories merely background, be assured that what happens affects this world long, long after in Cabe&rsquo;s time. I hope to return again to write about those stories.&hellip;<P>Welcome back to the Dragonrealm!<P>Richard A. Knaak<P>&copy; 2003 Richard A. Knaak<P>]]>
+</d104>
+</othertext>
+<mediafile>
+<f114>04</f114>
+<f115>03</f115>
+<f116>01</f116>
+<f117>http://www.netread.com/jcusers2/1247/928/9781451651928/image/lgcover.9781451651928.jpg</f117>
+</mediafile>
+<mediafile>
+<f114>07</f114>
+<f115>03</f115>
+<f116>01</f116>
+<f117>http://www.netread.com/jcusers2/1247/928/9781451651928/image/smcover.9781451651928.jpg</f117>
+</mediafile>
+<mediafile>
+<f114>01</f114>
+<f116>06</f116>
+<f117>9781451651928.pdf</f117>
+<f373>20111025</f373>
+</mediafile>
+<imprint>
+<b241>02</b241>
+<b242>Gallery Books</b242>
+<b243>SIMO243</b243>
+<b079>Gallery Books</b079>
+</imprint>
+<publisher>
+<b291>01</b291>
+<b241>02</b241>
+<b243>SIMO243</b243>
+<b081>Gallery Books</b081>
+</publisher>
+<b394>02</b394>
+<b003>20111122</b003>
+<salesrights>
+<b089>01</b089>
+<b090>AD AE AF AG AI AL AM AN AO AQ AR AS AT AU AW AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CA CD CF CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD ME MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA NE NG NI NL NO NP NR NZ OM PA PE PF PG PH PK PL PN PS PT PY QA RO RS RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TH TJ TL TM TN TO TR TT TV TW TZ UA UG UM US UY UZ VA VC VE VG VI VN VU WS YE ZA ZM ZW</b090>
+</salesrights>
+<relatedproduct>
+<h208>13</h208>
+<productidentifier>
+<b221>02</b221>
+<b244>1451651384</b244>
+</productidentifier>
+</relatedproduct>
+<relatedproduct>
+<h208>13</h208>
+<productidentifier>
+<b221>03</b221>
+<b244>9781451651386</b244>
+</productidentifier>
+</relatedproduct>
+<supplydetail>
+<j137>Simon &amp; Schuster</j137>
+<j292>01</j292>
+<j141>NP</j141>
+<j396>10</j396>
+<j142>20111122</j142>
+<j143>20111122</j143>
+<price>
+<j148>41</j148>
+<j151>9.99</j151>
+<j152>USD</j152>
+<b251>US</b251>
+<j161>20110905</j161>
+</price>
+<price>
+<j148>41</j148>
+<j151>11.99</j151>
+<j152>CAD</j152>
+<b251>CA</b251>
+<j161>20110905</j161>
+</price>
+<price>
+<j148>41</j148>
+<j151>6.99</j151>
+<j152>GBP</j152>
+<b251>GB</b251>
+<j161>20110905</j161>
+</price>
+<price>
+<j148>41</j148>
+<j151>11.99</j151>
+<j152>AUD</j152>
+<b251>AU</b251>
+<j161>20110905</j161>
+</price>
+</supplydetail>
+<supplydetail>
+<j137>Simon &amp; Schuster</j137>
+<j292>01</j292>
+<j397>ROW</j397>
+<j141>NP</j141>
+<j396>10</j396>
+<j142>20111122</j142>
+<j143>20111122</j143>
+<price>
+<j148>01</j148>
+<discountcoded>
+<j363>02</j363>
+<j378>Gallery Books</j378>
+<j364>096</j364>
+</discountcoded>
+<j151>18.99</j151>
+<j152>USD</j152>
+<j303>WORLD</j303>
+<j304>US CA</j304>
+<j161>20110905</j161>
+</price>
+</supplydetail>
+<supplydetail>
+<j137>Simon &amp; Schuster</j137>
+<j292>01</j292>
+<j138>CA</j138>
+<j141>NP</j141>
+<j396>10</j396>
+<j142>20111122</j142>
+<j143>20111122</j143>
+<price>
+<j148>01</j148>
+<discountcoded>
+<j363>02</j363>
+<j378>Gallery Books</j378>
+<j364>096</j364>
+</discountcoded>
+<j151>21.99</j151>
+<j152>CAD</j152>
+<b251>CA</b251>
+<j161>20110905</j161>
+</price>
+</supplydetail>
+</product>
+
+
+</ONIXmessage>
