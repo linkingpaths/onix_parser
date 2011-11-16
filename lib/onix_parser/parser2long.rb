@@ -34,11 +34,20 @@ module OnixParser
         parsed_values[:isbn] = isbn_node.any? ? isbn_node.first.innerText : ''
         parsed_values[:upc] = ''
 
-        # TODO: other file types
-        file_path = "/tmp/#{parsed_values[:isbn]}.jpg"
-        parsed_values[:cover] = File.exists?(file_path) ? File.new(file_path) : nil
+        # Prices
+        prices = []
+        price_nodes = product.search('/SupplyDetail/Price')
+        if price_nodes.any?
+          default_currency = doc.root.search('/Header/DefaultCurrencyCode').any? ? doc.root.search('/Header/DefaultCurrencyCode').first.innerText : nil
+          price_nodes.each do |price_node|
+            price_data = {:price => nil, :start_date => nil, :end_date => nil, :currency => default_currency}
+            price_data[:price] = price_node.search('/PriceAmount').first.innerText if price_node.search('/PriceAmount').any?
+            price_data[:currency] = price_node.search('/CurrencyCode').first.innerText if price_node.search('/CurrencyCode').any?
+            prices << price_data
+          end
+        end
+        parsed_values[:prices] = prices
 
-        parsed_values[:excerpt] = nil
         parsed_values[:xml] = product.to_s
 
         yield OnixParser::Product.new(parsed_values)

@@ -79,13 +79,23 @@ describe OnixParser::Parser2long do
       @products[5].synopsis.start_with?('Commending what&rsquo;s commendable').should be_true
     end
 
-    it "should set the prices" do
-      @products[0].prices.should eql({})
-      @products[1].prices.should eql({})
-      @products[2].prices.should eql({})
-      @products[3].prices.should eql({})
-      @products[4].prices.should eql({})
-      @products[5].prices.should eql({})
+    describe "Prices" do
+      before(:each) do
+        @price_data = @products[0].prices.first
+      end
+
+      it "should set the currency type" do
+        @price_data[:currency].should == 'USD'
+      end
+
+      it "should set the start/end dates" do
+        @price_data[:start_date].should be_nil
+        @price_data[:end_date].should be_nil
+      end
+
+      it "should set the price amount" do
+        @price_data[:price].should == '9.99'
+      end
     end
 
     it "should set the xml" do
