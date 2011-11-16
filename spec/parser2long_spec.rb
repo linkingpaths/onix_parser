@@ -96,6 +96,14 @@ describe OnixParser::Parser2long do
       it "should set the price amount" do
         @price_data[:price].should == '9.99'
       end
+
+      it "should set the sales rights" do
+        @price_data[:territory][:region_included].should == 'WORLD'
+
+        other_price_data = @products[3].prices.first
+        other_price_data[:territory][:region_excluded].should == 'ROW'
+        other_price_data[:territory][:country_included].should == 'CA PH US GB'
+      end
     end
 
     it "should set the xml" do

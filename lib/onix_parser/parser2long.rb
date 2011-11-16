@@ -34,6 +34,24 @@ module OnixParser
         parsed_values[:isbn] = isbn_node.any? ? isbn_node.first.innerText : ''
         parsed_values[:upc] = ''
 
+        # SalesRights
+        sales_rights = {:region_included => '', :region_excluded => '', :country_included => '', :country_excluded => ''}
+        sales_rights_node = product.search('/SalesRights')
+        if sales_rights_node.any?
+          sales_rights_node.each do |rights_node|
+            rights_type = rights_node.search('/SalesRightsType').first.innerText == '02' ? :included : :excluded
+            rights_country = rights_node.search('/RightsCountry')
+            rights_territory = rights_node.search('/RightsTerritory')
+            if rights_type == :included
+              sales_rights[:country_included] = rights_country.first.innerText if rights_country.any?
+              sales_rights[:region_included] = rights_territory.first.innerText if rights_territory.any?
+            else # :excluded
+              sales_rights[:country_excluded] = rights_country.first.innerText if rights_country.any?
+              sales_rights[:region_excluded] = rights_territory.first.innerText if rights_territory.any?
+            end
+          end
+        end
+
         # Prices
         prices = []
         price_nodes = product.search('/SupplyDetail/Price')
@@ -42,7 +60,34 @@ module OnixParser
           price_nodes.each do |price_node|
             price_data = {:price => nil, :start_date => nil, :end_date => nil, :currency => default_currency}
             price_data[:price] = price_node.search('/PriceAmount').first.innerText if price_node.search('/PriceAmount').any?
+            # PriceEffectiveFrom
+            price_data[:start_date] = price_node.search('/PriceEffectiveFrom').first.innerText if price_node.search('/PriceEffectiveFrom').any?
+
+            # PriceEffectiveUntil
+            price_data[:end_date] = price_node.search('/PriceEffectiveUntil').first.innerText if price_node.search('/PriceEffectiveUntil').any?
+
+            # CurrencyType
             price_data[:currency] = price_node.search('/CurrencyCode').first.innerText if price_node.search('/CurrencyCode').any?
+
+            region_in = price_node.search('/Territory')
+            region_out = price_node.search('/TerritoryExcluded')
+            country_in = price_node.search('/Country')
+            country_out = price_node.search('/CountryExcluded')
+
+            if region_in.any? || region_out.any? || country_in.any? || country_out.any?
+              # Region included
+              territory[:region_included] = region_in.any? ? region_in.first.innerText : ''
+              # Region excluded
+              territory[:region_excluded] = region_out.any? ? region_out.first.innerText : ''
+              # Country Included
+              territory[:country_included] = country_in.any? ? country_in.first.innerText : ''
+              # Country Excluded
+              territory[:country_excluded] = country_out.any? ? country_out.first.innerText : ''
+            else
+              territory = sales_rights
+            end
+            price_data[:territory] = territory
+
             prices << price_data
           end
         end
