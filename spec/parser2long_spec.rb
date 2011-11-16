@@ -103,5 +103,11 @@ describe OnixParser::Parser2long do
         @products[n].xml.should_not be_nil
       end
     end
+
+    it "should have related ids" do
+      @products[0].other_ids.count.should == 1
+      @products[0].other_ids[0][0].should == 'ISBN-13'
+      @products[0].other_ids[0][1].should == '9781433521546'
+    end
   end
 end
