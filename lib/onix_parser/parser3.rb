@@ -57,6 +57,10 @@ module OnixParser
           parsed_values[:publisher] = publishing_detail.search("/Publisher/PublisherName").text.strip
           parsed_values[:publishing_status] = publishing_detail.search("/PublishingStatus").text.strip
 
+          publish_date_node = publishing_detail.search("/PublishingDate/PublishingDateRole[text() = '01']/../Date")
+
+          parsed_values[:released_at] = publish_date_node.first.innerText if publish_date_node.any?
+
           sales_rights_territory = publishing_detail.search("/SalesRights/Territory")
           if sales_rights_territory.any?
             default_territory[:region_included] = sales_rights_territory.search("/RegionsIncluded").first.innerText if sales_rights_territory.search("/RegionsIncluded").any?

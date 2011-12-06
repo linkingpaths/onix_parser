@@ -15,6 +15,10 @@ describe OnixParser::Parser2short do
       end
     end
 
+    it "should set the released_at date" do
+      @products[0].released_at.should == '20100831' 
+    end
+
     it "should have two price records" do
       @products[0].prices.count.should == 2
     end

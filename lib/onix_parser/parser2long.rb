@@ -20,6 +20,7 @@ module OnixParser
 
         parsed_values[:publisher] = product.search('/Publisher/PublisherName').text
         parsed_values[:publishing_status] = product.search('/PublishingStatus').text
+        parsed_values[:released_at] = product.search('/PublicationDate').text
 
         synopsis_nodes = product.search("/OtherText/TextTypeCode[text() = '02']/../Text")
         parsed_values[:synopsis] = synopsis_nodes.first.innerText.gsub(/<\/?[^>]*>/, "") if synopsis_nodes.any?

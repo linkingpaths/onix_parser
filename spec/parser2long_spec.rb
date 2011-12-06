@@ -70,6 +70,10 @@ describe OnixParser::Parser2long do
       end
     end
 
+    it "should set the released_at date" do
+      @products[0].released_at.should == '20110707'
+    end
+
     it "should set the synopsis" do
       @products[0].synopsis.start_with?('Tracing King Solomon').should be_true
       @products[1].synopsis.start_with?('Unites some of today').should be_true

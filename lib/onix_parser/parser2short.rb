@@ -8,6 +8,7 @@ module OnixParser
         parsed_values[:author] = product.search('/contributor/b036').collect(&:innerText).join(',')
         parsed_values[:publisher] = product.search('/publisher/b081').text.strip
         parsed_values[:publishing_status] = product.search('/b394').text
+        parsed_values[:released_at] = product.search('/b003').text
 
         synopsis_nodes = product.search("/othertext/d102[text() = '01']/../d104")
         parsed_values[:synopsis] = synopsis_nodes.first.innerText.gsub(/<\/?[^>]*>/, "").strip if synopsis_nodes.any?
