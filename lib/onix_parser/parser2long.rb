@@ -70,6 +70,9 @@ module OnixParser
             # CurrencyType
             price_data[:currency] = price_node.search('/CurrencyCode').first.innerText if price_node.search('/CurrencyCode').any?
 
+            # PriceType
+            price_data[:price_type] = price_node.search('/PriceTypeCode').first.innerText if price_node.search('/PriceTypeCode').any?
+
             region_in = price_node.search('/Territory')
             region_out = price_node.search('/TerritoryExcluded')
             country_in = price_node.search('/Country')

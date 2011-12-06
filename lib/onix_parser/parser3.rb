@@ -116,6 +116,7 @@ module OnixParser
       prices_nodes.each do |price_node|
         price_data = {:price => price_node.search("/PriceAmount").first.innerText, :start_date => nil, :end_date => nil}
         price_data[:currency] = price_node.search("/CurrencyCode").first.innerText if price_node.search("/CurrencyCode").any?
+        price_data[:price_type] = price_node.search("/PriceType").first.innerText if price_node.search("/PriceType").any?
 
         territory_nodes = price_node.search("/Territory")
         currency_zone_nodes = price_node.search("/CurrencyZone")

@@ -37,11 +37,11 @@ describe OnixParser::Parser2short do
 
     it "should have a workidentifier for the first product" do
       @products[0].other_ids.count.should == 1
-      @products[0].other_ids[0][1].should == '9781595548047' 
+      @products[0].other_ids[0][1].should == '9781595548047'
     end
   end
 
-  
+
   context "related file" do
     before(:each) do
       @related = File.join(@data_path, "related.xml")
@@ -152,9 +152,13 @@ describe OnixParser::Parser2short do
     end
 
     it "should set the price" do
-      @products[0].prices.should eql [{:price => '14.99', :start_date => nil, :end_date => nil, :currency => 'USD',
-                                       :territory => {:region_included => 'WORLD', :region_excluded => '',
-                                                      :country_included => '', :country_excluded => ''}}]
+      @products[0].prices[0][:price].should == '14.99'
+      @products[0].prices[0][:start_date].should == nil
+      @products[0].prices[0][:end_date].should == nil
+      @products[0].prices[0][:currency].should == 'USD'
+      @products[0].prices[0][:price_type].should == '01'
+      @products[0].prices[0][:territory].should == {:region_included => 'WORLD', :region_excluded => '',
+                                                    :country_included => '', :country_excluded => ''}
     end
 
     it "should set the xml" do

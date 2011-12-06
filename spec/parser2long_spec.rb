@@ -97,6 +97,10 @@ describe OnixParser::Parser2long do
         @price_data[:price].should == '9.99'
       end
 
+      it "should set the price type code" do
+        @price_data[:price_type].should == '01'
+      end
+
       it "should set the sales rights" do
         @price_data[:territory][:region_included].should == 'WORLD'
 

@@ -54,6 +54,9 @@ module OnixParser
             # CurrencyType
             price_data[:currency] = price_node.search("/j152").first.innerText if price_node.search("/j152").any?
 
+            # PriceType
+            price_data[:price_type] = price_node.search('/j148').first.innerText if price_node.search('/j148').any?
+            
             territory = {}
 
             # Region Included
