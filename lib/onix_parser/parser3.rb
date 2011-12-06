@@ -55,6 +55,7 @@ module OnixParser
         publishing_detail = xml_product.search("/PublishingDetail")
         if publishing_detail.any?
           parsed_values[:publisher] = publishing_detail.search("/Publisher/PublisherName").text.strip
+          parsed_values[:publishing_status] = publishing_detail.search("/PublishingStatus").text.strip
 
           sales_rights_territory = publishing_detail.search("/SalesRights/Territory")
           if sales_rights_territory.any?

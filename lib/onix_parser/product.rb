@@ -2,7 +2,7 @@ module OnixParser
   class Product
     attr_accessor :title, :author, :subject, :publisher, :cover, :synopsis,
                   :isbn, :isbn10, :upc, :gtin, :lang, :country, :xml, :prices,
-                  :excerpt, :other_isbn, :cover_url, :other_ids
+                  :excerpt, :other_isbn, :cover_url, :other_ids, :publishing_status
 
     def initialize(parsed_values)
       self.title      = parsed_values[:title]
@@ -23,6 +23,7 @@ module OnixParser
       self.excerpt    = parsed_values[:excerpt]
       self.cover_url  = parsed_values[:cover_url]
       self.other_ids  = parsed_values[:other_ids]
+      self.publishing_status     = parsed_values[:publishing_status]
     end
 
 

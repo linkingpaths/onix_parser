@@ -133,39 +133,45 @@ describe OnixParser::Parser3 do
       @products[11].author.should eql('Charles R. Solomon,Stephen F. Olford')
     end
 
+    it "should cancel the appropriate books" do
+      @products[7].publishing_status.should == '04'
+      @products[8].publishing_status.should == '07'  
+      @products[204].publishing_status.should == '01'
+    end
+
     it "should set the price" do
       @products[0].prices.should eql [{:price => '11.99', :start_date => nil, :end_date => nil, :currency => 'USD',
                                        :territory => {:region_included => 'WORLD',
-                                                        :region_excluded => '',
-                                                        :country_included => '',
-                                                        :country_excluded => ''}}]
+                                                      :region_excluded => '',
+                                                      :country_included => '',
+                                                      :country_excluded => ''}}]
 
 
       @products[1].prices.should eql [{:price => '24.99', :start_date => nil, :end_date => nil, :currency => 'USD',
                                        :territory => {:region_included => 'WORLD',
-                                                        :region_excluded => '',
-                                                        :country_included => '',
-                                                        :country_excluded => ''}}]
+                                                      :region_excluded => '',
+                                                      :country_included => '',
+                                                      :country_excluded => ''}}]
       @products[2].prices.should eql [{:price => '12.99', :start_date => nil, :end_date => nil, :currency => 'USD',
                                        :territory => {:region_included => 'WORLD',
-                                                        :region_excluded => '',
-                                                        :country_included => '',
-                                                        :country_excluded => ''}}]
+                                                      :region_excluded => '',
+                                                      :country_included => '',
+                                                      :country_excluded => ''}}]
       @products[3].prices.should eql [{:price => '10.99', :start_date => nil, :end_date => nil, :currency => 'USD',
                                        :territory => {:region_included => 'WORLD',
-                                                        :region_excluded => '',
-                                                        :country_included => '',
-                                                        :country_excluded => ''}}]
+                                                      :region_excluded => '',
+                                                      :country_included => '',
+                                                      :country_excluded => ''}}]
       @products[4].prices.should eql [{:price => '10.99', :start_date => nil, :end_date => nil, :currency => 'USD',
                                        :territory => {:region_included => 'WORLD',
-                                                        :region_excluded => '',
-                                                        :country_included => '',
-                                                        :country_excluded => ''}}]
+                                                      :region_excluded => '',
+                                                      :country_included => '',
+                                                      :country_excluded => ''}}]
       @products[5].prices.should eql [{:price => '10.99', :start_date => nil, :end_date => nil, :currency => 'USD',
                                        :territory => {:region_included => 'WORLD',
-                                                        :region_excluded => '',
-                                                        :country_included => '',
-                                                        :country_excluded => ''}}]
+                                                      :region_excluded => '',
+                                                      :country_included => '',
+                                                      :country_excluded => ''}}]
     end
   end
 
