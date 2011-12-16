@@ -4,7 +4,10 @@ module OnixParser
     def self.find_products(doc, &block)
       doc.root.search('/Product').each do |product|
         parsed_values = {}
-        parsed_values[:title] = product.search('/Title/TitleText').first.innerText
+
+        title_tag =  product.search('/Title/TitleText').empty? ? product.search('/DistinctiveTitle').first : product.search('/Title/TitleText').first
+        parsed_values[:title] = title_tag.innerText
+                        
         contributor_nodes = product.search('/Contributor/PersonName')
         if contributor_nodes.any?
           parsed_values[:author] = contributor_nodes.collect(&:innerText).joi(',')
