@@ -12,7 +12,10 @@ module OnixParser
 
         synopsis_nodes = product.search("/othertext/d102[text() = '01']/../d104")
         parsed_values[:synopsis] = synopsis_nodes.first.innerText.gsub(/<\/?[^>]*>/, "").strip if synopsis_nodes.any?
-        parsed_values[:language] = product.search('/language/b252').first.innerText.strip
+
+        language_nodes = product.search('/language/b252')
+        parsed_values[:language] = language_nodes.first.innerText.strip if language_nodes.any?
+        
         parsed_values[:country] = ''
 
 #        subject = product.search('').text
