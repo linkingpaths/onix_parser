@@ -5,125 +5,125 @@ describe OnixParser::Parser3 do
     @data_path = File.join(File.dirname(__FILE__), "..", "data")
   end
 
-#  context "Pricing" do
-#    context "example 1" do
-#      before(:each) do
-#        @pricing_file = File.join(@data_path, "pricing_1_onix3.xml")
-#        doc = Hpricot(File.read(@pricing_file))
-#        @products = []
-#        OnixParser::Parser3.find_products(doc) do |product|
-#          @products << product
-#        end
-#      end
-#
-#      it "should set the price appropriately" do
-#        price = @products[0].prices.first
-#        price[:price_type].should == '41'
-#        price[:price].should == '12.99'
-#        price[:currency].should == 'USD'
-#      end
-#
-#      it "should have a related product" do
-#        @products[0].other_ids.count.should == 1
-#        @products[0].other_ids[0][1].should == '9780842300520'
-#      end
-#    end
-#
-#    context "example 2" do
-#      before(:each) do
-#        @pricing_file = File.join(@data_path, "pricing_2_onix3.xml")
-#        doc = Hpricot(File.read(@pricing_file))
-#        @products = []
-#        OnixParser::Parser3.find_products(doc) do |product|
-#          @products << product
-#        end
-#      end
-#
-#      it "should set the prices appropriately" do
-#        first_price = @products[0].prices[0]
-#        first_price[:price].should == '12.99'
-#        first_price[:currency].should == 'USD'
-#        first_price[:end_date].should == '20110305'
-#        first_price[:price_type].should == '41'
-#
-#        second_price = @products[0].prices[1]
-#        second_price[:price].should == '8.99'
-#        second_price[:currency].should == 'USD'
-#        second_price[:start_date].should == '20110306'
-#        second_price[:price_type].should == '41'
-#      end
-#    end
-#
-#    context "example 3" do
-#      before(:each) do
-#        @pricing_file = File.join(@data_path, "pricing_3_onix3.xml")
-#        doc = Hpricot(File.read(@pricing_file))
-#        @products = []
-#        OnixParser::Parser3.find_products(doc) do |product|
-#          @products << product
-#        end
-#      end
-#
-#      it "should set the prices appropriately" do
-#        first_price = @products[0].prices[0]
-#        first_price[:price].should == '12.99'
-#        first_price[:currency].should == 'USD'
-#        first_price[:territory][:country_included].should == 'US'
-#        first_price[:price_type].should == '41'
-#
-#        second_price = @products[0].prices[1]
-#        second_price[:price].should == '7.50'
-#        second_price[:currency].should == 'USD'
-#        second_price[:territory][:country_included].should == 'IN'
-#        second_price[:price_type].should == '01'
-#
-#        third_price = @products[0].prices[2]
-#        third_price[:price].should == '12.99'
-#        third_price[:currency].should == 'USD'
-#        third_price[:territory][:region_included].should == 'WORLD'
-#        third_price[:territory][:country_excluded].should == 'US IN'
-#        third_price[:price_type].should == '01'
-#      end
-#    end
-#
-#    context "example 4" do
-#      before(:each) do
-#        @pricing_file = File.join(@data_path, "pricing_4_onix3.xml")
-#        doc = Hpricot(File.read(@pricing_file))
-#        @products = []
-#        OnixParser::Parser3.find_products(doc) do |product|
-#          @products << product
-#        end
-#      end
-#
-#      it "should set the prices appropriately" do
-#        first_price = @products[0].prices[0]
-#        first_price[:price].should == '9.99'
-#        first_price[:currency].should == 'GBP'
-#        first_price[:territory][:country_included].should == 'GB'
-#        first_price[:price_type].should == '42'
-#
-#        second_price = @products[0].prices[1]
-#        second_price[:price].should == '11.99'
-#        second_price[:currency].should == 'USD'
-#        second_price[:territory][:country_included].should == 'US'
-#        second_price[:price_type].should == '41'
-#
-#        third_price = @products[0].prices[2]
-#        third_price[:price].should == '9.50'
-#        third_price[:currency].should == 'EUR'
-#        third_price[:territory][:currency_zone].should == 'EUR'
-#        third_price[:price_type].should == '01'
-#
-#        fourth_price = @products[0].prices[3]
-#        fourth_price[:price].should == '8.50'
-#        fourth_price[:currency].should == 'GBP'
-#        fourth_price[:territory][:region_included].should == 'WORLD'
-#        fourth_price[:territory][:country_excluded].should == 'US GB AT BE CY DE ES FI FR GR IE IT LU NL MT PT SI SK'
-#        fourth_price[:price_type].should == '01'
-#      end
-#    end
-#  end
+  context "Pricing" do
+    context "example 1" do
+      before(:each) do
+        @pricing_file = File.join(@data_path, "pricing_1_onix3.xml")
+        doc = Hpricot(File.read(@pricing_file))
+        @products = []
+        OnixParser::Parser3.find_products(doc) do |product|
+          @products << product
+        end
+      end
+
+      it "should set the price appropriately" do
+        price = @products[0].prices.first
+        price[:price_type].should == '41'
+        price[:price].should == '12.99'
+        price[:currency].should == 'USD'
+      end
+
+      it "should have a related product" do
+        @products[0].other_ids.count.should == 1
+        @products[0].other_ids[0][1].should == '9780842300520'
+      end
+    end
+
+    context "example 2" do
+      before(:each) do
+        @pricing_file = File.join(@data_path, "pricing_2_onix3.xml")
+        doc = Hpricot(File.read(@pricing_file))
+        @products = []
+        OnixParser::Parser3.find_products(doc) do |product|
+          @products << product
+        end
+      end
+
+      it "should set the prices appropriately" do
+        first_price = @products[0].prices[0]
+        first_price[:price].should == '12.99'
+        first_price[:currency].should == 'USD'
+        first_price[:end_date].should == '20110305'
+        first_price[:price_type].should == '41'
+
+        second_price = @products[0].prices[1]
+        second_price[:price].should == '8.99'
+        second_price[:currency].should == 'USD'
+        second_price[:start_date].should == '20110306'
+        second_price[:price_type].should == '41'
+      end
+    end
+
+    context "example 3" do
+      before(:each) do
+        @pricing_file = File.join(@data_path, "pricing_3_onix3.xml")
+        doc = Hpricot(File.read(@pricing_file))
+        @products = []
+        OnixParser::Parser3.find_products(doc) do |product|
+          @products << product
+        end
+      end
+
+      it "should set the prices appropriately" do
+        first_price = @products[0].prices[0]
+        first_price[:price].should == '12.99'
+        first_price[:currency].should == 'USD'
+        first_price[:territory][:country_included].should == 'US'
+        first_price[:price_type].should == '41'
+
+        second_price = @products[0].prices[1]
+        second_price[:price].should == '7.50'
+        second_price[:currency].should == 'USD'
+        second_price[:territory][:country_included].should == 'IN'
+        second_price[:price_type].should == '01'
+
+        third_price = @products[0].prices[2]
+        third_price[:price].should == '12.99'
+        third_price[:currency].should == 'USD'
+        third_price[:territory][:region_included].should == 'WORLD'
+        third_price[:territory][:country_excluded].should == 'US IN'
+        third_price[:price_type].should == '01'
+      end
+    end
+
+    context "example 4" do
+      before(:each) do
+        @pricing_file = File.join(@data_path, "pricing_4_onix3.xml")
+        doc = Hpricot(File.read(@pricing_file))
+        @products = []
+        OnixParser::Parser3.find_products(doc) do |product|
+          @products << product
+        end
+      end
+
+      it "should set the prices appropriately" do
+        first_price = @products[0].prices[0]
+        first_price[:price].should == '9.99'
+        first_price[:currency].should == 'GBP'
+        first_price[:territory][:country_included].should == 'GB'
+        first_price[:price_type].should == '42'
+
+        second_price = @products[0].prices[1]
+        second_price[:price].should == '11.99'
+        second_price[:currency].should == 'USD'
+        second_price[:territory][:country_included].should == 'US'
+        second_price[:price_type].should == '41'
+
+        third_price = @products[0].prices[2]
+        third_price[:price].should == '9.50'
+        third_price[:currency].should == 'EUR'
+        third_price[:territory][:currency_zone].should == 'EUR'
+        third_price[:price_type].should == '01'
+
+        fourth_price = @products[0].prices[3]
+        fourth_price[:price].should == '8.50'
+        fourth_price[:currency].should == 'GBP'
+        fourth_price[:territory][:region_included].should == 'WORLD'
+        fourth_price[:territory][:country_excluded].should == 'US GB AT BE CY DE ES FI FR GR IE IT LU NL MT PT SI SK'
+        fourth_price[:price_type].should == '01'
+      end
+    end
+  end
 
   context "books_3 file" do
     before(:each) do

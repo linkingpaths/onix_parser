@@ -1,89 +1,93 @@
 module OnixParser
   class Parser3
+    def self.parse_product(xml_product, &block)
+      parsed_values = {}
+      parsed_values[:title] = xml_product.search("/DescriptiveDetail/TitleDetail/TitleElement/TitleText").first.innerText.strip
+      parsed_values[:author] = xml_product.search("/DescriptiveDetail/Contributor/PersonName").collect(&:innerText).join(',')
+      parsed_values[:subject] = xml_product.search("/DescriptiveDetail/Subject/SubjectSchemeIdentifier[text() = '22']/../SubjectSchemeVersion[text() = '2.0']/../SubjectHeadingText").text.strip
+      parsed_values[:language] = xml_product.search("/DescriptiveDetail/Language/LanguageCode").text.strip
+      parsed_values[:country] = xml_product.search("/DescriptiveDetail/Language/CountryCode").text.strip
+
+      parsed_values[:isbn] = xml_product.search("/ProductIdentifier/ProductIDType[text() = 15]/../IDValue").text.strip
+      isbn10_node = xml_product.search("/ProductIdentifier/ProductIDType[text() = 02]/../IDValue")
+      parsed_values[:isbn10] = isbn10_node.text.strip if isbn10_node.any?
+      gtin_node = xml_product.search("/ProductIdentifier/ProductIDType[text() = 03]/../IDValue")
+      parsed_values[:gtin] = gtin_node.text.strip if gtin_node.any?
+      upc_node = xml_product.search("/ProductIdentifier/ProductIDType[text() = 04]/../IDValue")
+      parsed_values[:upc] = upc_node.text.strip if upc_node.any?
+
+      collateral_detail = xml_product.search("/CollateralDetail")
+      parsed_values[:cover] = nil
+      if (collateral_detail.any?)
+        file_path = "/tmp/#{parsed_values[:isbn]}.jpg"
+        if File.exists?(file_path)
+          parsed_values[:cover] = File.new(file_path)
+        else
+          cover_node = collateral_detail.search("/SupportingResource/ResourceContentType[text() = '01']/../ResourceVersion/ResourceLink")
+
+          cover_url = cover_node.any? ? cover_node.text.strip : ''
+          unless (cover_url == '')
+            uri = URI.parse(cover_url)
+            Net::HTTP.start(uri.host) {|http|
+              resp = http.get(uri.path)
+              parsed_values[:cover] = Tempfile.new('book_cover')
+              parsed_values[:cover].write(resp.body)
+            }
+          end
+        end
+
+        long_synopsis_node = collateral_detail.search("/TextContent/TextType[text() = '03']/../Text")
+        parsed_values[:synopsis] = long_synopsis_node.any? ? long_synopsis_node.text.strip : ''
+        short_synopsis_node = collateral_detail.search("/TextContent/TextType[text() = '02']/../Text")
+        parsed_values[:synopsis] = short_synopsis_node.text.strip if parsed_values[:synopsis] == '' && short_synopsis_node.any?
+
+      end
+
+      parsed_values[:other_ids] = []
+      related_products = xml_product.search("/RelatedMaterial/RelatedProduct/ProductRelationCode[text() = '13']/../ProductIdentifier")
+      related_products.each do |related_product|
+        parsed_values[:other_ids] << [find_product_type(related_product.search('/ProductIDType').first.innerText), related_product.search('/IDValue').first.innerText]
+      end
+
+      default_territory = {:region_included => '', :region_excluded => '',
+                           :country_included => '', :country_excluded => ''}
+      publishing_detail = xml_product.search("/PublishingDetail")
+      if publishing_detail.any?
+        parsed_values[:publisher] = publishing_detail.search("/Publisher/PublisherName").text.strip
+        parsed_values[:publishing_status] = publishing_detail.search("/PublishingStatus").text.strip
+
+        publish_date_node = publishing_detail.search("/PublishingDate/PublishingDateRole[text() = '01']/../Date")
+
+        parsed_values[:released_at] = publish_date_node.first.innerText if publish_date_node.any?
+
+        sales_rights_territory = publishing_detail.search("/SalesRights/Territory")
+        if sales_rights_territory.any?
+          default_territory[:region_included] = sales_rights_territory.search("/RegionsIncluded").first.innerText if sales_rights_territory.search("/RegionsIncluded").any?
+          default_territory[:region_excluded] = sales_rights_territory.search("/RegionsExcluded").first.innerText if sales_rights_territory.search("/RegionsExcluded").any?
+          default_territory[:country_included] = sales_rights_territory.search("/CountryIncluded").first.innerText if sales_rights_territory.search("/CountryIncluded").any?
+          default_territory[:country_excluded] = sales_rights_territory.search("/CountryExcluded").first.innerText if sales_rights_territory.search("/CountryExcluded").any?
+        end
+      end
+
+      prices = []
+      product_supplies = xml_product.search("/ProductSupply")
+      market_count = xml_product.search("/ProductSupply/Market").count
+
+      if market_count > 1
+        prices << self.parse_markets(product_supplies)
+      else
+        prices << self.parse_markets(product_supplies, default_territory)
+      end
+
+      parsed_values[:prices] = prices.flatten
+      parsed_values[:xml] = xml_product.to_s
+
+      yield OnixParser::Product.new(parsed_values)
+    end
+
     def self.find_products(doc, &block)
       doc.root.search("/Product").each do |xml_product|
-        parsed_values = {}
-        parsed_values[:title] = xml_product.search("/DescriptiveDetail/TitleDetail/TitleElement/TitleText").first.innerText.strip
-        parsed_values[:author] = xml_product.search("/DescriptiveDetail/Contributor/PersonName").collect(&:innerText).join(',')
-        parsed_values[:subject] = xml_product.search("/DescriptiveDetail/Subject/SubjectSchemeIdentifier[text() = '22']/../SubjectSchemeVersion[text() = '2.0']/../SubjectHeadingText").text.strip
-        parsed_values[:language] = xml_product.search("/DescriptiveDetail/Language/LanguageCode").text.strip
-        parsed_values[:country] = xml_product.search("/DescriptiveDetail/Language/CountryCode").text.strip
-
-        parsed_values[:isbn] = xml_product.search("/ProductIdentifier/ProductIDType[text() = 15]/../IDValue").text.strip
-        isbn10_node = xml_product.search("/ProductIdentifier/ProductIDType[text() = 02]/../IDValue")
-        parsed_values[:isbn10] = isbn10_node.text.strip if isbn10_node.any?
-        gtin_node = xml_product.search("/ProductIdentifier/ProductIDType[text() = 03]/../IDValue")
-        parsed_values[:gtin] = gtin_node.text.strip if gtin_node.any?
-        upc_node = xml_product.search("/ProductIdentifier/ProductIDType[text() = 04]/../IDValue")
-        parsed_values[:upc] = upc_node.text.strip if upc_node.any?
-
-        collateral_detail = xml_product.search("/CollateralDetail")
-        parsed_values[:cover] = nil
-        if (collateral_detail.any?)
-          file_path = "/tmp/#{parsed_values[:isbn]}.jpg"
-          if File.exists?(file_path)
-            parsed_values[:cover] = File.new(file_path)
-          else
-            cover_node = collateral_detail.search("/SupportingResource/ResourceContentType[text() = '01']/../ResourceVersion/ResourceLink")
-
-            cover_url = cover_node.any? ? cover_node.text.strip : ''
-            unless (cover_url == '')
-              uri = URI.parse(cover_url)
-              Net::HTTP.start(uri.host) {|http|
-                resp = http.get(uri.path)
-                parsed_values[:cover] = Tempfile.new('book_cover')
-                parsed_values[:cover].write(resp.body)
-              }
-            end
-          end
-
-          long_synopsis_node = collateral_detail.search("/TextContent/TextType[text() = '03']/../Text")
-          parsed_values[:synopsis] = long_synopsis_node.any? ? long_synopsis_node.text.strip : ''
-          short_synopsis_node = collateral_detail.search("/TextContent/TextType[text() = '02']/../Text")
-          parsed_values[:synopsis] = short_synopsis_node.text.strip if parsed_values[:synopsis] == '' && short_synopsis_node.any?
-
-        end
-
-        parsed_values[:other_ids] = []
-        related_products = xml_product.search("/RelatedMaterial/RelatedProduct/ProductRelationCode[text() = '13']/../ProductIdentifier")
-        related_products.each do |related_product|
-          parsed_values[:other_ids] << [find_product_type(related_product.search('/ProductIDType').first.innerText), related_product.search('/IDValue').first.innerText]
-        end
-
-        default_territory = {:region_included => '', :region_excluded => '',
-                             :country_included => '', :country_excluded => ''}
-        publishing_detail = xml_product.search("/PublishingDetail")
-        if publishing_detail.any?
-          parsed_values[:publisher] = publishing_detail.search("/Publisher/PublisherName").text.strip
-          parsed_values[:publishing_status] = publishing_detail.search("/PublishingStatus").text.strip
-
-          publish_date_node = publishing_detail.search("/PublishingDate/PublishingDateRole[text() = '01']/../Date")
-
-          parsed_values[:released_at] = publish_date_node.first.innerText if publish_date_node.any?
-
-          sales_rights_territory = publishing_detail.search("/SalesRights/Territory")
-          if sales_rights_territory.any?
-            default_territory[:region_included] = sales_rights_territory.search("/RegionsIncluded").first.innerText if sales_rights_territory.search("/RegionsIncluded").any?
-            default_territory[:region_excluded] = sales_rights_territory.search("/RegionsExcluded").first.innerText if sales_rights_territory.search("/RegionsExcluded").any?
-            default_territory[:country_included] = sales_rights_territory.search("/CountryIncluded").first.innerText if sales_rights_territory.search("/CountryIncluded").any?
-            default_territory[:country_excluded] = sales_rights_territory.search("/CountryExcluded").first.innerText if sales_rights_territory.search("/CountryExcluded").any?
-          end
-        end
-
-        prices = []
-        product_supplies = xml_product.search("/ProductSupply")
-        market_count = xml_product.search("/ProductSupply/Market").count
-
-        if market_count > 1
-          prices << self.parse_markets(product_supplies)
-        else
-          prices << self.parse_markets(product_supplies, default_territory)
-        end
-
-        parsed_values[:prices] = prices.flatten
-        parsed_values[:xml] = xml_product.to_s
-
-        yield OnixParser::Product.new(parsed_values)
+        self.parse_product(xml_product, &block)
       end
     end
 
