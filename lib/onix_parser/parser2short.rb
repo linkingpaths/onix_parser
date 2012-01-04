@@ -70,12 +70,12 @@ module OnixParser
 
           # TODO: Need to get this to work
           # This is where things get dicey.  Need to create a record
-          country_included.each do |country|
-            prices << price_data.clone.merge(:country => country)
-          end
+#          country_included.each do |country|
+#            prices << price_data.clone.merge(:country => country)
+#          end
 
-#            price_data[:territory] = territory
-#            prices << price_data
+          price_data[:territory] = territory
+          prices << price_data
         end
       else
         prices << {:price => 0, :start_date => nil, :end_date => nil, :region => 'WORLD', :currency => 'USD'}
