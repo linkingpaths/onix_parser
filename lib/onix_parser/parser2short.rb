@@ -60,13 +60,13 @@ module OnixParser
           territory = {}
 
           # Region Included
-          region_included = price_node.search("/j303").any? ? price_node.search("/j303").collect(&:innerText) : []
+          price_data[:region_included] = price_node.search("/j303").any? ? price_node.search("/j303").collect(&:innerText) : []
           # Region Excluded
-          region_excluded = price_node.search("/j305").any? ? price_node.search("/j305").collect(&:innerText) : []
+          price_data[:region_excluded] = price_node.search("/j305").any? ? price_node.search("/j305").collect(&:innerText) : []
           # Country Included
-          country_included = price_node.search("/b251").any? ? price_node.search("/b251").collect(&:innerText) : []
+          price_data[:country_included] = price_node.search("/b251").any? ? price_node.search("/b251").collect(&:innerText) : []
           # Country Excluded
-          country_excluded = price_node.search("/j304").any? ? price_node.search("/j304").collect(&:innerText) : []
+          price_data[:country_excluded] = price_node.search("/j304").any? ? price_node.search("/j304").collect(&:innerText) : []
 
           # TODO: Need to get this to work
           # This is where things get dicey.  Need to create a record
