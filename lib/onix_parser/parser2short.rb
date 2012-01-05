@@ -4,7 +4,9 @@ module OnixParser
       parsed_values = {}
       parsed_values[:title] = product.search('/title/b203').first.innerText.strip
       parsed_values[:author] = product.search('/contributor/b036').collect(&:innerText).join(',')
-      parsed_values[:publisher] = product.search('/publisher/b081').text.strip
+      
+      publisher_node = product.search('/publisher/b081').any? ? product.search('/publisher/b081') : product.search('/b081')
+      parsed_values[:publisher] = publisher_node.text.strip
       parsed_values[:publishing_status] = product.search('/b394').text
       parsed_values[:released_at] = product.search('/b003').text
 
