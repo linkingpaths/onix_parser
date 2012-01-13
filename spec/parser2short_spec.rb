@@ -24,6 +24,7 @@ describe OnixParser::Parser2short do
       nigeria = @rights[0]
       nigeria.should_not be_nil
       nigeria[:country].should == 'NG'
+      nigeria[:type].should == '03'
       nigeria[:sellable].should == 0
     end
 
@@ -31,21 +32,25 @@ describe OnixParser::Parser2short do
       us = @rights[1]
       us.should_not be_nil
       us[:country].should == 'US'
+      us[:type].should == '01'
       us[:sellable].should == 1
 
       gb = @rights[2]
       gb.should_not be_nil
       gb[:country].should == 'GB'
+      gb[:type].should == '01'
       gb[:sellable].should == 1
 
       ca = @rights[3]
       ca.should_not be_nil
       ca[:country].should == 'CA'
+      ca[:type].should == '01'
       ca[:sellable].should == 1
 
       au = @rights[4]
       au.should_not be_nil
       au[:country].should == 'AU'
+      au[:type].should == '01'
       au[:sellable].should == 1
     end
 
@@ -71,6 +76,7 @@ describe OnixParser::Parser2short do
       row = @rights[0]
       row.should_not be_nil
       row[:country].should == 'ROW'
+      row[:type].should == '01'
       row[:sellable].should == 1
     end
 
@@ -80,6 +86,7 @@ describe OnixParser::Parser2short do
         terr = @rights[index + 1]
         terr.should_not be_nil
         terr[:country].should == value
+        terr[:type].should == '03'
         terr[:sellable].should == 0
       end
     end
