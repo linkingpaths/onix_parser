@@ -88,7 +88,7 @@ module OnixParser
       sales_rights = []
       sales_rights_nodes = product.search('/salesrights')
       sales_rights_nodes.each do |node|
-        sellable = ['01','02','07','08'].include?(node.search('/b089').first.innerText) ? true : false
+        sellable = ['01','02','07','08'].include?(node.search('/b089').first.innerText) ? 1 : 0
 
         where_nodes = node.search('/b090')
         where_nodes = node.search('/b388') unless where_nodes.any?
@@ -112,7 +112,7 @@ module OnixParser
         where_nodes.each do |where_node|
           country_list = where_node.innerText.split(' ')
           country_list.each do |country|
-            data = {:country => country, :sellable => false}
+            data = {:country => country, :sellable => 0}
             sales_rights << data
           end
         end

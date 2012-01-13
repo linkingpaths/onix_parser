@@ -24,29 +24,29 @@ describe OnixParser::Parser2short do
       nigeria = @rights[0]
       nigeria.should_not be_nil
       nigeria[:country].should == 'NG'
-      nigeria[:sellable].should be_false
+      nigeria[:sellable].should == 0
     end
 
     it 'should be for sale in the US, GB, CA, and AU' do
       us = @rights[1]
       us.should_not be_nil
       us[:country].should == 'US'
-      us[:sellable].should be_true
+      us[:sellable].should == 1
 
       gb = @rights[2]
       gb.should_not be_nil
       gb[:country].should == 'GB'
-      gb[:sellable].should be_true
+      gb[:sellable].should == 1
 
       ca = @rights[3]
       ca.should_not be_nil
       ca[:country].should == 'CA'
-      ca[:sellable].should be_true
+      ca[:sellable].should == 1
 
       au = @rights[4]
       au.should_not be_nil
       au[:country].should == 'AU'
-      au[:sellable].should be_true
+      au[:sellable].should == 1
     end
 
     
@@ -71,7 +71,7 @@ describe OnixParser::Parser2short do
       row = @rights[0]
       row.should_not be_nil
       row[:country].should == 'ROW'
-      row[:sellable].should be_true
+      row[:sellable].should == 1
     end
 
     it 'should not be sellable in the specified countries' do
@@ -80,7 +80,7 @@ describe OnixParser::Parser2short do
         terr = @rights[index + 1]
         terr.should_not be_nil
         terr[:country].should == value
-        terr[:sellable].should be_false
+        terr[:sellable].should == 0
       end
     end
   end
