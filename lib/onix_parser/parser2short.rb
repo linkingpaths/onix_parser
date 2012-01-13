@@ -70,17 +70,53 @@ module OnixParser
 
           # TODO: Need to get this to work
           # This is where things get dicey.  Need to create a record
-#          country_included.each do |country|
-#            prices << price_data.clone.merge(:country => country)
-#          end
+          price_data[:country_included].each do |country|
+            prices << price_data.clone.merge(:country => country)
+          end
 
-          price_data[:territory] = territory
-          prices << price_data
+#          price_data[:territory] = territory
+#          prices << price_data
         end
       else
         prices << {:price => 0, :start_date => nil, :end_date => nil, :region => 'WORLD', :currency => 'USD'}
       end
       parsed_values[:prices] = prices
+
+      # Sales Rights
+      sales_rights = []
+      sales_rights_nodes = product.search('/salesrights')
+      sales_rights_nodes.each do |node|
+        sellable = ['01','02','07','08'].include?(node.search('/b089').first.innerText) ? true : false
+
+        where_nodes = node.search('/b090')
+        where_nodes = node.search('/b388') unless where_nodes.any?
+        where_nodes = node.search('/b091') unless where_nodes.any?
+
+        where_nodes.each do |where_node|
+          country_list = where_node.innerText.split(' ')
+          country_list.each do |country|
+            data = {:country => country, :sellable => sellable}
+            sales_rights << data
+          end
+        end
+      end
+
+      not_for_sale_nodes = product.search('/notforsale')
+      not_for_sale_nodes.each do |node|
+        where_nodes = node.search('/b090')
+        where_nodes = node.search('/b388') unless where_nodes.any?
+        where_nodes = node.search('/b091') unless where_nodes.any?
+
+        where_nodes.each do |where_node|
+          country_list = where_node.innerText.split(' ')
+          country_list.each do |country|
+            data = {:country => country, :sellable => false}
+            sales_rights << data
+          end
+        end
+      end
+
+      parsed_values[:sales_rights] = sales_rights
 
       excerpt_node = product.search("/othertext/d102[text() = '23']/../d104")
       parsed_values[:excerpt] = excerpt_node.any? ? excerpt_node.first.innerText : ''

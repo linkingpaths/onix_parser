@@ -5,6 +5,86 @@ describe OnixParser::Parser2short do
     @data_path = File.join(File.dirname(__FILE__), "..", "data")
   end
 
+  context 'sales_rights_1 file' do
+    before do
+      @file = File.join(@data_path, 'sales_rights_1.xml')
+      doc = Hpricot(File.read(@file))
+      @products = []
+      OnixParser::Parser2short.find_products(doc) do |product|
+        @products << product
+      end
+      @rights = @products.first.sales_rights
+    end
+
+    it 'should have the sales rights' do
+      @rights.count.should == 5
+    end
+
+    it 'should not be for sale in Nigeria' do
+      nigeria = @rights[0]
+      nigeria.should_not be_nil
+      nigeria[:country].should == 'NG'
+      nigeria[:sellable].should be_false
+    end
+
+    it 'should be for sale in the US, GB, CA, and AU' do
+      us = @rights[1]
+      us.should_not be_nil
+      us[:country].should == 'US'
+      us[:sellable].should be_true
+
+      gb = @rights[2]
+      gb.should_not be_nil
+      gb[:country].should == 'GB'
+      gb[:sellable].should be_true
+
+      ca = @rights[3]
+      ca.should_not be_nil
+      ca[:country].should == 'CA'
+      ca[:sellable].should be_true
+
+      au = @rights[4]
+      au.should_not be_nil
+      au[:country].should == 'AU'
+      au[:sellable].should be_true
+    end
+
+    
+  end
+
+  context 'sales_rights_2 file' do
+    before do
+      @file = File.join(@data_path, 'sales_rights_2.xml')
+      doc = Hpricot(File.read(@file))
+      @products = []
+      OnixParser::Parser2short.find_products(doc) do |product|
+        @products << product
+      end
+      @rights = @products.first.sales_rights
+    end
+
+    it 'should have the sales rights' do
+      @rights.count.should == 21
+    end
+
+    it 'should be sellable in the rest of the world' do
+      row = @rights[0]
+      row.should_not be_nil
+      row[:country].should == 'ROW'
+      row[:sellable].should be_true
+    end
+
+    it 'should not be sellable in the specified countries' do
+      list = ["AF", "DZ", "BY", "BA", "CG", "CD", "CI", "CU", "ID", "IR", "IQ", "KP", "LR", "LY", "MK", "MM", "NG", "SD", "SY", "ZW"]
+      list.each_with_index do |value, index|
+        terr = @rights[index + 1]
+        terr.should_not be_nil
+        terr[:country].should == value
+        terr[:sellable].should be_false
+      end
+    end
+  end
+
   context 'selling_onix_2_short file' do
     before do
       @file = File.join(@data_path, 'selling_onix_2_short.xml')

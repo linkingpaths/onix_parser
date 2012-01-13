@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE ONIXmessage SYSTEM "http://www.editeur.org/onix/2.1/short/onix-international.dtd">
+<ONIXmessage>
+<header>
+<m174>Pearson Education</m174>
+<m175>David Ahmadi, 201-236-7861</m175>
+<m283>david.ahmadi@pearsoned.com</m283>
+<m178>Rethink Books</m178>
+<m179>Brittney Aleman</m179>
+<m182>20111013</m182>
+<m184>eng</m184>
+<m185>01</m185>
+<m186>USD</m186>
+<m193>gen</m193>
+</header>
+<product>
+<a001>0130389919</a001>
+<a002>03</a002>
+<a194>01</a194>
+<productidentifier>
+<b221>02</b221>
+<b244>0130389919</b244>
+</productidentifier>
+<productidentifier>
+<b221>03</b221>
+<b244>9780130389916</b244>
+</productidentifier>
+<productidentifier>
+<b221>15</b221>
+<b244>9780130389916</b244>
+</productidentifier>
+<productidentifier>
+<b221>14</b221>
+<b244>09780130389916</b244>
+</productidentifier>
+<b246>01</b246>
+<b012>DG</b012>
+<b211>029</b211>
+<series>
+<b018>FT Press Delivers Elements</b018>
+</series>
+<title textcase="02">
+<b202>01</b202>
+<b203>How to Write Proposals and Grant Applications That Win</b203>
+</title>
+<contributor>
+<b034>1</b034>
+<b035>A01</b035>
+<b037>Canavor, Natalie</b037>
+<b039>Natalie</b039>
+<b040>Canavor</b040>
+</contributor>
+<contributor>
+<b034>2</b034>
+<b035>A01</b035>
+<b037>Meirowitz, Claire</b037>
+<b039>Claire</b039>
+<b040>Meirowitz</b040>
+</contributor>
+<b057>1</b057>
+<language>
+<b253>01</b253>
+<b252>eng</b252>
+</language>
+<b061>10</b061>
+<b064>BUS007000</b064>
+<othertext>
+<d102>13</d102>
+<d104 textformat="02"><![CDATA[<P style="MARGIN: 0px" soNormal><B>Natalie Canavor</B>&rsquo;s publications, articles, Web sites, and scripts have won international recognition. She successfully launched four monthly national magazines for business and professional audiences and directed all communications for New York State&rsquo;s largest educational agency, where she supervised hundreds of publications and advised leaders on PR strategy. Her journalism credits include numerous features for <I>The</I> <I>New York Times </I>and<I> Newsday</I>. She consults for Adelphi University&rsquo;s Long Island Center for Nonprofit Leadership. <B>Claire Meirowitz</B>, an award-winning author, has served as project manager and copy editor for many leading business, technology, and educational publications and for publishers including <I>Forbes</I>, <I>The Wall Street Journal</I>, CMP Media LLC, Ziff-Davis Media, Interex, and United Technical Publications. She has managed projects and edited materials for IBM, Microsoft, HP, Intel, Cisco Systems, Computer Associates, Kodak, Merant, MOCA, and Qwest. </P>]]></d104>
+</othertext>
+<othertext>
+<d102>01</d102>
+<d104 textformat="02"><![CDATA[<P>This is the eBook version of the printed book.</P><P style="MARGIN: 0px">This Element is an excerpt from <I>The Truth About the New Rules of Business Writing</I> (9780137153152) by Natalie Canavor and Claire Meirowitz. Available in print and digital formats.</P>  <P style="MARGIN: 0px">&nbsp;</P>  <P style="MARGIN: 0px">How to write successful proposals and grant applications.</P>  <P style="MARGIN: 0px"><B>&nbsp;</B></P>  <P style="MARGIN: 0px">Two technology companies regularly apply for government defense contracts by responding to requests for proposals (RFPs). One reaps modest success. While the executives usually voice a &ldquo;win some, lose some&rdquo; attitude, they are always surprised when a bid fails because &ldquo;our engineers are the best in the business.&rdquo; The second lands a steady stream of contracts; some of which are a distinct reach. What&rsquo;s the difference?</P>]]></d104>
+</othertext>
+<mediafile>
+<f114>04</f114>
+<f115>03</f115>
+<f116>06</f116>
+<f117>0130389919.jpg</f117>
+</mediafile>
+<imprint>
+<b079>FT Press</b079>
+</imprint>
+<publisher>
+<b291>01</b291>
+<b081>Pearson Education</b081>
+</publisher>
+<b394>04</b394>
+<b003>20100302</b003>
+<b087>2010</b087>
+<salesrights>
+<b089>01</b089>
+<b388>ROW</b388>
+</salesrights>
+<notforsale>
+<b090>AF DZ BY BA CG CD CI CU ID IR IQ KP LR LY MK MM NG SD SY ZW</b090>
+</notforsale>
+<relatedproduct>
+<h208>13</h208>
+<productidentifier>
+<b221>02</b221>
+<b244>0132543672</b244>
+</productidentifier>
+<productidentifier>
+<b221>03</b221>
+<b244>9780132543675</b244>
+</productidentifier>
+</relatedproduct>
+<supplydetail>
+<j137>Pearson Education</j137>
+<j141>IP</j141>
+<j396>20</j396>
+<price>
+<j148>01</j148>
+<discountcoded>
+<j363>02</j363>
+<j364>t</j364>
+</discountcoded>
+<j151>1.99</j151>
+<j152>USD</j152>
+</price>
+</supplydetail>
+</product>
+</ONIXmessage>
