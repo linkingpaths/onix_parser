@@ -96,6 +96,43 @@ module OnixParser
       end
       parsed_values[:prices] = prices
 
+      # Sales Rights
+      sales_rights = []
+      sales_rights_nodes = product.search('/salesrights')
+      sales_rights_nodes.each do |node|
+        type_code = node.search('/salesrightstype').first.innerText
+        sellable = ['01','02','07','08'].include?(type_code) ? 1 : 0
+
+        where_nodes = node.search('/RightsCountry')
+        where_nodes = node.search('/RightsTerritory') unless where_nodes.any?
+        where_nodes = node.search('/RightsRegion') unless where_nodes.any?
+
+        where_nodes.each do |where_node|
+          country_list = where_node.innerText.split(' ')
+          country_list.each do |country|
+            data = {:country => country, :sellable => sellable, :type => type_code}
+            sales_rights << data
+          end
+        end
+      end
+
+      not_for_sale_nodes = product.search('/notforsale')
+      not_for_sale_nodes.each do |node|
+        where_nodes = node.search('/RightsCountry')
+        where_nodes = node.search('/RightsTerritory') unless where_nodes.any?
+        where_nodes = node.search('/RightsRegion') unless where_nodes.any?
+
+        where_nodes.each do |where_node|
+          country_list = where_node.innerText.split(' ')
+          country_list.each do |country|
+            data = {:country => country, :sellable => 0, :type => '03'}
+            sales_rights << data
+          end
+        end
+      end
+
+      parsed_values[:sales_rights] = sales_rights
+
       # Related Products
       parsed_values[:other_ids] = []
       product.search('/RelatedProduct').each do |rproduct|

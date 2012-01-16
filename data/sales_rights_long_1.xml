@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<!DOCTYPE ONIXMessage SYSTEM "http://www.editeur.org/onix/2.1/reference/onix-international.dtd">
+<ONIXMessage release="2.1">
+<Header>
+<FromCompany>Baker Publishing Group </FromCompany>
+<FromPerson>Nathan Henrion</FromPerson>
+<FromEmail>nhenrion@bakerbooks.com</FromEmail>
+<SentDate>20111229</SentDate>
+<DefaultPriceTypeCode>01</DefaultPriceTypeCode>
+<DefaultLinearUnit>in</DefaultLinearUnit>
+<DefaultWeightUnit>lb</DefaultWeightUnit>
+</Header>
+<Product>
+<RecordReference>1441212566</RecordReference>
+<NotificationType>04</NotificationType>
+<RecordSourceType>01</RecordSourceType>
+<RecordSourceName>Baker Publishing Group</RecordSourceName>
+<ProductIdentifier>
+<ProductIDType>02</ProductIDType>
+<IDValue>1441212566</IDValue>
+</ProductIdentifier>
+<ProductIdentifier>
+<ProductIDType>03</ProductIDType>
+<IDValue>9781441212566</IDValue>
+</ProductIdentifier>
+<ProductIdentifier>
+<ProductIDType>15</ProductIDType>
+<IDValue>9781441212566</IDValue>
+</ProductIdentifier>
+<ProductForm>DG</ProductForm>
+<EpubType>029</EpubType>
+<Title>
+<TitleType>01</TitleType>
+<TextCaseFlag>02</TextCaseFlag>
+<TitleText>Why Your Best Is Good Enough</TitleText>
+</Title>
+<Contributor>
+<SequenceNumber>1</SequenceNumber>
+<ContributorRole>A01</ContributorRole>
+<PersonNameInverted>Leman, Dr. Kevin</PersonNameInverted>
+</Contributor>
+<LanguageOfText>eng</LanguageOfText>
+<BASICMainSubject>SEL021000</BASICMainSubject>
+<BASICVersion>2.01</BASICVersion>
+<Annotation>Writing in his well-known, upbeat style, this bestselling author helps those who struggle with self-doubt to value their talents and gifts and accept their shortcomings.</Annotation>
+<MainDescription>Writing in his well-known, upbeat style, Dr. Kevin Leman helps those who struggle with self-doubt to value their talents and gifts and accept their shortcomings. He points out why the lifestyle we develop as a child determines our degree of success or failure and explains how, regardless of the past, each person can develop a healthy lifestyle today.</MainDescription>
+<OtherText>
+<TextTypeCode>02</TextTypeCode>
+<Text textformat="04">Writing in his well-known, upbeat style, this bestselling author helps those who struggle with self-doubt to value their talents and gifts and accept their shortcomings.</Text>
+</OtherText>
+<OtherText>
+<TextTypeCode>03</TextTypeCode>
+<Text textformat="04">Writing in his well-known, upbeat style, Dr. Kevin Leman helps those who struggle with self-doubt to value their talents and gifts and accept their shortcomings. He points out why the lifestyle we develop as a child determines our degree of success or failure and explains how, regardless of the past, each person can develop a healthy lifestyle today.</Text>
+</OtherText>
+<OtherText>
+<TextTypeCode>18</TextTypeCode>
+<Text textformat="04">Break free from perfectionism!&lt;BR&gt;&lt;BR&gt;Are you an expert at finding flaws within yourself? Do you tend to procrastinate, set unrealistic goals, or continually try to please others? Do you have to &amp;quot;push&amp;quot; your children to get them to do anything?&lt;BR&gt;&lt;BR&gt;Writing in his warm and direct style, Dr. Kevin Leman shows you how to value your talents and gifts and accept your shortcomings. Regardless of the past, you can develop a healthy lifestyle today. Dr. Leman also shows you how to apply these same principles in raising children with healthy self-esteem.&lt;BR&gt;&lt;BR&gt;If you want to make a positive change in your life, this is the place to start. &lt;BR&gt;&lt;BR&gt;&lt;BR&gt;Dr. Kevin Leman, an internationally known psychologist, humorist, radio and television personality, and speaker, has taught and entertained audiences worldwide with his wit and commonsense psychology. Dr. Leman is the &lt;i&gt;New York Times&lt;/i&gt; bestselling and award-winning author of many books, including &lt;i&gt;Have a New Kid by Friday&lt;/i&gt;, &lt;i&gt;Have a New Husband by Friday&lt;/i&gt;, &lt;i&gt;The Birth Order Book&lt;/i&gt;, &lt;i&gt;Sex Begins in the Kitchen&lt;/i&gt;, and &lt;i&gt;Turn Up the Heat&lt;/i&gt;.</Text>
+</OtherText>
+<OtherText>
+<TextTypeCode>13</TextTypeCode>
+<Text textformat="04">Dr. Kevin Leman is an internationally known psychologist, humorist, and bestselling author of many books, including &lt;i&gt;Have a New Kid by Friday&lt;/i&gt;. He is former consulting psychologist for &lt;i&gt;Good Morning America&lt;/i&gt;.</Text>
+</OtherText>
+<Imprint>
+<NameCodeType>02</NameCodeType>
+<NameCodeValue>BAKER027</NameCodeValue>
+<ImprintName>Revell</ImprintName>
+</Imprint>
+<PublisherName>Baker Publishing Group</PublisherName>
+<CityOfPublication>Grand Rapids</CityOfPublication>
+<CountryOfPublication>US</CountryOfPublication>
+<PublishingStatus>04</PublishingStatus>
+<PublicationDate>20100301</PublicationDate>
+<SalesRights>
+<SalesRightsType>03</SalesRightsType>
+<RightsCountry>NG</RightsCountry>
+</SalesRights>
+<SalesRights>
+<SalesRightsType>01</SalesRightsType>
+<RightsCountry>US GB CA AU</RightsCountry>
+</SalesRights>
+<RelatedProduct>
+<RelationCode>13</RelationCode>
+<ProductIdentifier>
+<ProductIDType>15</ProductIDType>
+<IDValue>9780800787943</IDValue>
+</ProductIdentifier>
+</RelatedProduct>
+<SupplyDetail>
+<SupplierName>Baker Publishing Group</SupplierName>
+<TelephoneNumber>800 877 2665</TelephoneNumber>
+<FaxNumber>800 398 3111</FaxNumber>
+<EmailAddress>orders@bakerpublishinggroup.com</EmailAddress>
+<Website>
+<WebsiteRole>01</WebsiteRole>
+<WebsiteLink>http://www.bakerpublishinggroup.com</WebsiteLink>
+</Website>
+<SupplierRole>01</SupplierRole>
+<ReturnsCodeType>02</ReturnsCodeType>
+<ReturnsCode>Y</ReturnsCode>
+<AvailabilityCode>IP</AvailabilityCode>
+<ExpectedShipDate>20100301</ExpectedShipDate>
+<PackQuantity>1</PackQuantity>
+<Price>
+<PriceTypeCode>01</PriceTypeCode>
+<ClassOfTrade>NST</ClassOfTrade>
+<DiscountCoded>
+<DiscountCodeType>02</DiscountCodeType>
+<DiscountCode>NST</DiscountCode>
+</DiscountCoded>
+<PriceAmount>6.99</PriceAmount>
+<CurrencyCode>USD</CurrencyCode>
+<CountryCode>US</CountryCode>
+</Price>
+<Price>
+<PriceTypeCode>01</PriceTypeCode>
+<ClassOfTrade>NST</ClassOfTrade>
+<DiscountCoded>
+<DiscountCodeType>02</DiscountCodeType>
+<DiscountCode>NST</DiscountCode>
+</DiscountCoded>
+<PriceAmount>6.99</PriceAmount>
+<CurrencyCode>CAD</CurrencyCode>
+<CountryCode>CA</CountryCode>
+</Price>
+<Price>
+<PriceTypeCode>01</PriceTypeCode>
+<ClassOfTrade>NST</ClassOfTrade>
+<DiscountCoded>
+<DiscountCodeType>02</DiscountCodeType>
+<DiscountCode>NST</DiscountCode>
+</DiscountCoded>
+<PriceAmount>3.83</PriceAmount>
+<CurrencyCode>GBP</CurrencyCode>
+<CountryCode>GB</CountryCode>
+</Price>
+<Price>
+<PriceTypeCode>01</PriceTypeCode>
+<ClassOfTrade>NST</ClassOfTrade>
+<DiscountCoded>
+<DiscountCodeType>02</DiscountCodeType>
+<DiscountCode>NST</DiscountCode>
+</DiscountCoded>
+<PriceAmount>6.99</PriceAmount>
+<CurrencyCode>AUD</CurrencyCode>
+<CountryCode>AU</CountryCode>
+</Price>
+</SupplyDetail>
+</Product>
+</ONIXMessage>
