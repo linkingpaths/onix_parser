@@ -1,22 +1,22 @@
 module OnixParser
   class Parser3
-    def self.parse_product(xml_product, &block)
+    def self.parse_product(product, &block)
       parsed_values = {}
-      parsed_values[:title] = xml_product.search("/DescriptiveDetail/TitleDetail/TitleElement/TitleText").first.innerText.strip
-      parsed_values[:author] = xml_product.search("/DescriptiveDetail/Contributor/PersonName").collect(&:innerText).join(',')
-      parsed_values[:subject] = xml_product.search("/DescriptiveDetail/Subject/SubjectSchemeIdentifier[text() = '22']/../SubjectSchemeVersion[text() = '2.0']/../SubjectHeadingText").text.strip
-      parsed_values[:language] = xml_product.search("/DescriptiveDetail/Language/LanguageCode").text.strip
-      parsed_values[:country] = xml_product.search("/DescriptiveDetail/Language/CountryCode").text.strip
+      parsed_values[:title] = product.search("/DescriptiveDetail/TitleDetail/TitleElement/TitleText").first.innerText.strip
+      parsed_values[:author] = product.search("/DescriptiveDetail/Contributor/PersonName").collect(&:innerText).join(',')
+      parsed_values[:subject] = product.search("/DescriptiveDetail/Subject/SubjectSchemeIdentifier[text() = '22']/../SubjectSchemeVersion[text() = '2.0']/../SubjectHeadingText").text.strip
+      parsed_values[:language] = product.search("/DescriptiveDetail/Language/LanguageCode").text.strip
+      parsed_values[:country] = product.search("/DescriptiveDetail/Language/CountryCode").text.strip
 
-      parsed_values[:isbn] = xml_product.search("/ProductIdentifier/ProductIDType[text() = 15]/../IDValue").text.strip
-      isbn10_node = xml_product.search("/ProductIdentifier/ProductIDType[text() = 02]/../IDValue")
+      parsed_values[:isbn] = product.search("/ProductIdentifier/ProductIDType[text() = 15]/../IDValue").text.strip
+      isbn10_node = product.search("/ProductIdentifier/ProductIDType[text() = 02]/../IDValue")
       parsed_values[:isbn10] = isbn10_node.text.strip if isbn10_node.any?
-      gtin_node = xml_product.search("/ProductIdentifier/ProductIDType[text() = 03]/../IDValue")
+      gtin_node = product.search("/ProductIdentifier/ProductIDType[text() = 03]/../IDValue")
       parsed_values[:gtin] = gtin_node.text.strip if gtin_node.any?
-      upc_node = xml_product.search("/ProductIdentifier/ProductIDType[text() = 04]/../IDValue")
+      upc_node = product.search("/ProductIdentifier/ProductIDType[text() = 04]/../IDValue")
       parsed_values[:upc] = upc_node.text.strip if upc_node.any?
 
-      collateral_detail = xml_product.search("/CollateralDetail")
+      collateral_detail = product.search("/CollateralDetail")
       parsed_values[:cover] = nil
       if (collateral_detail.any?)
         file_path = "/tmp/#{parsed_values[:isbn]}.jpg"
@@ -44,14 +44,14 @@ module OnixParser
       end
 
       parsed_values[:other_ids] = []
-      related_products = xml_product.search("/RelatedMaterial/RelatedProduct/ProductRelationCode[text() = '13']/../ProductIdentifier")
+      related_products = product.search("/RelatedMaterial/RelatedProduct/ProductRelationCode[text() = '13']/../ProductIdentifier")
       related_products.each do |related_product|
         parsed_values[:other_ids] << [find_product_type(related_product.search('/ProductIDType').first.innerText), related_product.search('/IDValue').first.innerText]
       end
 
       default_territory = {:region_included => '', :region_excluded => '',
                            :country_included => '', :country_excluded => ''}
-      publishing_detail = xml_product.search("/PublishingDetail")
+      publishing_detail = product.search("/PublishingDetail")
       if publishing_detail.any?
         parsed_values[:publisher] = publishing_detail.search("/Publisher/PublisherName").text.strip
         parsed_values[:publishing_status] = publishing_detail.search("/PublishingStatus").text.strip
@@ -67,11 +67,49 @@ module OnixParser
           default_territory[:country_included] = sales_rights_territory.search("/CountryIncluded").first.innerText if sales_rights_territory.search("/CountryIncluded").any?
           default_territory[:country_excluded] = sales_rights_territory.search("/CountryExcluded").first.innerText if sales_rights_territory.search("/CountryExcluded").any?
         end
+
+        # Sales Rights
+        sales_rights = []
+        sales_rights_nodes = publishing_detail.search('/SalesRights')
+        sales_rights_nodes.each do |node|
+          type_code = node.search('/SalesRightsType').first.innerText
+          sellable = ['01','02','07','08'].include?(type_code) ? 1 : 0
+          inverse = sellable == 1 ? 0 : 1
+
+          node.search('/Territory/RegionsIncluded').each do |region_node|
+            region_node.innerText.split(' ').each do |name|
+              data = {:country => name, :sellable => sellable, :type => type_code}
+              sales_rights << data
+            end
+          end
+
+          node.search('/Territory/CountriesIncluded').each do |country_node|
+            country_node.innerText.split(' ').each do |name|
+              data = {:country => name, :sellable => sellable, :type => type_code}
+              sales_rights << data
+            end
+          end
+
+          node.search('/Territory/RegionsExcluded').each do |region_node|
+            region_node.innerText.split(' ').each do |name|
+              data = {:country => name, :sellable => inverse, :type => type_code}
+              sales_rights << data
+            end
+          end
+
+          node.search('/Territory/CountriesExcluded').each do |country_node|
+            country_node.innerText.split(' ').each do |name|
+              data = {:country => name, :sellable => inverse, :type => type_code}
+              sales_rights << data
+            end
+          end
+        end
+        parsed_values[:sales_rights] = sales_rights
       end
 
       prices = []
-      product_supplies = xml_product.search("/ProductSupply")
-      market_count = xml_product.search("/ProductSupply/Market").count
+      product_supplies = product.search("/ProductSupply")
+      market_count = product.search("/ProductSupply/Market").count
 
       if market_count > 1
         prices << self.parse_markets(product_supplies)
@@ -80,14 +118,14 @@ module OnixParser
       end
 
       parsed_values[:prices] = prices.flatten
-      parsed_values[:xml] = xml_product.to_s
+      parsed_values[:xml] = product.to_s
 
       yield OnixParser::Product.new(parsed_values)
     end
 
     def self.find_products(doc, &block)
-      doc.root.search("/Product").each do |xml_product|
-        self.parse_product(xml_product, &block)
+      doc.root.search("/Product").each do |product|
+        self.parse_product(product, &block)
       end
     end
 
