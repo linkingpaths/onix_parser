@@ -6,6 +6,22 @@ describe OnixParser::Parser3 do
   end
 
   context 'Sales Rights' do
+    context 'sales_rights_3_1' do
+      before(:each) do
+        @file = File.join(@data_path, 'sales_rights_3_1.xml')
+        doc = Hpricot(File.read(@file))
+        @products = []
+        OnixParser::Parser3.find_products(doc) do |product|
+          @products << product
+        end
+        @rights = @products.first.sales_rights
+      end
+
+      it 'should work freaking work' do
+        @rights.first[:country].should == 'WORLD'
+      end
+    end
+
     context 'sales_rights_3' do
       before(:each) do
         @file = File.join(@data_path, 'sales_rights_3.xml')
@@ -105,21 +121,14 @@ describe OnixParser::Parser3 do
         first_price = @products[0].prices[0]
         first_price[:price].should == '12.99'
         first_price[:currency].should == 'USD'
-        first_price[:territory][:country_included].should == 'US'
+        first_price[:country].should == 'US'
         first_price[:price_type].should == '41'
 
         second_price = @products[0].prices[1]
         second_price[:price].should == '7.50'
         second_price[:currency].should == 'USD'
-        second_price[:territory][:country_included].should == 'IN'
+        second_price[:country].should == 'IN'
         second_price[:price_type].should == '01'
-
-        third_price = @products[0].prices[2]
-        third_price[:price].should == '12.99'
-        third_price[:currency].should == 'USD'
-        third_price[:territory][:region_included].should == 'WORLD'
-        third_price[:territory][:country_excluded].should == 'US IN'
-        third_price[:price_type].should == '01'
       end
     end
 
@@ -137,26 +146,25 @@ describe OnixParser::Parser3 do
         first_price = @products[0].prices[0]
         first_price[:price].should == '9.99'
         first_price[:currency].should == 'GBP'
-        first_price[:territory][:country_included].should == 'GB'
+        first_price[:country].should == 'GB'
         first_price[:price_type].should == '42'
 
         second_price = @products[0].prices[1]
         second_price[:price].should == '11.99'
         second_price[:currency].should == 'USD'
-        second_price[:territory][:country_included].should == 'US'
+        second_price[:country].should == 'US'
         second_price[:price_type].should == '41'
 
         third_price = @products[0].prices[2]
         third_price[:price].should == '9.50'
         third_price[:currency].should == 'EUR'
-        third_price[:territory][:currency_zone].should == 'EUR'
+        third_price[:country].should == 'EUR'
         third_price[:price_type].should == '01'
 
         fourth_price = @products[0].prices[3]
         fourth_price[:price].should == '8.50'
         fourth_price[:currency].should == 'GBP'
-        fourth_price[:territory][:region_included].should == 'WORLD'
-        fourth_price[:territory][:country_excluded].should == 'US GB AT BE CY DE ES FI FR GR IE IT LU NL MT PT SI SK'
+        fourth_price[:country].should == 'WORLD'
         fourth_price[:price_type].should == '01'
       end
     end
@@ -196,60 +204,42 @@ describe OnixParser::Parser3 do
       @products[0].prices[0][:end_date].should == nil
       @products[0].prices[0][:currency].should == 'USD'
       @products[0].prices[0][:price_type].should == '01'
-      @products[0].prices[0][:territory].should == {:region_included => 'WORLD',
-                                                    :region_excluded => '',
-                                                    :country_included => '',
-                                                    :country_excluded => ''}
+      @products[0].prices[0][:country].should == 'WORLD'
 
       @products[1].prices[0][:price].should == '24.99'
       @products[1].prices[0][:start_date].should == nil
       @products[1].prices[0][:end_date].should == nil
       @products[1].prices[0][:currency].should == 'USD'
       @products[1].prices[0][:price_type].should == '01'
-      @products[1].prices[0][:territory].should == {:region_included => 'WORLD',
-                                                    :region_excluded => '',
-                                                    :country_included => '',
-                                                    :country_excluded => ''}
+      @products[1].prices[0][:country].should == 'WORLD'
 
       @products[2].prices[0][:price].should == '12.99'
       @products[2].prices[0][:start_date].should == nil
       @products[2].prices[0][:end_date].should == nil
       @products[2].prices[0][:currency].should == 'USD'
       @products[2].prices[0][:price_type].should == '01'
-      @products[2].prices[0][:territory].should == {:region_included => 'WORLD',
-                                                    :region_excluded => '',
-                                                    :country_included => '',
-                                                    :country_excluded => ''}
+      @products[2].prices[0][:country].should == 'PH'
 
       @products[3].prices[0][:price].should == '10.99'
       @products[3].prices[0][:start_date].should == nil
       @products[3].prices[0][:end_date].should == nil
       @products[3].prices[0][:currency].should == 'USD'
       @products[3].prices[0][:price_type].should == '01'
-      @products[3].prices[0][:territory].should == {:region_included => 'WORLD',
-                                                    :region_excluded => '',
-                                                    :country_included => '',
-                                                    :country_excluded => ''}
+      @products[3].prices[0][:country].should == 'WORLD'
 
       @products[4].prices[0][:price].should == '10.99'
       @products[4].prices[0][:start_date].should == nil
       @products[4].prices[0][:end_date].should == nil
       @products[4].prices[0][:currency].should == 'USD'
       @products[4].prices[0][:price_type].should == '01'
-      @products[4].prices[0][:territory].should == {:region_included => 'WORLD',
-                                                    :region_excluded => '',
-                                                    :country_included => '',
-                                                    :country_excluded => ''}
+      @products[4].prices[0][:country].should == 'WORLD'
 
       @products[5].prices[0][:price].should == '10.99'
       @products[5].prices[0][:start_date].should == nil
       @products[5].prices[0][:end_date].should == nil
       @products[5].prices[0][:currency].should == 'USD'
       @products[5].prices[0][:price_type].should == '01'
-      @products[5].prices[0][:territory].should == {:region_included => 'WORLD',
-                                                    :region_excluded => '',
-                                                    :country_included => '',
-                                                    :country_excluded => ''}
+      @products[5].prices[0][:country].should == 'WORLD'
     end
   end
 
@@ -338,9 +328,14 @@ describe OnixParser::Parser3 do
 
     it "should set the cover if present in the XML" do
       (0..4).each do |n|
-        @products[n].cover.should_not be_nil
+        @products[n].cover_url.should_not == ''
       end
-      @products[5].cover.should_not nil
+      @products[0].cover_url.should == 'http://www.zondervan.com/images/product/medium/0310252385.jpg'
+      @products[1].cover_url.should == 'http://www.zondervan.com/images/product/medium/0310266696.jpg'
+      @products[2].cover_url.should == 'http://www.zondervan.com/images/product/medium/0310272289.jpg'
+      @products[3].cover_url.should == 'http://www.zondervan.com/images/product/medium/031027236x.jpg'
+      @products[4].cover_url.should == 'http://www.zondervan.com/images/product/medium/0310320747.jpg'
+      @products[5].cover_url.should == ''
     end
 
     it "should set the synopsis" do
