@@ -174,12 +174,12 @@ module OnixParser
         end
 
         if (price_territory[:country_included].any?)
-          price_territory[:country_included].join(' ').split(' ').each do |country|
+          price_territory[:country_included].each do |country|
             prices << price_data.clone.merge(:country => country)
           end
         end
         if (price_territory[:region_included].any?)
-          price_territory[:region_included].join(' ').split(' ').each do |country|
+          price_territory[:region_included].each do |country|
             prices << price_data.clone.merge(:country => country)
           end
         end
