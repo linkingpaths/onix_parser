@@ -18,7 +18,7 @@ describe OnixParser::Parser3 do
 
     it 'should get the correct pricing data' do
       product = @products.first
-      product.prices[0][:country].should == ['WORLD']
+      product.prices[0][:country].should == 'WORLD'
     end
   end
   
@@ -205,42 +205,42 @@ describe OnixParser::Parser3 do
       @products[0].prices[0][:end_date].should == nil
       @products[0].prices[0][:currency].should == 'USD'
       @products[0].prices[0][:price_type].should == '01'
-      @products[0].prices[0][:country].should == ['WORLD']
+      @products[0].prices[0][:country].should == 'WORLD'
 
       @products[1].prices[0][:price].should == '24.99'
       @products[1].prices[0][:start_date].should == nil
       @products[1].prices[0][:end_date].should == nil
       @products[1].prices[0][:currency].should == 'USD'
       @products[1].prices[0][:price_type].should == '01'
-      @products[1].prices[0][:country].should == ['WORLD']
+      @products[1].prices[0][:country].should == 'WORLD'
 
       @products[2].prices[0][:price].should == '12.99'
       @products[2].prices[0][:start_date].should == nil
       @products[2].prices[0][:end_date].should == nil
       @products[2].prices[0][:currency].should == 'USD'
       @products[2].prices[0][:price_type].should == '01'
-      @products[2].prices[0][:country].should == ['PH']
+      @products[2].prices[0][:country].should == 'PH'
 
       @products[3].prices[0][:price].should == '10.99'
       @products[3].prices[0][:start_date].should == nil
       @products[3].prices[0][:end_date].should == nil
       @products[3].prices[0][:currency].should == 'USD'
       @products[3].prices[0][:price_type].should == '01'
-      @products[3].prices[0][:country].should == ['WORLD']
+      @products[3].prices[0][:country].should == 'WORLD'
 
       @products[4].prices[0][:price].should == '10.99'
       @products[4].prices[0][:start_date].should == nil
       @products[4].prices[0][:end_date].should == nil
       @products[4].prices[0][:currency].should == 'USD'
       @products[4].prices[0][:price_type].should == '01'
-      @products[4].prices[0][:country].should == ['WORLD']
+      @products[4].prices[0][:country].should == 'WORLD'
 
       @products[5].prices[0][:price].should == '10.99'
       @products[5].prices[0][:start_date].should == nil
       @products[5].prices[0][:end_date].should == nil
       @products[5].prices[0][:currency].should == 'USD'
       @products[5].prices[0][:price_type].should == '01'
-      @products[5].prices[0][:country].should == ['WORLD']
+      @products[5].prices[0][:country].should == 'WORLD'
     end
   end
 

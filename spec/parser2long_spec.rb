@@ -193,8 +193,17 @@ describe OnixParser::Parser2long do
       it "should set the sales rights" do
         @price_data[:country].should == 'WORLD'
 
-        other_price_data = @products[3].prices.first
-        other_price_data[:country].should == 'CA PH US GB'
+        other_price_1 = @products[3].prices[0]
+        other_price_1[:country].should == 'CA'
+
+        other_price_2 = @products[3].prices[1]
+        other_price_2[:country].should == 'PH'
+
+        other_price_3 = @products[3].prices[2]
+        other_price_3[:country].should == 'US'
+
+        other_price_4 = @products[3].prices[3]
+        other_price_4[:country].should == 'GB'
       end
     end
 

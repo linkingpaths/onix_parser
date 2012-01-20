@@ -186,7 +186,7 @@ module OnixParser
 
         if prices.empty? && sales_rights.any?
           sales_rights.each do |sales_right|
-            prices << {:country => [sales_right[:country]], :price_type => price_data[:price_type], :price => price_data[:price], :currency => 'USD'} if sales_right[:sellable] == 1
+            prices << {:country => sales_right[:country], :price_type => price_data[:price_type], :price => price_data[:price], :currency => price_data[:currency]} if sales_right[:sellable] == 1
           end
         end
       end

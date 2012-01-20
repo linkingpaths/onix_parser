@@ -39,6 +39,43 @@ module OnixParser
         parsed_values[:other_ids] << [find_product_type(workid.search('/b201').first.innerText), workid.search('/b244').first.innerText]
       end
 
+      # Sales Rights
+      sales_rights = []
+      sales_rights_nodes = product.search('/salesrights')
+      sales_rights_nodes.each do |node|
+        type_code = node.search('/b089').first.innerText
+        sellable = ['01','02','07','08'].include?(type_code) ? 1 : 0
+
+        where_nodes = node.search('/b090')
+        where_nodes = node.search('/b388') unless where_nodes.any?
+        where_nodes = node.search('/b091') unless where_nodes.any?
+
+        where_nodes.each do |where_node|
+          country_list = where_node.innerText.split(' ')
+          country_list.each do |country|
+            data = {:country => country, :sellable => sellable, :type => type_code}
+            sales_rights << data
+          end
+        end
+      end
+
+      not_for_sale_nodes = product.search('/notforsale')
+      not_for_sale_nodes.each do |node|
+        where_nodes = node.search('/b090')
+        where_nodes = node.search('/b388') unless where_nodes.any?
+        where_nodes = node.search('/b091') unless where_nodes.any?
+
+        where_nodes.each do |where_node|
+          country_list = where_node.innerText.split(' ')
+          country_list.each do |country|
+            data = {:country => country, :sellable => 0, :type => '03'}
+            sales_rights << data
+          end
+        end
+      end
+
+      parsed_values[:sales_rights] = sales_rights
+
       # prices
       prices = []
       price_nodes = product.search('/supplydetail/price')
@@ -73,49 +110,17 @@ module OnixParser
           price_data[:country_included].each do |country|
             prices << price_data.clone.merge(:country => country)
           end
-
-#          price_data[:territory] = territory
-#          prices << price_data
+          price_data[:region_included].each do |country|
+            prices << price_data.clone.merge(:country => country)
+          end
+          if prices.empty? && sales_rights.any?
+            sales_rights.each do |sales_right|
+              prices << {:country => sales_right[:country], :price_type => price_data[:price_type], :price => price_data[:price], :currency => price_data[:currency]} if sales_right[:sellable] == 1
+            end
+          end
         end
       end
       parsed_values[:prices] = prices
-
-      # Sales Rights
-      sales_rights = []
-      sales_rights_nodes = product.search('/salesrights')
-      sales_rights_nodes.each do |node|
-        type_code = node.search('/b089').first.innerText 
-        sellable = ['01','02','07','08'].include?(type_code) ? 1 : 0
-
-        where_nodes = node.search('/b090')
-        where_nodes = node.search('/b388') unless where_nodes.any?
-        where_nodes = node.search('/b091') unless where_nodes.any?
-
-        where_nodes.each do |where_node|
-          country_list = where_node.innerText.split(' ')
-          country_list.each do |country|
-            data = {:country => country, :sellable => sellable, :type => type_code}
-            sales_rights << data
-          end
-        end
-      end
-
-      not_for_sale_nodes = product.search('/notforsale')
-      not_for_sale_nodes.each do |node|
-        where_nodes = node.search('/b090')
-        where_nodes = node.search('/b388') unless where_nodes.any?
-        where_nodes = node.search('/b091') unless where_nodes.any?
-
-        where_nodes.each do |where_node|
-          country_list = where_node.innerText.split(' ')
-          country_list.each do |country|
-            data = {:country => country, :sellable => 0, :type => '03'}
-            sales_rights << data
-          end
-        end
-      end
-
-      parsed_values[:sales_rights] = sales_rights
 
       excerpt_node = product.search("/othertext/d102[text() = '23']/../d104")
       parsed_values[:excerpt] = excerpt_node.any? ? excerpt_node.first.innerText : ''
