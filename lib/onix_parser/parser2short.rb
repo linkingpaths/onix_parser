@@ -77,8 +77,6 @@ module OnixParser
 #          price_data[:territory] = territory
 #          prices << price_data
         end
-      else
-        prices << {:price => 0, :start_date => nil, :end_date => nil, :region => 'WORLD', :currency => 'USD'}
       end
       parsed_values[:prices] = prices
 
