@@ -79,19 +79,23 @@ module OnixParser
 
           if region_in.any? || region_out.any? || country_in.any? || country_out.any?
             # Region included
-            territory[:region_included] = region_in.any? ? region_in.first.innerText : ''
+            territory[:region_included] = region_in.any? ? region_in.collect(&:innerText) : []
             # Region excluded
-            territory[:region_excluded] = region_out.any? ? region_out.first.innerText : ''
+            territory[:region_excluded] = region_out.any? ? region_out.collect(&:innerText) : []
             # Country Included
-            territory[:country_included] = country_in.any? ? country_in.first.innerText : ''
+            territory[:country_included] = country_in.any? ? country_in.collect(&:innerText) : []
             # Country Excluded
-            territory[:country_excluded] = country_out.any? ? country_out.first.innerText : ''
+            territory[:country_excluded] = country_out.any? ? country_out.collect(&:innerText) : []
           else
             territory = sales_rights
           end
-          price_data[:territory] = territory
 
-          prices << price_data
+          territory[:country_included].each do |country|
+            prices << price_data.clone.merge(:country => country)
+          end
+          territory[:region_included].each do |country|
+            prices << price_data.clone.merge(:country => country)
+          end
         end
       end
       parsed_values[:prices] = prices

@@ -191,11 +191,10 @@ describe OnixParser::Parser2long do
       end
 
       it "should set the sales rights" do
-        @price_data[:territory][:region_included].should == 'WORLD'
+        @price_data[:country].should == 'WORLD'
 
         other_price_data = @products[3].prices.first
-        other_price_data[:territory][:region_excluded].should == 'ROW'
-        other_price_data[:territory][:country_included].should == 'CA PH US GB'
+        other_price_data[:country].should == 'CA PH US GB'
       end
     end
 

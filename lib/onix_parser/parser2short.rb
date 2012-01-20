@@ -70,8 +70,6 @@ module OnixParser
           # Country Excluded
           price_data[:country_excluded] = price_node.search("/j304").any? ? price_node.search("/j304").collect(&:innerText) : []
 
-          # TODO: Need to get this to work
-          # This is where things get dicey.  Need to create a record
           price_data[:country_included].each do |country|
             prices << price_data.clone.merge(:country => country)
           end
