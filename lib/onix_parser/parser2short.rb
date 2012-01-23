@@ -2,7 +2,8 @@ module OnixParser
   class Parser2short
     def self.parse_product(product, &block)
       parsed_values = {}
-      parsed_values[:title] = product.search('/title/b203').first.innerText.strip
+      title_nodes = product.search('/title/b203')
+      parsed_values[:title] = title_nodes.first.innerText.strip if title_nodes.any?
       parsed_values[:author] = product.search('/contributor/b036').collect(&:innerText).join(',')
       
       publisher_node = product.search('/publisher/b081').any? ? product.search('/publisher/b081') : product.search('/b081')
