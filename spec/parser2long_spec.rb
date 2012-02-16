@@ -219,4 +219,5 @@ describe OnixParser::Parser2long do
       @products[0].other_ids[0][1].should == '9781433521546'
     end
   end
+
 end

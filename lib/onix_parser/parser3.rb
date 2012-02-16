@@ -16,6 +16,9 @@ module OnixParser
       upc_node = product.search("/ProductIdentifier/ProductIDType[text() = 04]/../IDValue")
       parsed_values[:upc] = upc_node.text.strip if upc_node.any?
 
+      avail_product_node = product.search('/ProductSupply/SupplyDetail/ProductAvailability')
+      parsed_values[:available] = OnixParser::product_available?(avail_product_node.any? ? avail_product_node.text.strip : nil)
+      
       collateral_detail = product.search("/CollateralDetail")
       parsed_values[:cover] = nil
       if (collateral_detail.any?)

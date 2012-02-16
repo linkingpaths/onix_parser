@@ -34,6 +34,11 @@ module OnixParser
       parsed_values[:isbn] = isbn_node.any? ? isbn_node.first.innerText : ''
       parsed_values[:upc] = ''
 
+      avail_code_node = product.search('/SupplyDetail/AvailabilityCode')
+      avail_product_node = product.search('/SupplyDetail/ProductAvailability')
+ 
+      parsed_values[:available] = OnixParser::product_available?(avail_product_node.any? ? avail_product_node.text.strip : nil, avail_code_node.any? ? avail_code_node.text.strip : nil)
+
       # Sales Rights
       sales_rights = []
       sales_rights_nodes = product.search('/salesrights')
