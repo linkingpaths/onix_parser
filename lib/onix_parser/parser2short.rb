@@ -102,6 +102,10 @@ module OnixParser
           # PriceType
           price_data[:price_type] = price_node.search('/j148').first.innerText if price_node.search('/j148').any?
 
+          # DiscountCode
+          discount_node = price_node.search('/discountcoded/j364')
+          price_data[:percent_due_publisher] = discount_node.first.innerText if discount_node.any?
+
           territory = {}
 
           # Region Included
@@ -121,7 +125,7 @@ module OnixParser
           end
           if prices.empty? && sales_rights.any?
             sales_rights.each do |sales_right|
-              prices << {:country => sales_right[:country], :price_type => price_data[:price_type], :price => price_data[:price], :currency => price_data[:currency]} if sales_right[:sellable] == 1
+              prices << {:country => sales_right[:country], :price_type => price_data[:price_type], :price => price_data[:price], :currency => price_data[:currency], :percent_due_publisher => price_data[:percent_due_publisher]} if sales_right[:sellable] == 1
             end
           end
         end

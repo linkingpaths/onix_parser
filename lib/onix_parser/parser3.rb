@@ -104,6 +104,7 @@ module OnixParser
       end
 
       parsed_values[:prices] = prices.flatten
+
       parsed_values[:xml] = product.to_s
 
       yield OnixParser::Product.new(parsed_values)
@@ -149,6 +150,10 @@ module OnixParser
         price_data = {:price => price_node.search("/PriceAmount").first.innerText, :start_date => nil, :end_date => nil}
         price_data[:currency] = price_node.search("/CurrencyCode").first.innerText if price_node.search("/CurrencyCode").any?
         price_data[:price_type] = price_node.search("/PriceType").first.innerText if price_node.search("/PriceType").any?
+        
+        # discount code
+        discount_node = price_node.search('/DiscountCoded/DiscountCode')
+        parsed_values[:percent_due_publisher] = discount_node.first.innerText if discount_node.any?
 
         territory_nodes = price_node.search("/Territory")
         currency_zone_nodes = price_node.search("/CurrencyZone")
@@ -189,7 +194,7 @@ module OnixParser
 
         if prices.empty? && sales_rights.any?
           sales_rights.each do |sales_right|
-            prices << {:country => sales_right[:country], :price_type => price_data[:price_type], :price => price_data[:price], :currency => price_data[:currency]} if sales_right[:sellable] == 1
+            prices << {:country => sales_right[:country], :price_type => price_data[:price_type], :price => price_data[:price], :currency => price_data[:currency], :percent_due_publisher => price_data[:percent_due_publisher]} if sales_right[:sellable] == 1
           end
         end
       end

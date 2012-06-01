@@ -21,6 +21,7 @@ describe OnixParser::Parser2short do
       price_data[:price].should == '69.99'
       price_data[:currency].should == 'USD'
       price_data[:country].should == 'ROW'
+      price_data[:percent_due_publisher].should == 25
     end
   end
 
