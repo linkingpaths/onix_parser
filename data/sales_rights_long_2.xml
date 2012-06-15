@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<!DOCTYPE ONIXMessage SYSTEM "http://www.editeur.org/onix/2.1/reference/onix-international.dtd">
+<ONIXMessage release="2.1">
+<Header>
+<FromCompany>Pearson Education</FromCompany>
+<FromPerson>David Ahmadi, 201-236-7861</FromPerson>
+<FromEmail>david.ahmadi@pearsoned.com</FromEmail>
+<ToCompany>Rethink Books</ToCompany>
+<ToPerson>Brittney Aleman</ToPerson>
+<SentDate>20111013</SentDate>
+<DefaultLanguageOfText>eng</DefaultLanguageOfText>
+<DefaultPriceTypeCode>01</DefaultPriceTypeCode>
+<DefaultCurrencyCode>USD</DefaultCurrencyCode>
+<DefaultClassOfTrade>gen</DefaultClassOfTrade>
+</Header>
+<Product>
+<RecordReference>0130389919</RecordReference>
+<NotificationType>03</NotificationType>
+<RecordSourceType>01</RecordSourceType>
+<ProductIdentifier>
+<ProductIDType>02</ProductIDType>
+<IDValue>0130389919</IDValue>
+</ProductIdentifier>
+<ProductIdentifier>
+<ProductIDType>03</ProductIDType>
+<IDValue>9780130389916</IDValue>
+</ProductIdentifier>
+<ProductIdentifier>
+<ProductIDType>15</ProductIDType>
+<IDValue>9780130389916</IDValue>
+</ProductIdentifier>
+<ProductIdentifier>
+<ProductIDType>14</ProductIDType>
+<IDValue>09780130389916</IDValue>
+</ProductIdentifier>
+<Barcode>01</Barcode>
+<ProductForm>DG</ProductForm>
+<EpubType>029</EpubType>
+<Series>
+<TitleOfSeries>FT Press Delivers Elements</TitleOfSeries>
+</Series>
+<Title textcase="02">
+<TitleType>01</TitleType>
+<TitleText>How to Write Proposals and Grant Applications That Win</TitleText>
+</Title>
+<Contributor>
+<SequenceNumber>1</SequenceNumber>
+<ContributorRole>A01</ContributorRole>
+<PersonNameInverted>Canavor, Natalie</PersonNameInverted>
+<NamesBeforeKey>Natalie</NamesBeforeKey>
+<KeyNames>Canavor</KeyNames>
+</Contributor>
+<Contributor>
+<SequenceNumber>2</SequenceNumber>
+<ContributorRole>A01</ContributorRole>
+<PersonNameInverted>Meirowitz, Claire</PersonNameInverted>
+<NamesBeforeKey>Claire</NamesBeforeKey>
+<KeyNames>Meirowitz</KeyNames>
+</Contributor>
+<EditionNumber>1</EditionNumber>
+<Language>
+<LanguageRole>01</LanguageRole>
+<LanguageCode>eng</LanguageCode>
+</Language>
+<NumberOfPages>10</NumberOfPages>
+<BASICMainSubject>BUS007000</BASICMainSubject>
+<OtherText>
+<TextTypeCode>13</TextTypeCode>
+<Text textformat="02">&lt;P style="MARGIN: 0px" soNormal&gt;&lt;B&gt;Natalie Canavor&lt;/B&gt;&amp;rsquo;s publications, articles, Web sites, and scripts have won international recognition. She successfully launched four monthly national magazines for business and professional audiences and directed all communications for New York State&amp;rsquo;s largest educational agency, where she supervised hundreds of publications and advised leaders on PR strategy. Her journalism credits include numerous features for &lt;I&gt;The&lt;/I&gt; &lt;I&gt;New York Times &lt;/I&gt;and&lt;I&gt; Newsday&lt;/I&gt;. She consults for Adelphi University&amp;rsquo;s Long Island Center for Nonprofit Leadership. &lt;B&gt;Claire Meirowitz&lt;/B&gt;, an award-winning author, has served as project manager and copy editor for many leading business, technology, and educational publications and for publishers including &lt;I&gt;Forbes&lt;/I&gt;, &lt;I&gt;The Wall Street Journal&lt;/I&gt;, CMP Media LLC, Ziff-Davis Media, Interex, and United Technical Publications. She has managed projects and edited materials for IBM, Microsoft, HP, Intel, Cisco Systems, Computer Associates, Kodak, Merant, MOCA, and Qwest. &lt;/P&gt;</Text>
+</OtherText>
+<OtherText>
+<TextTypeCode>01</TextTypeCode>
+<Text textformat="02">&lt;P&gt;This is the eBook version of the printed book.&lt;/P&gt;&lt;P style="MARGIN: 0px"&gt;This Element is an excerpt from &lt;I&gt;The Truth About the New Rules of Business Writing&lt;/I&gt; (9780137153152) by Natalie Canavor and Claire Meirowitz. Available in print and digital formats.&lt;/P&gt;  &lt;P style="MARGIN: 0px"&gt;&amp;nbsp;&lt;/P&gt;  &lt;P style="MARGIN: 0px"&gt;How to write successful proposals and grant applications.&lt;/P&gt;  &lt;P style="MARGIN: 0px"&gt;&lt;B&gt;&amp;nbsp;&lt;/B&gt;&lt;/P&gt;  &lt;P style="MARGIN: 0px"&gt;Two technology companies regularly apply for government defense contracts by responding to requests for proposals (RFPs). One reaps modest success. While the executives usually voice a &amp;ldquo;win some, lose some&amp;rdquo; attitude, they are always surprised when a bid fails because &amp;ldquo;our engineers are the best in the business.&amp;rdquo; The second lands a steady stream of contracts; some of which are a distinct reach. What&amp;rsquo;s the difference?&lt;/P&gt;</Text>
+</OtherText>
+<MediaFile>
+<MediaFileTypeCode>04</MediaFileTypeCode>
+<MediaFileFormatCode>03</MediaFileFormatCode>
+<MediaFileLinkTypeCode>06</MediaFileLinkTypeCode>
+<MediaFileLink>0130389919.jpg</MediaFileLink>
+</MediaFile>
+<Imprint>
+<ImprintName>FT Press</ImprintName>
+</Imprint>
+<Publisher>
+<PublishingRole>01</PublishingRole>
+<PublisherName>Pearson Education</PublisherName>
+</Publisher>
+<PublishingStatus>04</PublishingStatus>
+<PublicationDate>20100302</PublicationDate>
+<CopyrightYear>2010</CopyrightYear>
+<SalesRights>
+<SalesRightsType>01</SalesRightsType>
+<RightsTerritory>ROW</RightsTerritory>
+</SalesRights>
+<NotForSale>
+<RightsCountry>AF DZ BY BA CG CD CI CU ID IR IQ KP LR LY MK MM NG SD SY ZW</RightsCountry>
+</NotForSale>
+<RelatedProduct>
+<RelationCode>13</RelationCode>
+<ProductIdentifier>
+<ProductIDType>02</ProductIDType>
+<IDValue>0132543672</IDValue>
+</ProductIdentifier>
+<ProductIdentifier>
+<ProductIDType>03</ProductIDType>
+<IDValue>9780132543675</IDValue>
+</ProductIdentifier>
+</RelatedProduct>
+<SupplyDetail>
+<SupplierName>Pearson Education</SupplierName>
+<AvailabilityCode>IP</AvailabilityCode>
+<ProductAvailability>20</ProductAvailability>
+<Price>
+<PriceTypeCode>01</PriceTypeCode>
+<DiscountCoded>
+<DiscountCodeType>02</DiscountCodeType>
+<DiscountCode>t</DiscountCode>
+</DiscountCoded>
+<PriceAmount>1.99</PriceAmount>
+<CurrencyCode>USD</CurrencyCode>
+</Price>
+</SupplyDetail>
+</Product>
+</ONIXMessage>

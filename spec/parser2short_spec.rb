@@ -5,6 +5,131 @@ describe OnixParser::Parser2short do
     @data_path = File.join(File.dirname(__FILE__), "..", "data")
   end
 
+  context 'pearson' do
+    before do
+      @file = File.join(@data_path, 'pearson.xml')
+      doc = Hpricot(File.read(@file))
+      @products = []
+      OnixParser::Parser2short.find_products(doc) do |product|
+        @products << product
+      end
+    end
+
+    it 'should have a price' do
+      price_data = @products[0].prices.first
+      price_data.should_not be_nil
+      price_data[:price].should == '69.99'
+      price_data[:currency].should == 'USD'
+      price_data[:country].should == 'ROW'
+    end
+  end
+
+  context 'sales_rights_1 file' do
+    before do
+      @file = File.join(@data_path, 'sales_rights_1.xml')
+      doc = Hpricot(File.read(@file))
+      @products = []
+      OnixParser::Parser2short.find_products(doc) do |product|
+        @products << product
+      end
+      @rights = @products.first.sales_rights
+    end
+
+    it 'should have the sales rights' do
+      @rights.count.should == 5
+    end
+
+    it 'should not be for sale in Nigeria' do
+      nigeria = @rights[0]
+      nigeria.should_not be_nil
+      nigeria[:country].should == 'NG'
+      nigeria[:type].should == '03'
+      nigeria[:sellable].should == 0
+    end
+
+    it 'should be for sale in the US, GB, CA, and AU' do
+      us = @rights[1]
+      us.should_not be_nil
+      us[:country].should == 'US'
+      us[:type].should == '01'
+      us[:sellable].should == 1
+
+      gb = @rights[2]
+      gb.should_not be_nil
+      gb[:country].should == 'GB'
+      gb[:type].should == '01'
+      gb[:sellable].should == 1
+
+      ca = @rights[3]
+      ca.should_not be_nil
+      ca[:country].should == 'CA'
+      ca[:type].should == '01'
+      ca[:sellable].should == 1
+
+      au = @rights[4]
+      au.should_not be_nil
+      au[:country].should == 'AU'
+      au[:type].should == '01'
+      au[:sellable].should == 1
+    end
+
+
+  end
+
+  context 'sales_rights_2 file' do
+    before do
+      @file = File.join(@data_path, 'sales_rights_2.xml')
+      doc = Hpricot(File.read(@file))
+      @products = []
+      OnixParser::Parser2short.find_products(doc) do |product|
+        @products << product
+      end
+      @rights = @products.first.sales_rights
+    end
+
+    it 'should have the sales rights' do
+      @rights.count.should == 21
+    end
+
+    it 'should be sellable in the rest of the world' do
+      row = @rights[0]
+      row.should_not be_nil
+      row[:country].should == 'ROW'
+      row[:type].should == '01'
+      row[:sellable].should == 1
+    end
+
+    it 'should not be sellable in the specified countries' do
+      list = ["AF", "DZ", "BY", "BA", "CG", "CD", "CI", "CU", "ID", "IR", "IQ", "KP", "LR", "LY", "MK", "MM", "NG", "SD", "SY", "ZW"]
+      list.each_with_index do |value, index|
+        terr = @rights[index + 1]
+        terr.should_not be_nil
+        terr[:country].should == value
+        terr[:type].should == '03'
+        terr[:sellable].should == 0
+      end
+    end
+  end
+
+  context 'selling_onix_2_short file' do
+    before do
+      @file = File.join(@data_path, 'selling_onix_2_short.xml')
+      doc = Hpricot(File.read(@file))
+      @products = []
+      OnixParser::Parser2short.find_products(doc) do |product|
+        @products << product
+      end
+    end
+
+    it 'should have 1 price record per country' do
+      product = @products.first
+      product.prices.count.should == 3
+      product.prices[0][:country].should == 'CA'
+      product.prices[1][:country].should == 'MX'
+      product.prices[2][:country].should == 'US'
+    end
+  end
+
   context "mult_prices file" do
     before(:each) do
       @multiple_prices = File.join(@data_path, "mult_prices_onix_2_short.xml")
@@ -16,7 +141,7 @@ describe OnixParser::Parser2short do
     end
 
     it "should set the released_at date" do
-      @products[0].released_at.should == '20100831' 
+      @products[0].released_at.should == '20100831'
     end
 
     it "should have two price records" do
@@ -27,7 +152,7 @@ describe OnixParser::Parser2short do
       first_price = @products[0].prices[0]
       first_price[:start_date].should be_nil
       first_price[:end_date].should be_nil
-      first_price[:territory][:region_included].should == 'WORLD'
+      first_price[:country].should == 'WORLD'
       first_price[:currency].should == 'USD'
     end
 
@@ -35,7 +160,7 @@ describe OnixParser::Parser2short do
       second_price = @products[0].prices[1]
       second_price[:start_date].should == '20110801'
       second_price[:end_date].should == '20110831'
-      second_price[:territory][:region_included].should == 'WORLD'
+      second_price[:country].should == 'WORLD'
       second_price[:currency].should == 'USD'
     end
 
@@ -118,11 +243,6 @@ describe OnixParser::Parser2short do
       @products[0].author.should eql("Linda Spangle")
     end
 
-    # Have not yet identified how to pull the subject from ONIX 2.1
-#  it "should set the subject" do
-#    @products[0].subject.should eql("")
-#  end
-
     it "should set the ISBN" do
       @products[0].isbn.should eql("9781418573102")
     end
@@ -161,14 +281,11 @@ describe OnixParser::Parser2short do
       @products[0].prices[0][:end_date].should == nil
       @products[0].prices[0][:currency].should == 'USD'
       @products[0].prices[0][:price_type].should == '01'
-      @products[0].prices[0][:territory].should == {:region_included => 'WORLD', :region_excluded => '',
-                                                    :country_included => '', :country_excluded => ''}
+      @products[0].prices[0][:country].should == 'WORLD'
     end
 
     it "should set the xml" do
       @products[0].xml.should_not be_nil
     end
   end
-
-
 end

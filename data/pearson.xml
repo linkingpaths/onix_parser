@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE ONIXmessage SYSTEM "http://www.editeur.org/onix/2.1/short/onix-international.dtd">
+<ONIXmessage>
+<header>
+<m174>Pearson Education</m174>
+<m175>David Ahmadi, 201-236-7861</m175>
+<m283>david.ahmadi@pearsoned.com</m283>
+<m178>Rethink Books</m178>
+<m179>Brittney Aleman</m179>
+<m182>20111208</m182>
+<m184>eng</m184>
+<m185>01</m185>
+<m186>USD</m186>
+<m193>gen</m193>
+</header>
+<product>
+<a001>0132874431</a001>
+<a002>03</a002>
+<a194>01</a194>
+<productidentifier>
+<b221>02</b221>
+<b244>0132874431</b244>
+</productidentifier>
+<productidentifier>
+<b221>03</b221>
+<b244>9780132874434</b244>
+</productidentifier>
+<productidentifier>
+<b221>15</b221>
+<b244>9780132874434</b244>
+</productidentifier>
+<productidentifier>
+<b221>14</b221>
+<b244>09780132874434</b244>
+</productidentifier>
+<b246>01</b246>
+<b012>DG</b012>
+<b211>029</b211>
+<series>
+<b018>FT Press Operations Management</b018>
+</series>
+<title textcase="02">
+<b202>01</b202>
+<b203>Creating a Sustainable Organization</b203>
+<b029>Approaches for Enhancing Corporate Value Through Sustainability</b029>
+</title>
+<contributor>
+<b034>1</b034>
+<b035>A01</b035>
+<b037>Soyka, Peter A.</b037>
+<b039>Peter A.</b039>
+<b040>Soyka</b040>
+</contributor>
+<b057>1</b057>
+<language>
+<b253>01</b253>
+<b252>eng</b252>
+</language>
+<b061>432</b061>
+<b064>BUS087000</b064>
+<subject>
+<b067>10</b067>
+<b069>BUS053000</b069>
+</subject>
+<othertext>
+<d102>13</d102>
+<d104 textformat="02"><![CDATA[<P style="MARGIN: 0px; mso-layout-grid-align: none" soNormal><B>Peter A. Soyka, </B>President of Soyka &amp; Company, LLC, is a highly experienced and respected sustainability and environmental management consultant. A recognized expert working at the intersection of EHS and finance, he specializes in helping companies identify and overcome the obstacles to sustainable business success. Soyka brings a substantial track record of innovative thinking and success in devising creative solutions to the most challenging environmental/business management problems, and in translating new ideas into approaches, tools, and techniques that produce real results. Much of his recent work has involved identifying and capturing the financial and other organizational benefits of proactive environmental management and sustainability practices.</P>]]></d104>
+</othertext>
+<othertext>
+<d102>04</d102>
+<d104 textformat="02"><![CDATA[<P style="MARGIN: 0px">FM</P>  <P style="MARGIN: 0px">1.&nbsp;&nbsp; Introduction</P>  <P style="MARGIN: 0px">2.&nbsp;&nbsp; Background and Context</P>  <P style="MARGIN: 0px">3.&nbsp;&nbsp; Environmental, Social, and Governance (ES&amp;G) Issues and How they Affect the Business Enterprise</P>  <P style="MARGIN: 0px">4.&nbsp;&nbsp; Stakeholder Interests and Influences and the Social License to Operate</P>  <P style="MARGIN: 0px">5.&nbsp;&nbsp; Managing ES&amp;G Issues Within the Organization</P>  <P style="MARGIN: 0px">6.&nbsp;&nbsp; Investors and the Power of Markets</P>  <P style="MARGIN: 0px">7.&nbsp;&nbsp; Financial Impacts of Effective (or Ineffective) ES&amp;G/Sustainability Management</P>  <P style="MARGIN: 0px">8.&nbsp;&nbsp; Defining, Measuring, and Reporting ES&amp;G Performance</P>  <P style="MARGIN: 0px">9.&nbsp;&nbsp; Making It Happen in Your Organization</P>  <P style="MARGIN: 0px">References</P>]]></d104>
+</othertext>
+<othertext>
+<d102>01</d102>
+<d104 textformat="02"><![CDATA[<P>This is the eBook version of the printed book.</P><P style="MARGIN: 0px">Organizations that prioritize environmental, health, and safety (EHS) issues are well placed to attract better customers, better talent, and today&#39;s growing number of socially responsible investors. But, to gain these benefits, companies must choose the right sustainability strategies, and then manage and measure them well. Now, leading business sustainability consultant Peter Soyka offers a complete and actionable guide to driving greater value through sustainability. In<I><B><I>Creating a Sustainable Organization</I></B></I>, Soyka bridges the disparate worlds of the EHS/sustainability professional and the investor/analyst. Readers will learn what the evidence says about linkages between sustainability and value&hellip; how to manage key stakeholder relationships influencing corporate response to EHS and social equity issues&hellip; how to effectively manage sustainability throughout the business&hellip; how to evaluate sustainability posture and performance from the standpoint of external investors and internal management&hellip; how to maximize the influence of organizational actors focused on sustainability, and much more. This book will be invaluable for all environmental, health, and safety decision-makers and professionals concerned with improving sustainability and value; for executives and strategists seeking long-term competitive advantage; for stock analysts evaluating potential investments; and for researchers and MBA candidates currently studying the techniques and potential of corporate sustainability.<BR></P>]]></d104>
+</othertext>
+<mediafile>
+<f114>04</f114>
+<f115>03</f115>
+<f116>06</f116>
+<f117>0132874431.jpg</f117>
+</mediafile>
+<imprint>
+<b079>FT Press</b079>
+</imprint>
+<publisher>
+<b291>01</b291>
+<b081>Pearson Education</b081>
+</publisher>
+<b394>04</b394>
+<b003>20111201</b003>
+<b087>2012</b087>
+<salesrights>
+<b089>01</b089>
+<b388>ROW</b388>
+</salesrights>
+<notforsale>
+<b090>AF DZ BY BA CG CD CI CU ID IR IQ KP LR LY MK MM NG SD SY ZW</b090>
+</notforsale>
+<relatedproduct>
+<h208>13</h208>
+<productidentifier>
+<b221>02</b221>
+<b244>0132874407</b244>
+</productidentifier>
+<productidentifier>
+<b221>03</b221>
+<b244>9780132874403</b244>
+</productidentifier>
+</relatedproduct>
+<supplydetail>
+<j137>Pearson Education</j137>
+<j141>IP</j141>
+<j396>20</j396>
+<price>
+<j148>01</j148>
+<discountcoded>
+<j363>02</j363>
+<j364>y</j364>
+</discountcoded>
+<j151>69.99</j151>
+<j152>USD</j152>
+</price>
+</supplydetail>
+</product>
+</ONIXmessage>

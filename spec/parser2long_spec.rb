@@ -5,6 +5,91 @@ describe OnixParser::Parser2long do
     @data_path = File.join(File.dirname(__FILE__), "..", "data")
   end
 
+  context 'sales_rights_long_1' do
+    before do
+      @file = File.join(@data_path, 'sales_rights_long_1.xml')
+      doc = Hpricot(File.read(@file))
+      @products = []
+      OnixParser::Parser2long.find_products(doc) do |product|
+        @products << product
+      end
+      @rights = @products.first.sales_rights
+    end
+
+    it 'should have the sales rights' do
+      @rights.count.should == 5
+    end
+
+    it 'should not be for sale in Nigeria' do
+      nigeria = @rights[0]
+      nigeria.should_not be_nil
+      nigeria[:country].should == 'NG'
+      nigeria[:type].should == '03'
+      nigeria[:sellable].should == 0
+    end
+
+    it 'should be for sale in the US, GB, CA, and AU' do
+      us = @rights[1]
+      us.should_not be_nil
+      us[:country].should == 'US'
+      us[:type].should == '01'
+      us[:sellable].should == 1
+
+      gb = @rights[2]
+      gb.should_not be_nil
+      gb[:country].should == 'GB'
+      gb[:type].should == '01'
+      gb[:sellable].should == 1
+
+      ca = @rights[3]
+      ca.should_not be_nil
+      ca[:country].should == 'CA'
+      ca[:type].should == '01'
+      ca[:sellable].should == 1
+
+      au = @rights[4]
+      au.should_not be_nil
+      au[:country].should == 'AU'
+      au[:type].should == '01'
+      au[:sellable].should == 1
+    end
+  end
+
+  context 'sales_rights_long_2' do
+    before do
+      @file = File.join(@data_path, 'sales_rights_long_2.xml')
+      doc = Hpricot(File.read(@file))
+      @products = []
+      OnixParser::Parser2long.find_products(doc) do |product|
+        @products << product
+      end
+      @rights = @products.first.sales_rights
+    end
+
+    it 'should have the sales rights' do
+      @rights.count.should == 21
+    end
+
+    it 'should be sellable in the rest of the world' do
+      row = @rights[0]
+      row.should_not be_nil
+      row[:country].should == 'ROW'
+      row[:type].should == '01'
+      row[:sellable].should == 1
+    end
+
+    it 'should not be sellable in the specified countries' do
+      list = ["AF", "DZ", "BY", "BA", "CG", "CD", "CI", "CU", "ID", "IR", "IQ", "KP", "LR", "LY", "MK", "MM", "NG", "SD", "SY", "ZW"]
+      list.each_with_index do |value, index|
+        terr = @rights[index + 1]
+        terr.should_not be_nil
+        terr[:country].should == value
+        terr[:type].should == '03'
+        terr[:sellable].should == 0
+      end
+    end
+  end
+
   context "onix_2_long file" do
     before(:each) do
       @onix_long = File.join(@data_path, "onix_2_long.xml")
@@ -106,11 +191,19 @@ describe OnixParser::Parser2long do
       end
 
       it "should set the sales rights" do
-        @price_data[:territory][:region_included].should == 'WORLD'
+        @price_data[:country].should == 'WORLD'
 
-        other_price_data = @products[3].prices.first
-        other_price_data[:territory][:region_excluded].should == 'ROW'
-        other_price_data[:territory][:country_included].should == 'CA PH US GB'
+        other_price_1 = @products[3].prices[0]
+        other_price_1[:country].should == 'CA'
+
+        other_price_2 = @products[3].prices[1]
+        other_price_2[:country].should == 'PH'
+
+        other_price_3 = @products[3].prices[2]
+        other_price_3[:country].should == 'US'
+
+        other_price_4 = @products[3].prices[3]
+        other_price_4[:country].should == 'GB'
       end
     end
 

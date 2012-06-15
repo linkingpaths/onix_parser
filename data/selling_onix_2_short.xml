@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ONIXmessage SYSTEM "http://www.editeur.org/onix/2.1/short/onix-international.dtd">
+<ONIXmessage>
+  <header>
+    <m174>Ingram Content Group</m174>
+    <m175>CoreSource</m175>
+    <m283>coresourcesupport@ingramcontent.com</m283>
+    <m178>Rethink Books</m178>
+    <m182>20110802</m182>
+  </header>
+  <product>
+    <a001>9781401686550</a001>
+    <a002>02</a002>
+    <productidentifier>
+      <b221>15</b221>
+      <b244>9781401686550</b244>
+    </productidentifier>
+    <b012>DG</b012>
+    <b211>029</b211>
+    <n338/>
+    <title>
+      <b202>01</b202>
+      <b203>The Baker's Wife</b203>
+      <b030>The</b030>
+      <b031>Baker's Wife</b031>
+    </title>
+    <workidentifier>
+      <b201>01</b201>
+      <b244>9781595547521</b244>
+    </workidentifier>
+    <contributor>
+      <b035>A01</b035>
+      <b036>Erin Healy</b036>
+      <b037>Healy, Erin</b037>
+      <b039>Erin</b039>
+      <b040>Healy</b040>
+    </contributor>
+    <n386/>
+    <language>
+      <b253>01</b253>
+      <b252>eng</b252>
+    </language>
+    <b061>352</b061>
+    <extent>
+      <b218>00</b218>
+      <b219>352</b219>
+      <b220>03</b220>
+    </extent>
+    <subject>
+      <b067>10</b067>
+      <b069>FIC042060</b069>
+    </subject>
+    <othertext>
+      <d102>01</d102>
+      <d103>06</d103>
+      <d104><![CDATA[<P><B>What doesn't kill you only makes you stronger, so why is Audrey weakening day by day?</B> </P>
+
+      <P>It's been a tough year for Audrey's family. Her husband Geoff, a pastor, lost his job after a scandal rocked their congregation.</P>
+
+      <P>Audrey hasn't lost faith. She's held her family together. Their attempt to resurrect a failing bakery is an effort to heal the family wounds and restore their place in the community.</P>
+
+      <P>Late to the bakery one dim, foggy morning, Audrey turns into the intersection in front of the shop and strikes a vehicle that she can't see even after the collision settles. Emerging from her car into the fog, she discovers she's hit a motor scooter. There's no rider in sight. There's blood, though, so much that she slips in it, injuring her wrists. </P>
+
+      <P>The absence of the scooter driver is a mystery, especially to Sergeant Jack Mansfield, the detective and church member who drove Geoff from his pulpit. The scooter belongs to Jack's wife, Julie, a teacher at the local high school. She has vanished like morning fog.</P>
+
+      <P>Though there is no evidence to support Jack's growing suspicion that Audrey and Geoff were involved in Julie's disappearance, the detective is convinced of their guilt. Jack's ability to reason slips as the leads on his wife dry up.</P>
+
+      <P>When Jack takes the tiny bakery and its patrons hostage, Audrey must find Julie and unravel the secret of her own mysterious suffering before Jack comes undone.</P>]]></d104>
+    </othertext>
+    <imprint>
+      <b079>Thomas Nelson</b079>
+    </imprint>
+    <publisher>
+      <b081>Thomas Nelson</b081>
+    </publisher>
+    <b003>20111004</b003>
+    <b087>2011</b087>
+    <salesrights>
+      <b089>02</b089>
+      <b090>CA MX US</b090>
+    </salesrights>
+    <relatedproduct>
+      <h208>13</h208>
+      <productidentifier>
+        <b221>15</b221>
+        <b244>9781595547521</b244>
+      </productidentifier>
+    </relatedproduct>
+    <supplydetail>
+      <j137>Thomas Nelson</j137>
+      <j292>01</j292>
+      <j141>NP</j141>
+      <j143>20111004</j143>
+      <price>
+        <j148>01</j148>
+        <j151>15.99</j151>
+        <j152>USD</j152>
+        <b251>CA</b251>
+        <b251>MX</b251>
+        <b251>US</b251>
+      </price>
+    </supplydetail>
+  </product>
+  <product>
+    <a001>0131385488</a001>
+    <a002>03</a002>
+    <a194>01</a194>
+    <productidentifier>
+      <b221>02</b221>
+      <b244>0131385488</b244>
+    </productidentifier>
+    <productidentifier>
+      <b221>03</b221>
+      <b244>9780131385481</b244>
+    </productidentifier>
+    <productidentifier>
+      <b221>15</b221>
+      <b244>9780131385481</b244>
+    </productidentifier>
+    <productidentifier>
+      <b221>14</b221>
+      <b244>09780131385481</b244>
+    </productidentifier>
+    <b246>01</b246>
+    <b012>DG</b012>
+    <b211>029</b211>
+    <series>
+      <b018>Visual QuickStart Guide</b018>
+    </series>
+    <title textcase="02">
+      <b202>01</b202>
+      <b203>Illustrator CS5 for Windows and Macintosh</b203>
+      <b029>Visual QuickStart Guide</b029>
+    </title>
+    <contributor>
+      <b034>1</b034>
+      <b035>A01</b035>
+      <b037>Weinmann, Elaine</b037>
+      <b039>Elaine</b039>
+      <b040>Weinmann</b040>
+    </contributor>
+    <contributor>
+      <b034>2</b034>
+      <b035>A01</b035>
+      <b037>Lourekas, Peter</b037>
+      <b039>Peter</b039>
+      <b040>Lourekas</b040>
+    </contributor>
+    <b057>1</b057>
+    <language>
+      <b253>01</b253>
+      <b252>eng</b252>
+    </language>
+    <b061>456</b061>
+    <b064>COM012030</b064>
+    <othertext>
+      <d102>04</d102>
+      <d104 textformat="02">
+        <![CDATA[ <p style="margin: 0px;"><b>TOC:</b></p> <p style="margin: 0px;">1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Create &amp; Save Files </p> <p style="margin: 0px;">2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Manage Color </p> <p style="margin: 0px;">3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Workspaces </p> <p style="margin: 0px;">4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Panels </p> <p style="margin: 0px;">5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bridge </p> <p style="margin: 0px;">6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Geometric Objects </p> <p style="margin: 0px;">7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Freehand Drawing </p> <p style="margin: 0px;">8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Select </p> <p style="margin: 0px;">9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Move, Copy &amp; Align </p> <p style="margin: 0px;">10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fill &amp; Stroke </p> <p style="margin: 0px;">11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Transform </p> <p style="margin: 0px;">12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Reshape </p> <p style="margin: 0px;">13&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Layers </p> <p style="margin: 0px;">14&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Appearances </p> <p style="margin: 0px;">15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Effects </p> <p style="margin: 0px;">16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Graphic Styles </p> <p style="margin: 0px;">17&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Live Trace </p> <p style="margin: 0px;">18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Live Paint </p> <p style="margin: 0px;">19&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Create Type </p> <p style="margin: 0px;">20&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Style &amp; Edit Type </p> <p style="margin: 0px;">21&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pen Tools </p> <p style="margin: 0px;">22&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Acquire Images </p> <p style="margin: 0px;">23&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Brushes </p> <p style="margin: 0px;">24&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gradients </p> <p style="margin: 0px;">25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Combine Paths </p> <p style="margin: 0px;">26&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Clipping Masks </p> <p style="margin: 0px;">27&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Transparency </p> <p style="margin: 0px;">28&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Symbols </p> <p style="margin: 0px;">29&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Live Color </p> <p style="margin: 0px;">30&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Preferences </p> <p style="margin: 0px;">31&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Print </p> <p style="margin: 0px;">32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Export</p> 					 				]]></d104>
+    </othertext>
+    <othertext>
+      <d102>01</d102>
+      <d104 textformat="02">
+        <![CDATA[<P>This is the eBook version of the printed book.</P>This fully updated edition for Illustrator CS5 covers the essential skills for Illustrator artists, such as drawing geometric and freehand objects; color management; using multiple artboards; applying colors, patterns, and gradients; creating and using brushes; transforming, reshaping, and combining objects; creating and styling type; applying graphic styles and transparency; using the Pen tool; using the live color, paint, trace, and effects features; using symbols; and output. The new and updated Illustrator CS5 features are clearly marked with bright red stars in both the table of contents and main text.<BR><BR>Among the many new CS5 features covered in this volume are bristle brushes, drawing modes, arrows, Width tool, Shape Builder tool, and Mini Bridge. Enhancements to such features as path joining, artboards, pixel-perfect drawing, and Art brushes are also covered. <BR><BR>Readers can follow the steps in a tutorial fashion, or use the book as a reference guide to individual program features. Many of the key illustrations used in the book are available via Web download for practice. ]]></d104>
+    </othertext>
+    <imprint>
+      <b079>Peachpit Press</b079>
+    </imprint>
+    <publisher>
+      <b291>01</b291>
+      <b081>Pearson Education</b081>
+    </publisher>
+    <b394>04</b394>
+    <b003>20100806</b003>
+    <b087>2011</b087>
+    <salesrights>
+      <b089>01</b089>
+      <b388>ROW</b388>
+    </salesrights>
+    <notforsale>
+      <b090>AF DZ BY BA CG CD CI CU ID IR IQ KP LR LY MK MM NG SD SY ZW</b090>
+    </notforsale>
+    <relatedproduct>
+      <h208>13</h208>
+      <productidentifier>
+        <b221>02</b221>
+        <b244>0321706617</b244>
+      </productidentifier>
+      <productidentifier>
+        <b221>03</b221>
+        <b244>9780321706614</b244>
+      </productidentifier>
+    </relatedproduct>
+    <supplydetail>
+      <j137>Pearson Education</j137>
+      <j141>IP</j141>
+      <j396>20</j396>
+      <price>
+        <j148>01</j148>
+        <discountcoded>
+          <j363>02</j363>
+          <j364>x</j364>
+        </discountcoded>
+        <j151>27.99</j151>
+        <j152>USD</j152>
+      </price>
+    </supplydetail>
+  </product>
+</ONIXmessage>

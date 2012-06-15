@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ONIXmessage SYSTEM "http://www.editeur.org/onix/2.1/short/onix-international.dtd">
+<ONIXmessage>
+<header>
+<m174>Baker Publishing Group </m174>
+<m175>Nathan Henrion</m175>
+<m283>nhenrion@bakerbooks.com</m283>
+<m182>20111229</m182>
+<m185>01</m185>
+<m187>in</m187>
+<m188>lb</m188>
+</header>
+<product>
+<a001>1441212566</a001>
+<a002>04</a002>
+<a194>01</a194>
+<a197>Baker Publishing Group</a197>
+<productidentifier>
+<b221>02</b221>
+<b244>1441212566</b244>
+</productidentifier>
+<productidentifier>
+<b221>03</b221>
+<b244>9781441212566</b244>
+</productidentifier>
+<productidentifier>
+<b221>15</b221>
+<b244>9781441212566</b244>
+</productidentifier>
+<b012>DG</b012>
+<b211>029</b211>
+<title>
+<b202>01</b202>
+<b027>02</b027>
+<b203>Why Your Best Is Good Enough</b203>
+</title>
+<contributor>
+<b034>1</b034>
+<b035>A01</b035>
+<b037>Leman, Dr. Kevin</b037>
+</contributor>
+<b059>eng</b059>
+<b064>SEL021000</b064>
+<b200>2.01</b200>
+<d100>Writing in his well-known, upbeat style, this bestselling author helps those who struggle with self-doubt to value their talents and gifts and accept their shortcomings.</d100>
+<d101>Writing in his well-known, upbeat style, Dr. Kevin Leman helps those who struggle with self-doubt to value their talents and gifts and accept their shortcomings. He points out why the lifestyle we develop as a child determines our degree of success or failure and explains how, regardless of the past, each person can develop a healthy lifestyle today.</d101>
+<othertext>
+<d102>02</d102>
+<d104 textformat="04">Writing in his well-known, upbeat style, this bestselling author helps those who struggle with self-doubt to value their talents and gifts and accept their shortcomings.</d104>
+</othertext>
+<othertext>
+<d102>03</d102>
+<d104 textformat="04">Writing in his well-known, upbeat style, Dr. Kevin Leman helps those who struggle with self-doubt to value their talents and gifts and accept their shortcomings. He points out why the lifestyle we develop as a child determines our degree of success or failure and explains how, regardless of the past, each person can develop a healthy lifestyle today.</d104>
+</othertext>
+<othertext>
+<d102>18</d102>
+<d104 textformat="04">Break free from perfectionism!&lt;BR&gt;&lt;BR&gt;Are you an expert at finding flaws within yourself? Do you tend to procrastinate, set unrealistic goals, or continually try to please others? Do you have to &amp;quot;push&amp;quot; your children to get them to do anything?&lt;BR&gt;&lt;BR&gt;Writing in his warm and direct style, Dr. Kevin Leman shows you how to value your talents and gifts and accept your shortcomings. Regardless of the past, you can develop a healthy lifestyle today. Dr. Leman also shows you how to apply these same principles in raising children with healthy self-esteem.&lt;BR&gt;&lt;BR&gt;If you want to make a positive change in your life, this is the place to start. &lt;BR&gt;&lt;BR&gt;&lt;BR&gt;Dr. Kevin Leman, an internationally known psychologist, humorist, radio and television personality, and speaker, has taught and entertained audiences worldwide with his wit and commonsense psychology. Dr. Leman is the &lt;i&gt;New York Times&lt;/i&gt; bestselling and award-winning author of many books, including &lt;i&gt;Have a New Kid by Friday&lt;/i&gt;, &lt;i&gt;Have a New Husband by Friday&lt;/i&gt;, &lt;i&gt;The Birth Order Book&lt;/i&gt;, &lt;i&gt;Sex Begins in the Kitchen&lt;/i&gt;, and &lt;i&gt;Turn Up the Heat&lt;/i&gt;.</d104>
+</othertext>
+<othertext>
+<d102>13</d102>
+<d104 textformat="04">Dr. Kevin Leman is an internationally known psychologist, humorist, and bestselling author of many books, including &lt;i&gt;Have a New Kid by Friday&lt;/i&gt;. He is former consulting psychologist for &lt;i&gt;Good Morning America&lt;/i&gt;.</d104>
+</othertext>
+<imprint>
+<b241>02</b241>
+<b243>BAKER027</b243>
+<b079>Revell</b079>
+</imprint>
+<b081>Baker Publishing Group</b081>
+<b209>Grand Rapids</b209>
+<b083>US</b083>
+<b394>04</b394>
+<b003>20100301</b003>
+<salesrights>
+<b089>03</b089>
+<b090>NG</b090>
+</salesrights>
+<salesrights>
+<b089>01</b089>
+<b090>US GB CA AU</b090>
+</salesrights>
+<relatedproduct>
+<h208>13</h208>
+<productidentifier>
+<b221>15</b221>
+<b244>9780800787943</b244>
+</productidentifier>
+</relatedproduct>
+<supplydetail>
+<j137>Baker Publishing Group</j137>
+<j270>800 877 2665</j270>
+<j271>800 398 3111</j271>
+<j272>orders@bakerpublishinggroup.com</j272>
+<website>
+<b367>01</b367>
+<b295>http://www.bakerpublishinggroup.com</b295>
+</website>
+<j292>01</j292>
+<j268>02</j268>
+<j269>Y</j269>
+<j141>IP</j141>
+<j142>20100301</j142>
+<j145>1</j145>
+<price>
+<j148>01</j148>
+<j149>NST</j149>
+<discountcoded>
+<j363>02</j363>
+<j364>NST</j364>
+</discountcoded>
+<j151>6.99</j151>
+<j152>USD</j152>
+<b251>US</b251>
+</price>
+<price>
+<j148>01</j148>
+<j149>NST</j149>
+<discountcoded>
+<j363>02</j363>
+<j364>NST</j364>
+</discountcoded>
+<j151>6.99</j151>
+<j152>CAD</j152>
+<b251>CA</b251>
+</price>
+<price>
+<j148>01</j148>
+<j149>NST</j149>
+<discountcoded>
+<j363>02</j363>
+<j364>NST</j364>
+</discountcoded>
+<j151>3.83</j151>
+<j152>GBP</j152>
+<b251>GB</b251>
+</price>
+<price>
+<j148>01</j148>
+<j149>NST</j149>
+<discountcoded>
+<j363>02</j363>
+<j364>NST</j364>
+</discountcoded>
+<j151>6.99</j151>
+<j152>AUD</j152>
+<b251>AU</b251>
+</price>
+</supplydetail>
+</product>
+</ONIXmessage>
