@@ -21,6 +21,7 @@ describe OnixParser::Parser2short do
       price_data[:price].should == '69.99'
       price_data[:currency].should == 'USD'
       price_data[:country].should == 'ROW'
+      price_data[:percent_due_publisher].should == 25
     end
   end
 
@@ -220,7 +221,7 @@ describe OnixParser::Parser2short do
       @products[0].gtin.should eql('9781416575740')
     end
   end
-
+  
   context "short_tags file" do
     before(:each) do
       @file1 = File.join(@data_path, "short_tags.xml")

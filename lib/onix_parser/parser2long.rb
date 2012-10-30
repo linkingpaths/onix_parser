@@ -39,6 +39,11 @@ module OnixParser
       parsed_values[:isbn] = isbn_node.any? ? isbn_node.first.innerText : ''
       parsed_values[:upc] = ''
 
+      avail_code_node = product.search('/SupplyDetail/AvailabilityCode')
+      avail_product_node = product.search('/SupplyDetail/ProductAvailability')
+ 
+      parsed_values[:available] = OnixParser::product_available?(avail_product_node.any? ? avail_product_node.text.strip : nil, avail_code_node.any? ? avail_code_node.text.strip : nil)
+
       # Sales Rights
       sales_rights = []
       sales_rights_nodes = product.search('/salesrights')
@@ -96,6 +101,10 @@ module OnixParser
           # PriceType
           price_data[:price_type] = price_node.search('/PriceTypeCode').first.innerText if price_node.search('/PriceTypeCode').any?
 
+          # DiscountCode
+          discount_node = price_node.search('/DiscountCoded/DiscountCode')
+          price_data[:percent_due_publisher] = discount_node.first.innerText if discount_node.any?
+
           region_in = price_node.search('/Territory')
           region_out = price_node.search('/TerritoryExcluded')
           country_in = price_node.search('/Country')
@@ -121,7 +130,7 @@ module OnixParser
           end
           if prices.empty? && sales_rights.any?
             sales_rights.each do |sales_right|
-              prices << {:country => sales_right[:country], :price_type => price_data[:price_type], :price => price_data[:price], :currency => price_data[:currency]} if sales_right[:sellable] == 1
+              prices << {:country => sales_right[:country], :price_type => price_data[:price_type], :price => price_data[:price], :currency => price_data[:currency], :percent_due_publisher => price_data[:percent_due_publisher]} if sales_right[:sellable] == 1
             end
           end
         end

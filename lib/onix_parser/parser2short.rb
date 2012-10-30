@@ -31,6 +31,11 @@ module OnixParser
       other_isbn_node = product.search("/relatedproduct/h208[text() = '13']/../productidentifier/b244")
       parsed_values[:other_isbn] = other_isbn_node.collect(&:innerText) if other_isbn_node.any?
 
+      avail_code_node = product.search('/supplydetail/j141')
+      avail_product_node = product.search('/supplydetail/j396')
+
+      parsed_values[:available] = OnixParser::product_available?(avail_product_node.any? ? avail_product_node.text.strip : nil, avail_code_node.any? ? avail_code_node.text.strip : nil)
+      
       file_path = "/tmp/#{parsed_values[:isbn]}.jpg"
       parsed_values[:cover] = File.exists?(file_path) ? File.new(file_path) : nil
 
@@ -97,6 +102,10 @@ module OnixParser
           # PriceType
           price_data[:price_type] = price_node.search('/j148').first.innerText if price_node.search('/j148').any?
 
+          # DiscountCode
+          discount_node = price_node.search('/discountcoded/j364')
+          price_data[:percent_due_publisher] = discount_node.first.innerText if discount_node.any?
+
           territory = {}
 
           # Region Included
@@ -116,7 +125,7 @@ module OnixParser
           end
           if prices.empty? && sales_rights.any?
             sales_rights.each do |sales_right|
-              prices << {:country => sales_right[:country], :price_type => price_data[:price_type], :price => price_data[:price], :currency => price_data[:currency]} if sales_right[:sellable] == 1
+              prices << {:country => sales_right[:country], :price_type => price_data[:price_type], :price => price_data[:price], :currency => price_data[:currency], :percent_due_publisher => price_data[:percent_due_publisher]} if sales_right[:sellable] == 1
             end
           end
         end
