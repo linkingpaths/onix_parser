@@ -16,6 +16,7 @@ module OnixParser
       lang_nodes = product.search('/language/b252')
       parsed_values[:language] = lang_nodes.first.innerText.strip if lang_nodes.any?
       parsed_values[:country] = ''
+      parsed_values[:format] = product.search('/b012').text if product.search('/b012').any?
 
 #        subject = product.search('').text
       parsed_values[:subject] = nil

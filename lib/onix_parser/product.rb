@@ -3,7 +3,7 @@ module OnixParser
     attr_accessor :title, :author, :subject, :publisher, :cover, :synopsis,
                   :isbn, :isbn10, :upc, :gtin, :lang, :country, :xml, :prices,
                   :excerpt, :other_isbn, :cover_url, :other_ids, :publishing_status,
-                  :released_at, :sales_rights, :available
+                  :released_at, :sales_rights, :available, :format
     alias_method :available?, :available
     #alias_method :available?=, :available=   available? is readonly
 
@@ -30,6 +30,7 @@ module OnixParser
       self.released_at = parsed_values[:released_at]
       self.publishing_status     = parsed_values[:publishing_status]
       self.sales_rights          = parsed_values[:sales_rights]
+      self.format     = parsed_values[:format]
     end
 
     protected
